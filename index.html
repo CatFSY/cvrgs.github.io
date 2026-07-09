@@ -3,19 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting. A self-supervised structured 3D Gaussian framework for novel view synthesis under extreme lighting.">
+        content="Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting.">
   <meta name="keywords" content="Extreme-GS, 3D Gaussian Splatting, Extreme Lighting, Novel View Synthesis, NeRF, AAAI 2027">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -77,7 +68,6 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- Paper Link -->
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/xxxx.xxxxx"
                    class="external-link button is-normal is-rounded is-dark">
@@ -85,7 +75,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- arXiv Link -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/xxxx.xxxxx"
                    class="external-link button is-normal is-rounded is-dark">
@@ -93,7 +82,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link -->
               <span class="link-block">
                 <a href="https://github.com/CatFSY/Extreme-GS"
                    class="external-link button is-normal is-rounded is-dark">
@@ -110,13 +98,15 @@
 </section>
 
 
-<!-- Teaser -->
+<!-- Teaser Video -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png" alt="Extreme-GS Teaser" style="width:100%; border-radius:10px;">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4" type="video/mp4">
+      </video>
       <h2 class="subtitle has-text-centered" style="margin-top:1em;">
-        <span class="dnerf">Extreme-GS</span> recovers illumination-consistent 3D scene representations under extreme lighting conditions including mixed exposure, pure low-light, pure over-exposure, and synthetic extreme lighting.
+        <span class="dnerf">Extreme-GS</span> recovers illumination-consistent 3D scene representations under extreme lighting conditions.
       </h2>
     </div>
   </div>
@@ -131,31 +121,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Current novel view synthesis (NVS) methods, notably Neural Radiance Fields (NeRF) and
-            3D Gaussian Splatting (3DGS), fundamentally rely on multi-view photometric consistency.
-            However, this assumption is frequently violated in uncontrolled real-world environments.
+            Current novel view synthesis methods rely on multi-view photometric consistency, an assumption frequently violated under extreme lighting where images suffer from over/under-exposure, saturation, and shadows.
           </p>
           <p>
-            Under extreme lighting, images suffer from both global exposure shifts and local illumination
-            artifacts—such as severe over/under-exposure, saturated highlights, and cast shadows. These
-            view-dependent degradations destroy appearance consistency and introduce unreliable
-            optimization signals, making it exceedingly difficult to recover illumination-consistent
-            3D scene representations.
-          </p>
-          <p>
-            To address this challenge, we propose <span class="dnerf">Extreme-GS</span>, a self-supervised structured
-            3D Gaussian framework for modeling scenes under extreme lighting. Extreme-GS introduces a
-            <strong>structured shading representation</strong> that implicitly separates a stable scene component
-            from lighting-dependent modulation. <strong>Dual-view feature-driven relighting</strong> constrains this
-            ambiguous factorization by transferring illumination across views while preserving scene
-            structure. We further estimate <strong>illumination reliability</strong> to modulate geometry optimization,
-            suppressing unreliable densification and pruning in saturated, shadowed, or locally corrupted
-            regions.
-          </p>
-          <p>
-            Experiments on mixed-exposure, pure low-light, pure over-exposure, and synthetic
-            extreme-lighting settings show that Extreme-GS yields more consistent scene appearance and
-            improves view synthesis quality across challenging extreme-lighting datasets.
+            We propose <span class="dnerf">Extreme-GS</span>, a self-supervised structured 3D Gaussian framework that introduces a structured shading representation to separate stable scene content from lighting-dependent modulation, with dual-view relighting as self-supervision and illumination-reliability guidance to stabilize geometry optimization.
           </p>
         </div>
       </div>
@@ -164,7 +133,7 @@
 </section>
 
 
-<!-- Pipeline / Method -->
+<!-- Pipeline -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -173,243 +142,11 @@
         <div class="content">
           <img src="./static/images/pipeline.png" alt="Extreme-GS Pipeline" style="width:100%; border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
-            <strong>Overview of Extreme-GS.</strong> Given multi-view images with extreme lighting variations,
-            Extreme-GS decomposes scene appearance into stable content and lighting-dependent modulation
-            via a structured shading representation. A cross-view feature extraction network enables
-            dual-view relighting for self-supervision, while illumination-reliability guided optimization
-            (IRGO) suppresses unreliable geometry updates in corrupted regions.
+            Extreme-GS takes multi-view images under extreme lighting and decomposes scene appearance into stable content and lighting-dependent modulation via a structured shading representation. Cross-view feature extraction enables dual-view relighting for self-supervision, while illumination-reliability guided optimization (IRGO) suppresses unreliable geometry updates in corrupted regions.
           </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<!-- Method Details -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Method</h2>
-
-    <div class="columns is-centered">
-      <!-- Structured Shading Model -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-4">Structured Shading Model</h3>
-          <p>
-            We introduce a multiplicative decomposition of appearance into a stable scene component
-            and lighting-dependent modulation. Each Gaussian stores a base color <strong>B</strong>,
-            a shading embedding <strong>Φ</strong>, and environment/local illumination codes
-            <strong>E<sub>env</sub></strong> and <strong>E<sub>loc</sub></strong>. The final rendered color is:
-          </p>
-          <div class="has-text-centered" style="padding:1.2em 0; font-size:1.1em;">
-            <strong>C = B · (1 + Φ) · (E<sub>env</sub> + E<sub>loc</sub>)</strong>
-          </div>
-          <p>
-            This formulation enables the model to disentangle view-consistent scene content from
-            view-dependent illumination effects, enabling robust novel view synthesis under
-            arbitrary lighting conditions.
-          </p>
-        </div>
-      </div>
-
-      <!-- Cross-view Relighting -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-4">Cross-View Relighting</h3>
-          <p>
-            To constrain the inherently ambiguous shading decomposition, we introduce dual-view
-            relighting as self-supervision. Geometry- and illumination-aware view selection
-            identifies informative peer views. Cross-view attention extracts corresponding features,
-            enabling illumination transfer while preserving structural consistency.
-          </p>
-          <p>Two complementary losses guide the optimization:</p>
-          <ul>
-            <li><strong>Illumination alignment loss L<sub>illum</sub></strong> — aligns illumination between rendered and relit views.</li>
-            <li><strong>Structure consistency loss L<sub>struct</sub></strong> — preserves geometric and textural details during relighting.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- IRGO -->
-    <div class="columns is-centered" style="margin-top:1em;">
-      <div class="column is-full-width">
-        <div class="content">
-          <h3 class="title is-4">Illumination-Reliability Guided Optimization (IRGO)</h3>
-          <p>
-            Saturated, shadowed, or corrupted regions produce unreliable gradients that mislead
-            3DGS density estimation. IRGO estimates a per-Gaussian <strong>confidence score</strong>
-            based on chromatic alignment and local appearance consistency, then modulates:
-          </p>
-          <ul>
-            <li><strong>Densification:</strong> Gaussians in low-confidence regions are penalized, preventing overfitting to corrupted measurements.</li>
-            <li><strong>Pruning:</strong> Unreliable Gaussians are pruned more aggressively, maintaining a clean and compact scene representation.</li>
-          </ul>
-          <p>
-            Combined with progressive log-space optimization for handling wide dynamic range,
-            IRGO enables stable training and high-quality rendering across diverse extreme-lighting inputs.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Results Section -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Experiments</h2>
-
-    <!-- Datasets -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Datasets</h3>
-        <div class="content">
-          <p>We evaluate on four challenging extreme-lighting benchmarks:</p>
-        </div>
-        <div class="columns is-multiline">
-          <div class="column is-3">
-            <div class="content">
-              <h4 class="title is-5">Multi-exposure</h4>
-              <p>Real scenes with bracketed exposures (±3EV) from GaussHDR / HDR-NeRF, covering diverse indoor and outdoor environments.</p>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="content">
-              <h4 class="title is-5">Synthetic</h4>
-              <p>8 NeRF Blender scenes re-rendered with dynamic point lights and weak ambient illumination, providing ground truth for evaluation.</p>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="content">
-              <h4 class="title is-5">DarkGS</h4>
-              <p>Real low-light scenes with localized flashlight illumination, testing robustness to severe underexposure.</p>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="content">
-              <h4 class="title is-5">LOM</h4>
-              <p>Pure low-light and pure over-exposure settings with normal-exposure ground truth for reference-based evaluation.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- HDR Recovery -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Multi-Exposure (HDR) Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/hdr_recover.png" alt="HDR Recovery Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Qualitative comparison on multi-exposure datasets.</strong> Extreme-GS produces more consistent
-            scene appearance with fewer artifacts in saturated and shadowed regions compared to baselines.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Extreme HDR -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Extreme Multi-Exposure Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/hdr_extreme.png" alt="Extreme HDR Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Results on extreme multi-exposure scenes.</strong> Our method maintains consistent appearance
-            across large exposure variations where baseline methods struggle.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Low-light Recovery -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Low-Light Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/lowlight_recover.png" alt="Low-light Recovery Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Qualitative comparison on DarkGS low-light dataset.</strong> Extreme-GS effectively recovers
-            scene details from severely underexposed inputs.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- LOM -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Low- and Over-Exposure (LOM) Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/lom_recover.png" alt="LOM Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Results on LOM dataset.</strong> Our method handles both pure low-light and pure over-exposure
-            scenarios with consistently high quality.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Synthetic -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Synthetic Extreme-Lighting Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/syn_recover.png" alt="Synthetic Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Results on synthetic extreme-lighting dataset.</strong> Extreme-GS accurately reconstructs
-            scene appearance under controlled ground-truth evaluation.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Structure Prior -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Structure Preservation Analysis</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/struprior.png" alt="Structure Prior Analysis" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Structure preservation visualization.</strong> The structured shading representation and
-            structure consistency loss effectively preserve geometric details during relighting.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Relighting -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Relighting Results</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/relighting.png" alt="Relighting Results" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Dual-view relighting results.</strong> Our cross-view relighting framework enables
-            illumination transfer across views while preserving scene structure.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ablation -->
-    <div class="columns is-centered" style="margin-top:1.5em;">
-      <div class="column is-full-width">
-        <h3 class="title is-4">Ablation Study</h3>
-        <div class="content has-text-centered">
-          <img src="./static/images/ablation.png" alt="Ablation Study" style="width:100%; border-radius:5px;">
-          <p style="margin-top:0.5em;" class="has-text-justified">
-            <strong>Ablation experiments.</strong> Each component—structured shading, cross-view relighting,
-            and illumination-reliability guidance—contributes meaningfully to the final performance.
-          </p>
-        </div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -443,8 +180,6 @@
           <p>
             This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
