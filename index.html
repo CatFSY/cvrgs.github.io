@@ -147,11 +147,8 @@
         <div class="tabs is-boxed is-centered">
           <ul>
             <li class="is-active" data-scan="box"><a>box</a></li>
-            <li data-scan="character"><a>character</a></li>
-            <li data-scan="coffee"><a>coffee</a></li>
             <li data-scan="flower"><a>flower</a></li>
             <li data-scan="luckycat"><a>luckycat</a></li>
-            <li data-scan="desk"><a>desk</a></li>
             <li data-scan="computer"><a>computer</a></li>
             <li data-scan="plant"><a>plant</a></li>
           </ul>
@@ -160,20 +157,11 @@
         <div id="box" class="scan-content">
           <video src="static/videos/hdr_box.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
-        <div id="character" class="scan-content is-hidden">
-          <video src="static/videos/hdr_character.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="coffee" class="scan-content is-hidden">
-          <video src="static/videos/hdr_coffee.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
         <div id="flower" class="scan-content is-hidden">
           <video src="static/videos/hdr_flower.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
         <div id="luckycat" class="scan-content is-hidden">
           <video src="static/videos/hdr_luckycat.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="desk" class="scan-content is-hidden">
-          <video src="static/videos/hdr_desk.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
         <div id="computer" class="scan-content is-hidden">
           <video src="static/videos/hdr_computer.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
@@ -197,7 +185,7 @@
 
         <div class="content has-text-justified" style="margin-top: 1.5rem;">
           <p>
-            We evaluate under four exposure distribution protocols: <strong>(i) Uniform Random</strong> (equal U/M/O mix), <strong>(ii) Extreme Bimodal</strong> (alternating U/O, no mid-exposure), <strong>(iii) Dark-skewed</strong> (80% U), and <strong>(iv) Bright-skewed</strong> (80% O), all with fixed random seed for reproducibility.
+            We categorize each training view's exposure into three levels: <strong>O</strong> (overexposed), <strong>M</strong> (mid exposure), and <strong>U</strong> (underexposed). We evaluate under four exposure distribution protocols, each defining the proportion of O/M/U views in the training set: <strong>(i) Bright-skewed</strong> (80% O / 10% M / 10% U), <strong>(ii) Dark-skewed</strong> (80% U / 10% M / 10% O), <strong>(iii) Uniform Random</strong> (equal ~33% O / ~33% M / ~33% U mix), and <strong>(iv) Extreme Bimodal</strong> (50% O / 50% U, no mid-exposure). All use a fixed random seed for reproducibility.
           </p>
         </div>
 
