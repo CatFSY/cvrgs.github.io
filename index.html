@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting.">
-  <meta name="keywords" content="Extreme-GS, 3D Gaussian Splatting, Extreme Lighting, Novel View Synthesis, NeRF, AAAI 2027">
+        content="CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting.">
+  <meta name="keywords" content="CVR-GS, 3D Gaussian Splatting, Extreme Lighting, Novel View Synthesis, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting</title>
+  <title>CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -41,7 +40,7 @@
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">More Research</a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://exgs.github.io">Extreme-GS</a>
+          <a class="navbar-item" href="https://exgs.github.io">CVR-GS</a>
           <a class="navbar-item" href="https://reti-diff.github.io">Reti-Diff</a>
         </div>
       </div>
@@ -55,19 +54,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting</h1>
+          <h1 class="title is-1 publication-title">CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting</h1>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><a href="#">Anonymous Author(s)</a><sup>*</sup></span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Anonymous Institution</span>
-          </div>
-          <div class="is-size-5 publication-venue">
-            <span>AAAI 2027</span>
+            <span class="author-block">Anonymous Author(s)</span>
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
+          <div class="publication-links" style="margin-top: 1.5rem;">
               <span class="link-block">
                 <a href="https://arxiv.org/pdf/xxxx.xxxxx"
                    class="external-link button is-normal is-rounded is-dark">
@@ -83,7 +75,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/CatFSY/Extreme-GS"
+                <a href="https://github.com/CatFSY/CVR-GS"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fab fa-github"></i></span>
                   <span>Code</span>
@@ -97,21 +89,14 @@
   </div>
 </section>
 
-
-<!-- Teaser Video -->
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered" style="margin-top:1em;">
-        <span class="dnerf">Extreme-GS</span> recovers illumination-consistent 3D scene representations under extreme lighting conditions.
-      </h2>
+      <img src="./static/images/teaser.png" alt="CVR-GS Teaser" style="width:100%; border-radius:10px;">
     </div>
   </div>
 </section>
-
 
 <!-- Abstract -->
 <section class="section">
@@ -121,10 +106,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Current novel view synthesis methods rely on multi-view photometric consistency, an assumption frequently violated under extreme lighting where images suffer from over/under-exposure, saturation, and shadows.
+            Novel view synthesis (NVS) with Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) assumes photometric consistency across views, yet real captures routinely violate it. Illumination corrupts each view both globally, through whole-image under- or over-exposure, and locally, where highlights saturate and shadows collapse into noise, destroying information within each view.
           </p>
           <p>
-            We propose <span class="dnerf">Extreme-GS</span>, a self-supervised structured 3D Gaussian framework that introduces a structured shading representation to separate stable scene content from lighting-dependent modulation, with dual-view relighting as self-supervision and illumination-reliability guidance to stabilize geometry optimization.
+            To integrate complementary information across these imperfect views, we recast illumination-robust scene recovery as a <em>cross-view relighting</em> problem and propose CVR-GS. Our method uses a structured shading representation to separate the underlying scene appearance from per-view illumination. By relighting one view with another's illumination and enforcing consistency, we disentangle this lighting from a shared, illumination-invariant canonical scene. From this separation we also obtain a per-Gaussian reliability score that stabilizes densification and pruning in saturated or shadowed regions, where photometric gradients are otherwise unreliable.
+          </p>
+          <p>
+            CVR-GS requires no ground-truth normal-light reference, exposure labels, or BRDF decomposition, and spans a spectrum from mixed-exposure captures to one-sided, fully extreme lighting. Across diverse extreme-lighting benchmarks, CVR-GS recovers a consistent scene and achieves higher-quality NVS than prior state-of-the-art methods.
           </p>
         </div>
       </div>
@@ -140,9 +128,9 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content">
-          <img src="./static/images/pipeline.png" alt="Extreme-GS Pipeline" style="width:100%; border-radius:10px;">
+          <img src="./static/images/pipeline.png" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
-            Extreme-GS takes multi-view images under extreme lighting and decomposes scene appearance into stable content and lighting-dependent modulation via a structured shading representation. Cross-view feature extraction enables dual-view relighting for self-supervision, while illumination-reliability guided optimization (IRGO) suppresses unreliable geometry updates in corrupted regions.
+            CVR-GS takes multi-view images under extreme lighting and decomposes scene appearance into stable content and lighting-dependent modulation via a structured shading representation. Cross-view feature extraction enables dual-view relighting for self-supervision, while illumination-reliability guided optimization (IRGO) suppresses unreliable geometry updates in corrupted regions.
           </p>
         </div>
       </div>
@@ -199,6 +187,7 @@
 <!-- Synthetic Comparison -->
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">Synthetic Scenes (Input vs. Recover)</h2>
     <div class="columns is-centered">
       <div class="column has-text-centered">
         <video controls muted loop playsinline style="width:100%; border-radius:10px;">
@@ -212,6 +201,7 @@
 <!-- DarkGS Comparison -->
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">DarkGS (3DGS vs. Ours)</h2>
     <div class="columns is-centered">
       <div class="column has-text-centered">
         <video controls muted loop playsinline style="width:100%; border-radius:10px;">
@@ -225,6 +215,7 @@
 <!-- LOM Comparison -->
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">LOM (3DGS vs. Ours)</h2>
     <div class="columns is-centered">
       <div class="column has-text-centered">
         <video controls muted loop playsinline style="width:100%; border-radius:10px;">
@@ -241,8 +232,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{anonymous2027extreme,
   author    = {Anonymous Authors},
-  title     = {Extreme-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting},
-  journal   = {AAAI},
+  title     = {CVR-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting},
   year      = {2027},
 }</code></pre>
   </div>
