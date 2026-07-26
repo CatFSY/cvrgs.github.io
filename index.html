@@ -79,11 +79,11 @@
   </div>
 </section>
 
-<!-- Teaser Image -->
+<!-- Teaser PDF -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png" alt="CVR-GS Teaser" style="width:100%; border-radius:10px;">
+      <embed src="./static/images/teaser.pdf" type="application/pdf" width="100%" height="700px" style="border-radius:10px;">
     </div>
   </div>
 </section>
@@ -96,13 +96,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Novel view synthesis (NVS) with Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) assumes photometric consistency across views, yet real captures routinely violate it. Illumination corrupts each view both globally, through whole-image under- or over-exposure, and locally, where highlights saturate and shadows collapse into noise, destroying information within each view.
+            While neural rendering methods such as Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) excel at novel view synthesis (NVS) under photometrically consistent lighting, they often fail in complex real-world environments. In unconstrained scenarios, varying illumination severely corrupts cross-view photometric consistency. Globally, entire images suffer from unpredictable under- or over-exposure. Locally, critical visual information is destroyed as highlights saturate and shadows collapse into noise.
           </p>
           <p>
-            To integrate complementary information across these imperfect views, we recast illumination-robust scene recovery as a <em>cross-view relighting</em> problem and propose CVR-GS. Our method uses a structured shading representation to separate the underlying scene appearance from per-view illumination. By relighting one view with another's illumination and enforcing consistency, we disentangle this lighting from a shared, illumination-invariant canonical scene. From this separation we also obtain a per-Gaussian reliability score that stabilizes densification and pruning in saturated or shadowed regions, where photometric gradients are otherwise unreliable.
+            To address this, we recast illumination-robust novel view synthesis as a cross-view relighting problem and propose CVR-GS. We synthesize one view under another view's illumination condition and constrain the reconstruction with illumination alignment and structural consistency, yielding a shared, illumination-invariant canonical appearance representation from complex per-view lighting. Furthermore, a per-Gaussian reliability score derived from the deviation between local and global illumination stabilizes densification and pruning in unreliable regions, such as shadows or saturated highlights, preventing geometry corruption.
           </p>
           <p>
-            CVR-GS requires no ground-truth normal-light reference, exposure labels, or BRDF decomposition, and spans a spectrum from mixed-exposure captures to one-sided, fully extreme lighting. Across diverse extreme-lighting benchmarks, CVR-GS recovers a consistent scene and achieves higher-quality NVS than prior state-of-the-art methods.
+            CVR-GS achieves higher-quality NVS than prior methods across diverse benchmarks, from multi-exposure to extreme lighting conditions.
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content">
-          <img src="./static/images/pipeline.png" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
+          <embed src="./static/images/pipeline.pdf" type="application/pdf" width="100%" height="700px" style="border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
             CVR-GS takes multi-view images under extreme lighting and decomposes scene appearance into stable content and lighting-dependent modulation via a structured shading representation. Cross-view feature extraction enables dual-view relighting for self-supervision, while illumination-reliability guided optimization (IRGO) suppresses unreliable geometry updates in corrupted regions.
           </p>
