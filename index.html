@@ -187,22 +187,19 @@
 <!-- Synthetic Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Synthetic Dataset (Input vs. Ours)</h2>
+    <h2 class="title is-3 has-text-centered">Synthetic Dataset</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <div class="tabs is-boxed is-centered">
           <ul>
-            <li class="is-active" data-scan="syn_chair"><a>chair</a></li>
-            <li data-scan="syn_hotdog"><a>hotdog</a></li>
+            <li class="is-active" data-scan="syn_hotdog"><a>hotdog</a></li>
             <li data-scan="syn_ficus"><a>ficus</a></li>
             <li data-scan="syn_mic"><a>mic</a></li>
+            <li data-scan="syn_chair"><a>chair</a></li>
           </ul>
         </div>
 
-        <div id="syn_chair" class="scan-content">
-          <video src="static/videos/syn_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="syn_hotdog" class="scan-content is-hidden">
+        <div id="syn_hotdog" class="scan-content">
           <video src="static/videos/syn_hotdog.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
         <div id="syn_ficus" class="scan-content is-hidden">
@@ -210,6 +207,9 @@
         </div>
         <div id="syn_mic" class="scan-content is-hidden">
           <video src="static/videos/syn_mic.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="syn_chair" class="scan-content is-hidden">
+          <video src="static/videos/syn_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
 
         <script>
@@ -236,14 +236,13 @@
 <!-- Flashlight Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Flashlight Dataset (Input vs. Ours)</h2>
+    <h2 class="title is-3 has-text-centered">Flashlight Dataset</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <div class="tabs is-boxed is-centered">
           <ul>
             <li class="is-active" data-scan="flash_lab1"><a>lab1</a></li>
             <li data-scan="flash_lab2"><a>lab_2</a></li>
-            <li data-scan="flash_out1"><a>outdoor_1</a></li>
             <li data-scan="flash_out2"><a>outdoor_2</a></li>
           </ul>
         </div>
@@ -253,9 +252,6 @@
         </div>
         <div id="flash_lab2" class="scan-content is-hidden">
           <video src="static/videos/flash_lab2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="flash_out1" class="scan-content is-hidden">
-          <video src="static/videos/flash_out1.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
         </div>
         <div id="flash_out2" class="scan-content is-hidden">
           <video src="static/videos/flash_out2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
@@ -285,7 +281,7 @@
 <!-- LOM Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">LOM Dataset (3DGS vs. Ours)</h2>
+    <h2 class="title is-3 has-text-centered">LOM Dataset</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
         <div class="tabs is-boxed is-centered">
