@@ -181,43 +181,139 @@
   </div>
 </section>
 
-<!-- Synthetic Comparison -->
+<!-- Synthetic Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">Synthetic Dataset (Input vs. Ours)</h2>
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <video autoplay controls muted loop playsinline style="width:100%; border-radius:10px;">
-          <source src="./static/videos/synthetic_combo.mp4" type="video/mp4">
-        </video>
+    <h2 class="title is-3 has-text-centered">Synthetic Dataset (Input vs. Ours)</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="tabs is-boxed is-centered">
+          <ul>
+            <li class="is-active" data-scan="syn_chair"><a>chair</a></li>
+            <li data-scan="syn_hotdog"><a>hotdog</a></li>
+            <li data-scan="syn_ficus"><a>ficus</a></li>
+            <li data-scan="syn_mic"><a>mic</a></li>
+          </ul>
+        </div>
+
+        <div id="syn_chair" class="scan-content">
+          <video src="static/videos/syn_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="syn_hotdog" class="scan-content is-hidden">
+          <video src="static/videos/syn_hotdog.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="syn_ficus" class="scan-content is-hidden">
+          <video src="static/videos/syn_ficus.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="syn_mic" class="scan-content is-hidden">
+          <video src="static/videos/syn_mic.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+
+        <script>
+          const tabs = document.querySelectorAll('.tabs ul li');
+          const contents = document.querySelectorAll('.scan-content');
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              tabs.forEach(t => t.classList.remove('is-active'));
+              contents.forEach(c => c.classList.add('is-hidden'));
+              tab.classList.add('is-active');
+              document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
+            });
+          });
+        </script>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- DarkGS Comparison -->
+<!-- Flashlight Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">Flashlight Dataset (Input vs. Ours)</h2>
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <video autoplay controls muted loop playsinline style="width:100%; border-radius:10px;">
-          <source src="./static/videos/flashlight_combo.mp4" type="video/mp4">
-        </video>
+    <h2 class="title is-3 has-text-centered">Flashlight Dataset (Input vs. Ours)</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="tabs is-boxed is-centered">
+          <ul>
+            <li class="is-active" data-scan="flash_lab1"><a>lab1</a></li>
+            <li data-scan="flash_lab2"><a>lab_2</a></li>
+            <li data-scan="flash_out1"><a>outdoor_1</a></li>
+            <li data-scan="flash_out2"><a>outdoor_2</a></li>
+          </ul>
+        </div>
+
+        <div id="flash_lab1" class="scan-content">
+          <video src="static/videos/flash_lab1.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="flash_lab2" class="scan-content is-hidden">
+          <video src="static/videos/flash_lab2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="flash_out1" class="scan-content is-hidden">
+          <video src="static/videos/flash_out1.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="flash_out2" class="scan-content is-hidden">
+          <video src="static/videos/flash_out2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+
+        <script>
+          const tabs = document.querySelectorAll('.tabs ul li');
+          const contents = document.querySelectorAll('.scan-content');
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              tabs.forEach(t => t.classList.remove('is-active'));
+              contents.forEach(c => c.classList.add('is-hidden'));
+              tab.classList.add('is-active');
+              document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
+            });
+          });
+        </script>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- LOM Comparison -->
+<!-- LOM Scenes -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-4 has-text-centered" style="margin-bottom: 1rem;">LOM Dataset (3DGS vs. Ours)</h2>
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <video autoplay controls muted loop playsinline style="width:100%; border-radius:10px;">
-          <source src="./static/videos/lom_combo.mp4" type="video/mp4">
-        </video>
+    <h2 class="title is-3 has-text-centered">LOM Dataset (3DGS vs. Ours)</h2>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <div class="tabs is-boxed is-centered">
+          <ul>
+            <li class="is-active" data-scan="lom_buu"><a>buu</a></li>
+            <li data-scan="lom_shrub"><a>shrub</a></li>
+            <li data-scan="lom_chair"><a>chair</a></li>
+            <li data-scan="lom_sofa"><a>sofa</a></li>
+          </ul>
+        </div>
+
+        <div id="lom_buu" class="scan-content">
+          <video src="static/videos/lom_buu.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="lom_shrub" class="scan-content is-hidden">
+          <video src="static/videos/lom_shrub.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="lom_chair" class="scan-content is-hidden">
+          <video src="static/videos/lom_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+        <div id="lom_sofa" class="scan-content is-hidden">
+          <video src="static/videos/lom_sofa.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
+        </div>
+
+        <script>
+          const tabs = document.querySelectorAll('.tabs ul li');
+          const contents = document.querySelectorAll('.scan-content');
+          tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              tabs.forEach(t => t.classList.remove('is-active'));
+              contents.forEach(c => c.classList.add('is-hidden'));
+              tab.classList.add('is-active');
+              document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
+            });
+          });
+        </script>
+
       </div>
     </div>
   </div>
