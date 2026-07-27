@@ -21,7 +21,12 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
 </head>
 <body>
 
@@ -121,7 +126,7 @@
         <div class="content">
           <img src="./static/images/pipeline.png" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
-            <strong>Overview of CVR-GS pipeline.</strong> CVR-GS pairs illumination-complementary views and extracts cross-view features to decompose each Gaussian's color into canonical base appearance~$B$, detail refinement~$\Phi$, ambient illumination~$E_{\text{env}}$, and per-view local shading~$E_{\text{loc}}$. Cross-view relighting enforces consistency by exchanging illumination between paired views, while illumination-reliability guided optimization suppresses densification and pruning in degraded regions.
+            <strong>Overview of CVR-GS pipeline.</strong> CVR-GS pairs illumination-complementary views and extracts cross-view features to decompose each Gaussian's color into canonical base appearance $B$, detail refinement $\Phi$, ambient illumination $E_{\text{env}}$, and per-view local shading $E_{\text{loc}}$. Cross-view relighting enforces consistency by exchanging illumination between paired views, while illumination-reliability guided optimization suppresses densification and pruning in degraded regions.
           </p>
         </div>
       </div>
