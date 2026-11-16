@@ -42,9 +42,12 @@ exposure fitting, GT-mean alignment or external fusion is applied.
 
 ## Multi-Light Objects
 
-The four synthetic videos remain unchanged: hotdog, ficus, mic and chair.
-Panels show Input, GS-W, LumiGS, PPISP, CVR-GS and GT, with 180 training and
-20 test poses labeled in their recorded sequence. PPISP is the GS branch
+The four synthetic videos cover hotdog, ficus, mic and chair. Only the
+40-pixel top metadata band (scene, frame ID and train/test label) has been
+removed; all six 400x400 image panels and method names remain intact.
+The 200-frame sequence still includes 180 training and 20 held-out views.
+Clean videos and posters are in static/videos/objects/ and
+static/images/objects/, with provenance in static/data/objects/. PPISP is the GS branch
 before Controller/ISP from training without exposure metadata. Source details
 remain in static/data/video_v2/.
 

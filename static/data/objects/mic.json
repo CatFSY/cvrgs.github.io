@@ -1,0 +1,31 @@
+{
+  "scene": "mic",
+  "source": "static/videos/v2/syn_mic_v2.mp4",
+  "source_sha256": "6e5b31e177c47918b3c04e07a082feab6df4f4bfd12cfdf88c5bc4b004f1ebc1",
+  "video": "static/videos/objects/mic.mp4",
+  "sha256": "19e61be43f695bbc7d27e170bd2499247f333d1cd23f12f447b5743cfe9abbce",
+  "poster": "static/images/objects/mic.png",
+  "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+  "rendered_image_panels_cropped": false,
+  "all_six_method_panels_retained": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "train_views": 180,
+  "heldout_views": 20,
+  "original_view_metadata": "static/data/video_v2/syn_mic_v2.json",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1216,
+        "height": 884,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}

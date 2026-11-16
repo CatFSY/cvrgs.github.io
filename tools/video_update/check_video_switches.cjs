@@ -72,7 +72,10 @@ for (const group of groups) {
     for (const method of methods.length ? methods : [null]) {
       if (method) method.listeners.click();
       verifyMedia();
-      assert(group.video.src.includes(`_${scene.dataset.scene}`));
+      if (group.dataset.comparisonGroup === 'syn') {
+        assert.equal(group.video.src, `static/videos/objects/${scene.dataset.scene}.mp4`);
+        assert.equal(group.video.poster, `static/images/objects/${scene.dataset.scene}.png`);
+      } else assert(group.video.src.includes(`_${scene.dataset.scene}`));
       if (method) {
         const record = hdrComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);
         assert(record);

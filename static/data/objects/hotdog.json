@@ -1,0 +1,31 @@
+{
+  "scene": "hotdog",
+  "source": "static/videos/v2/syn_hotdog_v2.mp4",
+  "source_sha256": "a8de7381573464c8128c9e1297ea691670ea23411534fe8b5c45f9bb1dd94e73",
+  "video": "static/videos/objects/hotdog.mp4",
+  "sha256": "86db230435834e2848d98c3e8935e3e304b7f67f6a1bf5c2c04cd1e613614e3c",
+  "poster": "static/images/objects/hotdog.png",
+  "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+  "rendered_image_panels_cropped": false,
+  "all_six_method_panels_retained": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "train_views": 180,
+  "heldout_views": 20,
+  "original_view_metadata": "static/data/video_v2/syn_hotdog_v2.json",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1216,
+        "height": 884,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}

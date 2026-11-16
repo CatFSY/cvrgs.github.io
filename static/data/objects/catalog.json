@@ -1,0 +1,126 @@
+[
+  {
+    "scene": "hotdog",
+    "source": "static/videos/v2/syn_hotdog_v2.mp4",
+    "source_sha256": "a8de7381573464c8128c9e1297ea691670ea23411534fe8b5c45f9bb1dd94e73",
+    "video": "static/videos/objects/hotdog.mp4",
+    "sha256": "86db230435834e2848d98c3e8935e3e304b7f67f6a1bf5c2c04cd1e613614e3c",
+    "poster": "static/images/objects/hotdog.png",
+    "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+    "rendered_image_panels_cropped": false,
+    "all_six_method_panels_retained": true,
+    "frames": 200,
+    "fps": 20,
+    "duration_seconds": 10,
+    "train_views": 180,
+    "heldout_views": 20,
+    "original_view_metadata": "static/data/video_v2/syn_hotdog_v2.json",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 1216,
+          "height": 884,
+          "r_frame_rate": "20/1",
+          "nb_frames": "200"
+        }
+      ],
+      "format": {
+        "duration": "10.000000"
+      }
+    }
+  },
+  {
+    "scene": "ficus",
+    "source": "static/videos/v2/syn_ficus_v2.mp4",
+    "source_sha256": "b8001e9b7d7a7091781aec63c612f1b43359c7a536332481238a8ec4ff9cf5ca",
+    "video": "static/videos/objects/ficus.mp4",
+    "sha256": "ef7041b73ecc071c005c4da6e5eddd695749b84ff2f2ee131287f699e2ddd3e4",
+    "poster": "static/images/objects/ficus.png",
+    "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+    "rendered_image_panels_cropped": false,
+    "all_six_method_panels_retained": true,
+    "frames": 200,
+    "fps": 20,
+    "duration_seconds": 10,
+    "train_views": 180,
+    "heldout_views": 20,
+    "original_view_metadata": "static/data/video_v2/syn_ficus_v2.json",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 1216,
+          "height": 884,
+          "r_frame_rate": "20/1",
+          "nb_frames": "200"
+        }
+      ],
+      "format": {
+        "duration": "10.000000"
+      }
+    }
+  },
+  {
+    "scene": "mic",
+    "source": "static/videos/v2/syn_mic_v2.mp4",
+    "source_sha256": "6e5b31e177c47918b3c04e07a082feab6df4f4bfd12cfdf88c5bc4b004f1ebc1",
+    "video": "static/videos/objects/mic.mp4",
+    "sha256": "19e61be43f695bbc7d27e170bd2499247f333d1cd23f12f447b5743cfe9abbce",
+    "poster": "static/images/objects/mic.png",
+    "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+    "rendered_image_panels_cropped": false,
+    "all_six_method_panels_retained": true,
+    "frames": 200,
+    "fps": 20,
+    "duration_seconds": 10,
+    "train_views": 180,
+    "heldout_views": 20,
+    "original_view_metadata": "static/data/video_v2/syn_mic_v2.json",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 1216,
+          "height": 884,
+          "r_frame_rate": "20/1",
+          "nb_frames": "200"
+        }
+      ],
+      "format": {
+        "duration": "10.000000"
+      }
+    }
+  },
+  {
+    "scene": "chair",
+    "source": "static/videos/v2/syn_chair_v2.mp4",
+    "source_sha256": "60787e944e0f8b3143a3fbac067fd5bb354959c4de845ab91e3db3e08a8c7399",
+    "video": "static/videos/objects/chair.mp4",
+    "sha256": "fec1f79cf3418adc5217b8afc479dcb202fc1b9d7f80255474cac085b0e5303e",
+    "poster": "static/images/objects/chair.png",
+    "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+    "rendered_image_panels_cropped": false,
+    "all_six_method_panels_retained": true,
+    "frames": 200,
+    "fps": 20,
+    "duration_seconds": 10,
+    "train_views": 180,
+    "heldout_views": 20,
+    "original_view_metadata": "static/data/video_v2/syn_chair_v2.json",
+    "probe": {
+      "programs": [],
+      "streams": [
+        {
+          "width": 1216,
+          "height": 884,
+          "r_frame_rate": "20/1",
+          "nb_frames": "200"
+        }
+      ],
+      "format": {
+        "duration": "10.000000"
+      }
+    }
+  }
+]

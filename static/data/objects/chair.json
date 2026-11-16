@@ -1,0 +1,31 @@
+{
+  "scene": "chair",
+  "source": "static/videos/v2/syn_chair_v2.mp4",
+  "source_sha256": "60787e944e0f8b3143a3fbac067fd5bb354959c4de845ab91e3db3e08a8c7399",
+  "video": "static/videos/objects/chair.mp4",
+  "sha256": "fec1f79cf3418adc5217b8afc479dcb202fc1b9d7f80255474cac085b0e5303e",
+  "poster": "static/images/objects/chair.png",
+  "annotation_removed": "scene name, frame ID and train/test view label in the top 40-pixel band",
+  "rendered_image_panels_cropped": false,
+  "all_six_method_panels_retained": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "train_views": 180,
+  "heldout_views": 20,
+  "original_view_metadata": "static/data/video_v2/syn_chair_v2.json",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1216,
+        "height": 884,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}
