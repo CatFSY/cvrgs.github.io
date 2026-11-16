@@ -46,7 +46,9 @@ const groups = [...html.matchAll(/<section[^>]*data-comparison-group="([^"]+)"[^
 assert.equal(groups.length, 4);
 assert.deepEqual(groups.find(group => group.dataset.comparisonGroup === 'hdr').querySelectorAll('[data-method]').map(button => button.dataset.method).sort(),
   ['3dgs', 'mcmc', 'gsw', 'lumi', 'ppisp', 'hdrgs', 'gausshdr'].sort());
-const originalComparisons = JSON.parse(fs.readFileSync(path.join(site, 'static/data/hdr_baselines/catalog.json'), 'utf8')).videos;
+const hdrComparisons = JSON.parse(fs.readFileSync(path.join(site, 'static/data/video_v4/catalog.json'), 'utf8'));
+assert.equal(hdrComparisons.length, 28);
+assert(hdrComparisons.every(record => record.label_background_added === false && record.only_glyph_pixels_changed_over_rendered_panels));
 const document = {
   addEventListener(type, cb) { assert.equal(type, 'DOMContentLoaded'); cb(); },
   querySelectorAll(selector) { assert.equal(selector, '[data-comparison-group]'); return groups; },
@@ -72,11 +74,10 @@ for (const group of groups) {
       verifyMedia();
       assert(group.video.src.includes(`_${scene.dataset.scene}`));
       if (method) {
-        const original = originalComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);
-        if (original) {
-          assert.equal(group.video.src, original.video);
-          assert.equal(group.video.poster, original.poster);
-        } else assert(group.video.src.includes(`_${method.dataset.method}_path`));
+        const record = hdrComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);
+        assert(record);
+        assert.equal(group.video.src, record.video);
+        assert.equal(group.video.poster, record.poster);
       }
       assert.equal(group.video.paused, true);
       combinations++;

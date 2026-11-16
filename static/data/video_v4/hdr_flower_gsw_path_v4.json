@@ -1,0 +1,130 @@
+{
+  "scene": "flower",
+  "method": "gsw",
+  "label": "GS-W",
+  "video": "static/videos/v4/hdr_flower_gsw_path_v4.mp4",
+  "poster": "static/images/video_v4/hdr_flower_gsw_path_v4_000.png",
+  "sha256": "d1d496b4a1bdd1067fdf92a0d6d74c514976b22e074319b16cd06330b7a1a95c",
+  "frames": 120,
+  "fps": 15,
+  "layout": [
+    1648,
+    1064
+  ],
+  "settings": [
+    "12U12M100O",
+    "100U12M12O",
+    "33U33M33O",
+    "50U50O"
+  ],
+  "setting_labels": [
+    "Bright-skewed",
+    "Dark-skewed",
+    "Uniform Random",
+    "Extreme Bimodal"
+  ],
+  "font": "/amax/home/fengshuangyu/cvrgs/output/fig3_relighting_layout_preview/body_fonts/NimbusRomNo9L-Regu.otf",
+  "font_sha256": "cdf576685df88c48163f26e007d0e23c7c46f8733db84834e6cbcd57949bc297",
+  "label_background_added": false,
+  "only_glyph_pixels_changed_over_rendered_panels": true,
+  "schematic_not_measured_histogram": true,
+  "source_videos": [
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/Gaussian-Wild/nn_8scenes_12U12M100O/flower/path_video.mp4",
+        "sha256": "03a5836a15330283c87a6d99105be3fa33f2b1c822f4fe6717026f5e55191141"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_12U12M100O/flower/path_video.mp4",
+        "sha256": "8be94b50d3d7a2e17c915f15787ce61ca09dfb43ee078bae403bfa6f1f3df5ca"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/Gaussian-Wild/nn_8scenes_100U12M12O/flower/path_video.mp4",
+        "sha256": "40ac9179f31332391bc587ca3c863fb867df6e4d00429eaa53808749df1b3be3"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_100U12M12O/flower/path_video.mp4",
+        "sha256": "cf0ccb52c2be1a11b6cba24bc0d86edfc5129b0584a7ef3f98c82e094e810e20"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/Gaussian-Wild/nn_8scenes_33U33M33O/flower/path_video.mp4",
+        "sha256": "d1d599e5e46d42bf7f7fe3283963f3ce2e2d3b3a643e379fd301d92d807244e8"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/flower/path_video.mp4",
+        "sha256": "e879231818748b907d6f9fe973859e062fd29cbb0005fcaaff7fe83d89ee0a4d"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/Gaussian-Wild/nn_8scenes_50U50O/flower/path_video.mp4",
+        "sha256": "d240a9209e6c09970aa50c41c740aab09d01f74a0c2754968b086ac8f1241b05"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_50U50O/flower/path_video.mp4",
+        "sha256": "ddea01cda6f4aa84fa8571ff9f7af0eb351c055a7508cc6bf528985ce925fd5f"
+      }
+    ]
+  ],
+  "source_replay_checks": [
+    {
+      "column": 0,
+      "row": 0,
+      "reference_psnr": 36.936
+    },
+    {
+      "column": 0,
+      "row": 1,
+      "reference_psnr": 38.745
+    },
+    {
+      "column": 1,
+      "row": 0,
+      "reference_psnr": 38.059
+    },
+    {
+      "column": 1,
+      "row": 1,
+      "reference_psnr": 39.409
+    },
+    {
+      "column": 2,
+      "row": 0,
+      "reference_psnr": 36.762
+    },
+    {
+      "column": 2,
+      "row": 1,
+      "reference_psnr": 39.287
+    },
+    {
+      "column": 3,
+      "row": 0,
+      "reference_psnr": 36.751
+    },
+    {
+      "column": 3,
+      "row": 1,
+      "reference_psnr": 39.494
+    }
+  ],
+  "elapsed_seconds": 7.86,
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 1064,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  }
+}

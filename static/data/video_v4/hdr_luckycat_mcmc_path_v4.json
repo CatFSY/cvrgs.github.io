@@ -1,0 +1,130 @@
+{
+  "scene": "luckycat",
+  "method": "mcmc",
+  "label": "GS-MCMC",
+  "video": "static/videos/v4/hdr_luckycat_mcmc_path_v4.mp4",
+  "poster": "static/images/video_v4/hdr_luckycat_mcmc_path_v4_000.png",
+  "sha256": "a4581bc97881348e6d878ca73ac7b8a66c3feebec5ecb3e5348a18b41d3f0b0c",
+  "frames": 120,
+  "fps": 15,
+  "layout": [
+    1648,
+    1064
+  ],
+  "settings": [
+    "12U12M100O",
+    "100U12M12O",
+    "33U33M33O",
+    "50U50O"
+  ],
+  "setting_labels": [
+    "Bright-skewed",
+    "Dark-skewed",
+    "Uniform Random",
+    "Extreme Bimodal"
+  ],
+  "font": "/amax/home/fengshuangyu/cvrgs/output/fig3_relighting_layout_preview/body_fonts/NimbusRomNo9L-Regu.otf",
+  "font_sha256": "cdf576685df88c48163f26e007d0e23c7c46f8733db84834e6cbcd57949bc297",
+  "label_background_added": false,
+  "only_glyph_pixels_changed_over_rendered_panels": true,
+  "schematic_not_measured_histogram": true,
+  "source_videos": [
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/3dgs-mcmc/output_mcmc_20U100O/luckycat/path_video.mp4",
+        "sha256": "5d82d038b4b56a875644cea8d09dfad4b5778fa2cc5e7fac33a0b92557f6904c"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_12U12M100O/luckycat/path_video.mp4",
+        "sha256": "c39670c1143897ca6b6ea2dc8beebed959364f27ba950d9d3efa7840fd88c587"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/3dgs-mcmc/output_mcmc_100U20O/luckycat/path_video.mp4",
+        "sha256": "a2b307531ed0409886e810484975a37f93e6f55e02e91bf6f548391f7be92119"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_100U12M12O/luckycat/path_video.mp4",
+        "sha256": "af6ca4aa6a44ac45a0d1a1d270d458a4227ee77731ac0701bb7b64189b5cb17d"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/3dgs-mcmc/output_mcmc_333333/luckycat/path_video.mp4",
+        "sha256": "2b8dd6cc7c5477008c2006b1101c24474a01eb9fcffb5d5422f9395d89149917"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/luckycat/path_video.mp4",
+        "sha256": "ba46a700c98ce45e6fec13f82a1c7c44252534dcc98f593b7d1bda6ea3c39c25"
+      }
+    ],
+    [
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/Z_com/3dgs-mcmc/output_mcmc_50U50O/luckycat/path_video.mp4",
+        "sha256": "910ab8e28b4124225f12fdd8d9fe040c3300036ace815193e0c147a9ca177986"
+      },
+      {
+        "path": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_50U50O/luckycat/path_video.mp4",
+        "sha256": "fe8d4644fcdedd99fec6666d3356b2e8b729e570df5594a7dd54386334a91032"
+      }
+    ]
+  ],
+  "source_replay_checks": [
+    {
+      "column": 0,
+      "row": 0,
+      "reference_psnr": 38.89
+    },
+    {
+      "column": 0,
+      "row": 1,
+      "reference_psnr": 38.695
+    },
+    {
+      "column": 1,
+      "row": 0,
+      "reference_psnr": 36.836
+    },
+    {
+      "column": 1,
+      "row": 1,
+      "reference_psnr": 38.958
+    },
+    {
+      "column": 2,
+      "row": 0,
+      "reference_psnr": 36.708
+    },
+    {
+      "column": 2,
+      "row": 1,
+      "reference_psnr": 39.037
+    },
+    {
+      "column": 3,
+      "row": 0,
+      "reference_psnr": 36.557
+    },
+    {
+      "column": 3,
+      "row": 1,
+      "reference_psnr": 38.854
+    }
+  ],
+  "elapsed_seconds": 10.11,
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 1064,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  }
+}

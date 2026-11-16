@@ -1,69 +1,63 @@
-# Comparison video update: continuous HDR camera paths
+# Comparison videos
 
-The Multi-Exposure section now follows the original camera-path rendering
-workflow. It does not use the previous v2 held-out-image slideshow.
+## Multi-Exposure
 
-## Multi-Exposure (current v3)
+The page exposes all seven baselines by method name: 3DGS, GS-MCMC, GS-W,
+LumiGS, PPISP, HDR-GS and GaussHDR, across box, luckycat, flower and plant.
+Each video shows the four protocols side by side: Bright-skewed, Dark-skewed,
+Uniform Random and Extreme Bimodal. Baseline renders are above CVR-GS.
 
-Four scenes: box, luckycat, flower, plant. Choose 3DGS, GS-MCMC, GS-W,
-LumiGS, PPISP, HDR-GS or GaussHDR. The original four baselines and three
-new baselines share the method selector; no comparison is hidden behind a
-historical-version menu.
-Each video presents all four training settings side by side: Bright-skewed,
-Dark-skewed, Uniform Random and Extreme Bimodal. The comparison method is
-above Ours, matching the original 1648×930 demo layout.
+The static reference-image banner is labeled Input, with Overexposed (O),
+Mid-exposure (M) and Underexposed (U) examples. These are recorded input
+examples, not ground truth for the moving camera. The exposure diagrams are
+schematic; they are not measured sampling-frequency histograms.
 
-The original four keyframe prefixes are replayed with the original B-spline
-function from exgs_test2/traj.py. Each model is loaded and rendered at 120
-continuous camera poses, producing 8 seconds at 15 FPS. Camera positions,
-orientations and cropped field of view are shared by all methods and settings.
-No image morphing, optical flow or interpolation between rendered photos is used.
+All annotations use Nimbus Roman No9 L Regular, matching the paper comparison
+figure. Method names are drawn directly on the native images: there is no
+white box, background tint or image cleanup beneath the labels.
 
-The top exposure-example banner is retained from the original video. These
-static recorded images illustrate exposure conditions; they are not GT for
-novel camera positions. No captured GT is available at the spline camera poses.
+The 28 videos are recomposed from original native render videos. The original
+3DGS, GS-MCMC, GS-W and LumiGS clips retain their corresponding original CVR-GS
+sources; the newer PPISP, HDR-GS and GaussHDR clips use the previously verified
+120-pose renders from runs/hdr_path_video_20261117. All clips retain 120 frames
+at 15 FPS (8 seconds). There is no photo slideshow, frame morphing, new model
+training or checkpoint modification.
 
-For the three newly rendered comparisons, model runs use their existing
-20000-step checkpoints. Each reloaded model
-was checked against a saved test output, within one 8-bit quantization level.
-Checkpoint hashes were checked before and after rendering. Native model frames
-are distinct across the trajectory. No retraining, Gaussian filtering or
-checkpoint changes were performed.
+The source videos are unchanged. Every recomposed first-frame panel is checked
+against its previously published counterpart outside the old label area; source
+hashes and replay checks are retained per comparison. Pixels outside the text
+glyphs are verified unchanged on the unencoded first-frame panels. Videos are
+encoded as H.264 and checked by decoding their complete duration.
 
-HDR-GS and GaussHDR retain the previous own-max normalization and mu-law5000
-display. PPISP shows clamp-only raw GS RGB from its no-metadata model, before
-Controller/ISP. Ours shows its learned canonical intrinsic RGB. There is no
-GT-mean alignment, new exposure fitting or external fusion.
+- Current videos: static/videos/v4/
+- Poster frames: static/images/video_v4/
+- Source hashes and composition checks: static/data/video_v4/
+- Reproduction: tools/video_update/compose_annotated_hdr.py
+- Scene and method control check: tools/video_update/check_video_switches.cjs
 
-- Videos (12): static/videos/v3/
-- Poster frames: static/images/video_v3/
-- Source hashes, trajectories, checkpoint and replay checks: static/data/video_v3/
-- Reproduction scripts: tools/video_update/prepare_video_paths.py,
-  render_video_paths.py, compose_video_paths.py, update_video_path_site.py.
-- Original workflow: exgs_test2/render_path.py, exgs_test2/traj.py,
-  exgs_test2/render_path_once.sh, exgs_test2/render_all_path.sh, and
-  ExgsPage/demo/README.md in the experiment workspace.
+HDR-GS and GaussHDR retain own-max normalization and mu-law5000 display. PPISP
+uses clamp-only direct GS RGB from training without exposure metadata, before
+the Controller/ISP. CVR-GS uses its learned canonical intrinsic RGB. No new
+exposure fitting, GT-mean alignment or external fusion is applied.
 
-## Synthetic
+## Multi-Light Objects
 
-The four v2 synthetic videos remain unchanged: hotdog, ficus, mic, chair.
-Panels show Input, GS-W, LumiGS, PPISP, Ours and GT, with 180 training and 20 test
-poses labeled in their recorded sequence. PPISP is the no-exposure-metadata
-GS branch before Controller/ISP. Model PNGs and legacy method videos retain
-the provenance recorded in static/data/video_v2/.
+The four synthetic videos remain unchanged: hotdog, ficus, mic and chair.
+Panels show Input, GS-W, LumiGS, PPISP, CVR-GS and GT, with 180 training and
+20 test poses labeled in their recorded sequence. PPISP is the GS branch
+before Controller/ISP from training without exposure metadata. Source details
+remain in static/data/video_v2/.
 
-## Earlier assets
+## Flashlight and LOM
 
-All original HDR baseline methods remain selectable by method name. Four
-previously published clips are reused byte-for-byte; twelve other scene/method
-clips are copied unchanged from ExgsPage/demo/Multi-exposure. Their original
-CVR-GS comparisons remain intact. Source paths, hashes and media checks are in
-static/data/hdr_baselines/catalog.json; the additional clips are in
-static/videos/baselines and posters in static/images/hdr_baselines.
+The original videos are unchanged. Flashlight retains Input, DarkGS, LITA-GS,
+LumiGS and CVR-GS. LOM retains 3DGS, LumiGS, LITA-GS and CVR-GS.
 
-Synthetic retains GS-W and LumiGS alongside PPISP and GT. Flashlight retains
-DarkGS, LITA-GS and LumiGS; LOM retains 3DGS, LumiGS and LITA-GS. Their videos
-are unchanged. The site uses scene/method buttons rather than version menus.
-The v2 HDR held-out-camera clips remain archived in static/videos/v2/; they are
-not the current continuous-camera comparison. See VIDEO_UPDATE_V2_ARCHIVE.md
-for their historical construction details.
+## Archived assets
+
+Earlier website videos and provenance records are preserved in their original
+paths, including static/videos/baselines/, static/videos/v3/ and
+static/data/hdr_baselines/. They are replaced on the page by the same methods
+with consistent annotations, rather than exposed through a version selector.
+The v2 HDR held-out-camera clips remain archived; they are not continuous
+camera-path videos. See VIDEO_UPDATE_V2_ARCHIVE.md for their construction.
