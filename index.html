@@ -91,7 +91,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaser.png" alt="CVR-GS Teaser" style="width:100%; border-radius:10px;">
+      <img src="./static/images/teaser.png?v=65c962e623" alt="CVR-GS Teaser" style="width:100%; border-radius:10px;">
     </div>
   </div>
 </section>
@@ -104,13 +104,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            While neural rendering methods such as Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) excel at novel view synthesis (NVS) under photometrically consistent lighting, they often fail in complex real-world environments. In unconstrained scenarios, varying illumination severely corrupts cross-view photometric consistency. Globally, entire images suffer from unpredictable under- or over-exposure. Locally, critical visual information is destroyed as highlights saturate and shadows collapse into noise.
-          </p>
-          <p>
-            To address this, we recast illumination-robust novel view synthesis as a cross-view relighting problem and propose CVR-GS. We synthesize one view under another view's illumination condition and constrain the reconstruction with illumination alignment and structural consistency, yielding a shared, illumination-invariant canonical appearance representation from complex per-view lighting. Furthermore, a per-Gaussian reliability score derived from the deviation between local and global illumination stabilizes densification and pruning in unreliable regions, such as shadows or saturated highlights, preventing geometry corruption.
-          </p>
-          <p>
-            CVR-GS achieves higher-quality NVS than prior methods across diverse benchmarks, from multi-exposure to extreme lighting conditions.
+            Scene digitization and free-viewpoint visualization require detailed 3D reconstructions with consistent appearance. However, exposure changes and spatially varying illumination in practical captures can obscure scene details and disrupt cross-view photometric consistency, making reliable reconstruction challenging. Yet details obscured by underexposure, saturation, or local shadows in one view may remain visible in another. To exploit these complementary observations, we propose CVR-GS, a 3D Gaussian Splatting framework based on cross-view relighting. By exchanging illumination between views, CVR-GS combines illumination alignment and multi-scale structural consistency to constrain appearance–illumination decomposition and recover shared appearance for novel-view rendering. We further use illumination reliability to guide Gaussian densification and pruning, mitigating erroneous growth and premature pruning caused by unreliable photometric gradients. When complementary observations are insufficient, a small set of enhanced anchor views guides recovery in low-light and overexposed scenes. Experiments across multi-exposure, Multi-Light Objects, flashlight, and one-sided exposure settings demonstrate state-of-the-art performance in cross-view fusion and appearance recovery.
           </p>
         </div>
       </div>
@@ -126,9 +120,9 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content">
-          <img src="./static/images/pipeline.png" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
+          <img src="./static/images/pipeline.png?v=21a6e7b484" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
-            <strong>Overview of CVR-GS pipeline.</strong> CVR-GS pairs illumination-complementary views and extracts cross-view features to decompose each Gaussian's color into canonical base appearance $B$, detail refinement $\Phi$, ambient illumination $E_{\text{env}}$, and per-view local shading $E_{\text{loc}}$. Cross-view relighting enforces consistency by exchanging illumination between paired views, while illumination-reliability guided optimization suppresses densification and pruning in degraded regions.
+            <strong>Overview of CVR-GS pipeline.</strong> CVR-GS pairs illumination-complementary views and learns an appearance–illumination decomposition of Gaussian colors for consistent appearance recovery. Cross-view relighting enforces consistency by exchanging illumination between paired views, while illumination reliability guides Gaussian densification and pruning.
           </p>
         </div>
       </div>
