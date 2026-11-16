@@ -27,6 +27,8 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+  <link rel="stylesheet" href="./static/css/comparisons-v2.css">
+  <script defer src="./static/js/comparisons-v2.js"></script>
 </head>
 <body>
 
@@ -135,106 +137,74 @@
 </section>
 
 
-<!-- Tabbed Scans -->
-<section class="section">
+<!-- Updated Multi-Exposure Scenes -->
+<section class="section comparison-v2" data-comparison-group="hdr"
+  data-caption="HDR-GS, GaussHDR, PPISP, Ours and Fusion GT at the same held-out camera poses. Choose one of the four training exposure settings. HDR-GS and GaussHDR use the existing mu-law display; PPISP uses direct GS RGB without exposure metadata, and Ours uses canonical appearance. Frames are held for inspection; this is a held-out view sequence, not a continuous camera path." data-legacy-caption="Previous four-setting comparison video.">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Multi-Exposure Scenes</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <div class="tabs is-boxed is-centered">
-          <ul>
-            <li class="is-active" data-scan="box"><a>box</a></li>
-            <li data-scan="luckycat"><a>luckycat</a></li>
-            <li data-scan="flower"><a>flower</a></li>
-            <li data-scan="plant"><a>plant</a></li>
-          </ul>
-        </div>
-
-        <div id="box" class="scan-content">
-          <video src="static/videos/hdr_box.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="luckycat" class="scan-content is-hidden">
-          <video src="static/videos/hdr_luckycat.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="flower" class="scan-content is-hidden">
-          <video src="static/videos/hdr_flower.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="plant" class="scan-content is-hidden">
-          <video src="static/videos/hdr_plant.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-
-        <script>
-          (function() {
-            const sec = document.currentScript.parentElement;
-            const tabs = sec.querySelectorAll('.tabs ul li');
-            const contents = sec.querySelectorAll('.scan-content');
-            tabs.forEach(tab => {
-              tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('is-active'));
-                contents.forEach(c => c.classList.add('is-hidden'));
-                tab.classList.add('is-active');
-                document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
-              });
-            });
-          })();
-        </script>
-
-        <div class="content has-text-justified" style="margin-top: 1.5rem;">
-          <p>
-            We categorize each training view's exposure into three levels: <strong>O</strong> (overexposed), <strong>M</strong> (mid exposure), and <strong>U</strong> (underexposed). We evaluate under four exposure distribution protocols, each defining the proportion of O/M/U views in the training set: <strong>(i) Bright-skewed</strong> (80% O / 10% M / 10% U), <strong>(ii) Dark-skewed</strong> (80% U / 10% M / 10% O), <strong>(iii) Uniform Random</strong> (equal ~33% O / ~33% M / ~33% U mix), and <strong>(iv) Extreme Bimodal</strong> (50% O / 50% U, no mid-exposure). All use a fixed random seed for reproducibility.
-          </p>
-        </div>
-
+    <div class="scene-buttons" role="group" aria-label="Multi-Exposure Scenes scenes">
+      <button type="button" class="button is-link" data-scene="box" aria-pressed="true">box</button>
+<button type="button" class="button is-light" data-scene="luckycat" aria-pressed="false">luckycat</button>
+<button type="button" class="button is-light" data-scene="flower" aria-pressed="false">flower</button>
+<button type="button" class="button is-light" data-scene="plant" aria-pressed="false">plant</button>
+    </div>
+    <div class="comparison-controls">
+      <div>
+        <label for="hdr-version-v2">Comparison</label>
+        <div class="select"><select id="hdr-version-v2" data-version>
+          <option value="v2">Updated methods</option>
+          <option value="legacy">Previous video</option>
+        </select></div>
       </div>
+      <div data-setting-control>
+              <label for="hdr-setting-v2">Training exposure setting</label>
+              <div class="select"><select id="hdr-setting-v2" data-setting>
+                <option value="12U12M100O">Bright-skewed (12U12M100O)</option>
+                <option value="100U12M12O">Dark-skewed (100U12M12O)</option>
+                <option value="33U33M33O">Uniform Random (33U33M33O)</option>
+                <option value="50U50O" selected>Extreme Bimodal (50U50O)</option>
+              </select></div>
+            </div>
+    </div>
+    <video src="static/videos/v2/hdr_box_50U50O_v2.mp4" poster="static/images/video_v2/hdr_box_50U50O_v2.png"
+      controls loop muted playsinline preload="metadata" aria-label="Multi-Exposure Scenes method comparison"></video>
+    <p data-video-error role="alert" hidden>Unable to load the video. Use the MP4 download below.</p>
+    <p class="comparison-caption" data-caption>HDR-GS, GaussHDR, PPISP, Ours and Fusion GT at the same held-out camera poses. Choose one of the four training exposure settings. HDR-GS and GaussHDR use the existing mu-law display; PPISP uses direct GS RGB without exposure metadata, and Ours uses canonical appearance. Frames are held for inspection; this is a held-out view sequence, not a continuous camera path.</p>
+    <div class="comparison-downloads">
+      <a data-download href="static/videos/v2/hdr_box_50U50O_v2.mp4" download>Download MP4</a>
+      <a data-protocol href="static/data/video_v2/hdr_box_50U50O_v2.json">Sources and display protocol</a>
     </div>
   </div>
 </section>
 
-<!-- Synthetic Scenes -->
-<section class="section">
+<!-- Updated Synthetic Scenes -->
+<section class="section comparison-v2" data-comparison-group="syn"
+  data-caption="Input, GS-W, LumiGS, PPISP, Ours and GT at corresponding views. PPISP uses the model trained without exposure metadata and renders direct GS RGB before the Controller and ISP. All 200 views are shown in their recorded order; each frame identifies its training or test split." data-legacy-caption="Previous four-column video: Input, GS-W, LumiGS and Ours.">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Synthetic Dataset</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <div class="tabs is-boxed is-centered">
-          <ul>
-            <li class="is-active" data-scan="syn_hotdog"><a>hotdog</a></li>
-            <li data-scan="syn_ficus"><a>ficus</a></li>
-            <li data-scan="syn_mic"><a>mic</a></li>
-            <li data-scan="syn_chair"><a>chair</a></li>
-          </ul>
-        </div>
-
-        <div id="syn_hotdog" class="scan-content">
-          <video src="static/videos/syn_hotdog.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="syn_ficus" class="scan-content is-hidden">
-          <video src="static/videos/syn_ficus.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="syn_mic" class="scan-content is-hidden">
-          <video src="static/videos/syn_mic.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="syn_chair" class="scan-content is-hidden">
-          <video src="static/videos/syn_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-
-        <script>
-          (function() {
-            const sec = document.currentScript.parentElement;
-            const tabs = sec.querySelectorAll('.tabs ul li');
-            const contents = sec.querySelectorAll('.scan-content');
-            tabs.forEach(tab => {
-              tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('is-active'));
-                contents.forEach(c => c.classList.add('is-hidden'));
-                tab.classList.add('is-active');
-                document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
-              });
-            });
-          })();
-        </script>
-
+    <div class="scene-buttons" role="group" aria-label="Synthetic Dataset scenes">
+      <button type="button" class="button is-link" data-scene="hotdog" aria-pressed="true">hotdog</button>
+<button type="button" class="button is-light" data-scene="ficus" aria-pressed="false">ficus</button>
+<button type="button" class="button is-light" data-scene="mic" aria-pressed="false">mic</button>
+<button type="button" class="button is-light" data-scene="chair" aria-pressed="false">chair</button>
+    </div>
+    <div class="comparison-controls">
+      <div>
+        <label for="syn-version-v2">Comparison</label>
+        <div class="select"><select id="syn-version-v2" data-version>
+          <option value="v2">Updated methods</option>
+          <option value="legacy">Previous video</option>
+        </select></div>
       </div>
+
+    </div>
+    <video src="static/videos/v2/syn_hotdog_v2.mp4" poster="static/images/video_v2/syn_hotdog_v2.png"
+      controls loop muted playsinline preload="metadata" aria-label="Synthetic Dataset method comparison"></video>
+    <p data-video-error role="alert" hidden>Unable to load the video. Use the MP4 download below.</p>
+    <p class="comparison-caption" data-caption>Input, GS-W, LumiGS, PPISP, Ours and GT at corresponding views. PPISP uses the model trained without exposure metadata and renders direct GS RGB before the Controller and ISP. All 200 views are shown in their recorded order; each frame identifies its training or test split.</p>
+    <div class="comparison-downloads">
+      <a data-download href="static/videos/v2/syn_hotdog_v2.mp4" download>Download MP4</a>
+      <a data-protocol href="static/data/video_v2/syn_hotdog_v2.json">Sources and display protocol</a>
     </div>
   </div>
 </section>

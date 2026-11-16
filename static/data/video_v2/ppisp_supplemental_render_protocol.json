@@ -1,0 +1,47 @@
+[
+  {
+    "scene": "chair",
+    "train_views": 180,
+    "test_reload_png_max_error": 0,
+    "seconds": 7.30762386880815,
+    "checkpoint_sha256": {
+      "point_cloud.ply": "079bc1497b6f4200a955a0f4152d1ea79d2f09a13827c59ccdbf56582ed277c8",
+      "ppisp.pt": "d9d877815883ad00d4245554d7f0b6061317dec8d2a4edaadc1851850e49a2b0"
+    },
+    "metadata_used": false,
+    "controller_isp_bypassed": true,
+    "photo_pixels_loaded": false,
+    "weights_unchanged": true,
+    "gpu": 1
+  },
+  {
+    "scene": "ficus",
+    "train_views": 180,
+    "test_reload_png_max_error": 0,
+    "seconds": 4.809930526185781,
+    "checkpoint_sha256": {
+      "point_cloud.ply": "5572d20b494c8976c08a9685c049e18cb7b5b480e4817ab0512ad17f5ad6e236",
+      "ppisp.pt": "3be418bb4cf9845f8b066f12597b53e7cc753f5d0bec76cbaa4d3f0cfdec835c"
+    },
+    "metadata_used": false,
+    "controller_isp_bypassed": true,
+    "photo_pixels_loaded": false,
+    "weights_unchanged": true,
+    "gpu": 1
+  },
+  {
+    "scene": "mic",
+    "train_views": 180,
+    "test_reload_png_max_error": 0,
+    "seconds": 5.6326371459290385,
+    "checkpoint_sha256": {
+      "point_cloud.ply": "0fb0e71afc066cbe073ce4b54442a298776968def1c675961a10bb03dfe1ca10",
+      "ppisp.pt": "aa1cfc405fd7a536a8707fa0eeea205c9f51c6478ad2c49135ba2b6b7efcc205"
+    },
+    "metadata_used": false,
+    "controller_isp_bypassed": true,
+    "photo_pixels_loaded": false,
+    "weights_unchanged": true,
+    "gpu": 1
+  }
+]

@@ -1,0 +1,46 @@
+.comparison-v2 .scene-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+.comparison-v2 .comparison-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.comparison-v2 label {
+  display: block;
+  margin-bottom: .35rem;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.comparison-v2 video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: white;
+  border: 1px solid #ededed;
+  border-radius: 6px;
+}
+.comparison-v2 .comparison-caption {
+  margin-top: 1rem;
+  line-height: 1.65;
+  text-align: left;
+}
+.comparison-v2 .comparison-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: .75rem;
+}
+.comparison-v2 [hidden] { display: none !important; }
+@media (max-width: 600px) {
+  .comparison-v2 .comparison-controls { align-items: stretch; }
+  .comparison-v2 .select, .comparison-v2 select { max-width: 100%; }
+}

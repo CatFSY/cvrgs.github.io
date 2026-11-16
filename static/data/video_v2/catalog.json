@@ -1,0 +1,471 @@
+{
+  "version": 2,
+  "source_repository": "https://github.com/CatFSY/cvrgs.github.io",
+  "synthetic": [
+    {
+      "scene": "hotdog",
+      "video": "static/videos/v2/syn_hotdog_v2.mp4",
+      "poster": "static/images/video_v2/syn_hotdog_v2.png",
+      "protocol": "static/data/video_v2/syn_hotdog_v2.json",
+      "bytes": 4273783,
+      "sha256": "a8de7381573464c8128c9e1297ea691670ea23411534fe8b5c45f9bb1dd94e73",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 924,
+            "r_frame_rate": "20/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "scene": "ficus",
+      "video": "static/videos/v2/syn_ficus_v2.mp4",
+      "poster": "static/images/video_v2/syn_ficus_v2.png",
+      "protocol": "static/data/video_v2/syn_ficus_v2.json",
+      "bytes": 5507676,
+      "sha256": "b8001e9b7d7a7091781aec63c612f1b43359c7a536332481238a8ec4ff9cf5ca",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 924,
+            "r_frame_rate": "20/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "scene": "mic",
+      "video": "static/videos/v2/syn_mic_v2.mp4",
+      "poster": "static/images/video_v2/syn_mic_v2.png",
+      "protocol": "static/data/video_v2/syn_mic_v2.json",
+      "bytes": 3760710,
+      "sha256": "6e5b31e177c47918b3c04e07a082feab6df4f4bfd12cfdf88c5bc4b004f1ebc1",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 924,
+            "r_frame_rate": "20/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    },
+    {
+      "scene": "chair",
+      "video": "static/videos/v2/syn_chair_v2.mp4",
+      "poster": "static/images/video_v2/syn_chair_v2.png",
+      "protocol": "static/data/video_v2/syn_chair_v2.json",
+      "bytes": 7129084,
+      "sha256": "60787e944e0f8b3143a3fbac067fd5bb354959c4de845ab91e3db3e08a8c7399",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 924,
+            "r_frame_rate": "20/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "10.000000"
+        }
+      }
+    }
+  ],
+  "multi_exposure": [
+    {
+      "scene": "box",
+      "video": "static/videos/v2/hdr_box_12U12M100O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_box_12U12M100O_v2.png",
+      "protocol": "static/data/video_v2/hdr_box_12U12M100O_v2.json",
+      "bytes": 1105934,
+      "sha256": "c659fba17374e3b280699a9dba129936f63c356a01b1541b5eb4509f2f81217d",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "12U12M100O"
+    },
+    {
+      "scene": "box",
+      "video": "static/videos/v2/hdr_box_100U12M12O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_box_100U12M12O_v2.png",
+      "protocol": "static/data/video_v2/hdr_box_100U12M12O_v2.json",
+      "bytes": 1101090,
+      "sha256": "f8d4a7373311b53a929cf5d05157ec416b4b8b2dc2c8b396f4f2d8d6ed8629e7",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "100U12M12O"
+    },
+    {
+      "scene": "box",
+      "video": "static/videos/v2/hdr_box_33U33M33O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_box_33U33M33O_v2.png",
+      "protocol": "static/data/video_v2/hdr_box_33U33M33O_v2.json",
+      "bytes": 1122716,
+      "sha256": "ed30daca9dd9e09642b1415931eee42ef921bc41e08167a073272d8f76df2260",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "33U33M33O"
+    },
+    {
+      "scene": "box",
+      "video": "static/videos/v2/hdr_box_50U50O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_box_50U50O_v2.png",
+      "protocol": "static/data/video_v2/hdr_box_50U50O_v2.json",
+      "bytes": 1123416,
+      "sha256": "1e369337d6a09799e43d239dc9e806267b8d81c7c40f5cfbe92a3659f7f0080c",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "50U50O"
+    },
+    {
+      "scene": "luckycat",
+      "video": "static/videos/v2/hdr_luckycat_12U12M100O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_luckycat_12U12M100O_v2.png",
+      "protocol": "static/data/video_v2/hdr_luckycat_12U12M100O_v2.json",
+      "bytes": 1271030,
+      "sha256": "8c866cd0c509e33debb16d81a0091f4d85170506d99a8184453b6e69f0d9390f",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "12U12M100O"
+    },
+    {
+      "scene": "luckycat",
+      "video": "static/videos/v2/hdr_luckycat_100U12M12O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_luckycat_100U12M12O_v2.png",
+      "protocol": "static/data/video_v2/hdr_luckycat_100U12M12O_v2.json",
+      "bytes": 1221293,
+      "sha256": "3eb0588aa84b5721178b7b59295d51c0ef91f3bdb152deba29da0934a4c0dfcf",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "100U12M12O"
+    },
+    {
+      "scene": "luckycat",
+      "video": "static/videos/v2/hdr_luckycat_33U33M33O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_luckycat_33U33M33O_v2.png",
+      "protocol": "static/data/video_v2/hdr_luckycat_33U33M33O_v2.json",
+      "bytes": 1313142,
+      "sha256": "3df6fd942b43796fb8bcd4fea005b3f746d20c5bb97e67ef4bf7f06bb2175578",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "33U33M33O"
+    },
+    {
+      "scene": "luckycat",
+      "video": "static/videos/v2/hdr_luckycat_50U50O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_luckycat_50U50O_v2.png",
+      "protocol": "static/data/video_v2/hdr_luckycat_50U50O_v2.json",
+      "bytes": 1263022,
+      "sha256": "e8485c20742d1833b6d8e23d6369c4cd8b5cfb188152761c50687139dc9856df",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "50U50O"
+    },
+    {
+      "scene": "flower",
+      "video": "static/videos/v2/hdr_flower_12U12M100O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_flower_12U12M100O_v2.png",
+      "protocol": "static/data/video_v2/hdr_flower_12U12M100O_v2.json",
+      "bytes": 1093020,
+      "sha256": "6d8bec20d4fbbab6cd73dffc5b11a61ca49d6b739db5919c1500fa2dbae53b5f",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "12U12M100O"
+    },
+    {
+      "scene": "flower",
+      "video": "static/videos/v2/hdr_flower_100U12M12O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_flower_100U12M12O_v2.png",
+      "protocol": "static/data/video_v2/hdr_flower_100U12M12O_v2.json",
+      "bytes": 1127321,
+      "sha256": "6376596d805f78d718e9edb667ecfc26bfdd58df3747715c353841bd328a3751",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "100U12M12O"
+    },
+    {
+      "scene": "flower",
+      "video": "static/videos/v2/hdr_flower_33U33M33O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_flower_33U33M33O_v2.png",
+      "protocol": "static/data/video_v2/hdr_flower_33U33M33O_v2.json",
+      "bytes": 1160933,
+      "sha256": "9c31ad105d0972caa485e840e96f54d6299d4501b95156642957031e4716fd8a",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "33U33M33O"
+    },
+    {
+      "scene": "flower",
+      "video": "static/videos/v2/hdr_flower_50U50O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_flower_50U50O_v2.png",
+      "protocol": "static/data/video_v2/hdr_flower_50U50O_v2.json",
+      "bytes": 1122350,
+      "sha256": "3baf69b356e1063e33760648a793a46b8a28cee3dffa1fa2a572b36ff5c8263a",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1216,
+            "height": 708,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "50U50O"
+    },
+    {
+      "scene": "plant",
+      "video": "static/videos/v2/hdr_plant_12U12M100O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_plant_12U12M100O_v2.png",
+      "protocol": "static/data/video_v2/hdr_plant_12U12M100O_v2.json",
+      "bytes": 4043536,
+      "sha256": "5346055d59cbdbe0655f100f45529b0ecc1043c19219cf93b9aef36cdefd4f9e",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1504,
+            "height": 916,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "12U12M100O"
+    },
+    {
+      "scene": "plant",
+      "video": "static/videos/v2/hdr_plant_100U12M12O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_plant_100U12M12O_v2.png",
+      "protocol": "static/data/video_v2/hdr_plant_100U12M12O_v2.json",
+      "bytes": 4155070,
+      "sha256": "6fccdb0556a4cfcba6eff6b9bf11c04b33eecc3fededc2771d129d05f2e09a41",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1504,
+            "height": 916,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "100U12M12O"
+    },
+    {
+      "scene": "plant",
+      "video": "static/videos/v2/hdr_plant_33U33M33O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_plant_33U33M33O_v2.png",
+      "protocol": "static/data/video_v2/hdr_plant_33U33M33O_v2.json",
+      "bytes": 4236573,
+      "sha256": "b746557b4ad77160b7e98efb9b6773144b5cbc251c2930bb6c2bf79b023e79fb",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1504,
+            "height": 916,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "33U33M33O"
+    },
+    {
+      "scene": "plant",
+      "video": "static/videos/v2/hdr_plant_50U50O_v2.mp4",
+      "poster": "static/images/video_v2/hdr_plant_50U50O_v2.png",
+      "protocol": "static/data/video_v2/hdr_plant_50U50O_v2.json",
+      "bytes": 4116509,
+      "sha256": "7b76b789fa9c802bdaa39085484f6aa846fc36cf74638e1f9cb8430ae1e9ad34",
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1504,
+            "height": 916,
+            "r_frame_rate": "20/1",
+            "nb_frames": "160"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      },
+      "setting": "50U50O"
+    }
+  ],
+  "notes": [
+    "Videos contain existing model outputs; no retraining, GT fitting, fusion or new enhancement.",
+    "Synthetic sequences contain 180 training and20 held-out poses, labeled per frame.",
+    "Multi-exposure sequences contain held-out poses only, held for multiple frames; no image morphing.",
+    "HDR-GS/GaussHDR use existing own-max normalized mu-law5000 displays; Ours native intrinsic and PPISP raw GS RGB.",
+    "Legacy video sources have frame order documented in ExgsPage/demo/README.md; their per-frame camera metadata is unavailable."
+  ]
+}

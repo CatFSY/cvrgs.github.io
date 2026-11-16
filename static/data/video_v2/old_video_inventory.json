@@ -1,0 +1,242 @@
+[
+  {
+    "path": "static/videos/flash_lab1.mp4",
+    "bytes": 1791209,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2056,
+        "height": 314,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/flash_lab2.mp4",
+    "bytes": 1185211,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2056,
+        "height": 314,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/flash_out2.mp4",
+    "bytes": 1762596,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2056,
+        "height": 314,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/hdr_box.mp4",
+    "bytes": 3488620,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "25/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/hdr_flower.mp4",
+    "bytes": 2659499,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "25/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/hdr_luckycat.mp4",
+    "bytes": 4429969,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "25/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/hdr_plant.mp4",
+    "bytes": 4827002,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "25/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  },
+  {
+    "path": "static/videos/lom_buu.mp4",
+    "bytes": 1216937,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2090,
+        "height": 398,
+        "r_frame_rate": "15/1",
+        "nb_frames": "103"
+      }
+    ],
+    "format": {
+      "duration": "6.866667"
+    }
+  },
+  {
+    "path": "static/videos/lom_chair.mp4",
+    "bytes": 1268053,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2090,
+        "height": 398,
+        "r_frame_rate": "15/1",
+        "nb_frames": "103"
+      }
+    ],
+    "format": {
+      "duration": "6.866667"
+    }
+  },
+  {
+    "path": "static/videos/lom_shrub.mp4",
+    "bytes": 5257630,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2090,
+        "height": 398,
+        "r_frame_rate": "15/1",
+        "nb_frames": "103"
+      }
+    ],
+    "format": {
+      "duration": "6.866667"
+    }
+  },
+  {
+    "path": "static/videos/lom_sofa.mp4",
+    "bytes": 1110860,
+    "programs": [],
+    "streams": [
+      {
+        "width": 2090,
+        "height": 398,
+        "r_frame_rate": "15/1",
+        "nb_frames": "103"
+      }
+    ],
+    "format": {
+      "duration": "6.866667"
+    }
+  },
+  {
+    "path": "static/videos/syn_chair.mp4",
+    "bytes": 4300594,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 400,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  },
+  {
+    "path": "static/videos/syn_ficus.mp4",
+    "bytes": 3402242,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 400,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  },
+  {
+    "path": "static/videos/syn_hotdog.mp4",
+    "bytes": 2945802,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 400,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  },
+  {
+    "path": "static/videos/syn_mic.mp4",
+    "bytes": 2419492,
+    "programs": [],
+    "streams": [
+      {
+        "width": 1600,
+        "height": 400,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+]

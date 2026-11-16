@@ -1,0 +1,456 @@
+{
+  "dataset": "multi_exposure",
+  "scene": "box",
+  "setting": "33U33M33O",
+  "fps": 20,
+  "frames": 160,
+  "duration_seconds": 8,
+  "unique_held_out_poses": 17,
+  "panel_resolution": [
+    400,
+    264
+  ],
+  "layout": "three top panels, two centered bottom panels",
+  "columns": [
+    "HDR-GS",
+    "GaussHDR",
+    "PPISP",
+    "Ours",
+    "Fusion GT"
+  ],
+  "iterations": 20000,
+  "hdrgs_gausshdr_display": "existing own-max normalization and mu-law5000 PNGs",
+  "ours_display": "native intrinsic RGB",
+  "ppisp_display": "raw GS RGB; trained without exposure metadata; controller/ISP bypassed",
+  "fusion_gt": "existing 8-bit fused PNG, byte/pixel-checked across all methods; not calibrated linear HDR ground truth",
+  "view_selection": "all held-out poses in sorted prefix order; no hand picking",
+  "temporal_processing": "Hold existing images for8 or10 display frames; no blending, interpolation, or morphing.",
+  "spatial_processing": "No resizing, cropping, color or brightness adjustment before encoding H264 CRF18.",
+  "records": [
+    {
+      "view": "001",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/001.png",
+          "sha256": "8b5d1f78992e39d6f64f4e90a27ab6efd43264fc4d51b66856fa1698386b0da9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/001.png",
+          "sha256": "1d75cf271cf6aee5a91ef2a14dc3b517d360276a531a1dd82aebf269a21d9393"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/001.png",
+          "sha256": "7e35148c2e4a0ef8b49666d02d3d8abbfb8b8063038f3f0fc1d5efa234abdaae"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/001.png",
+          "sha256": "b4ef5981b8ebaec2a877d7c385ebc3ecec9668a25d3be3a7c6bebe847c5e34c6"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/001.png",
+          "sha256": "8d9c3b577c0102c4b7c1512a2a196cb067eae378f3034428c1ae25d0d10c8bf0"
+        }
+      ]
+    },
+    {
+      "view": "003",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/003.png",
+          "sha256": "49ae9adb2a87d0e06b6c2b8181463f6be7492107080f36217903db6cf87de0c9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/003.png",
+          "sha256": "3b7918387caa36c60a8de399175ec5330e7956fdc5d4d5a28fdcc184edd2e2d5"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/003.png",
+          "sha256": "52831184b5cf7c20afe26001de228052d647d96a4cc0b1939174412163fb11a0"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/003.png",
+          "sha256": "b699d9f329a79ab0e7c366c2f94962f8a8c97d00fb453dd21ba246d37b259f0b"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/003.png",
+          "sha256": "ac2facd9d517c9fedd72db026024309a9f7fb64a31e455dae268efd93860cc6d"
+        }
+      ]
+    },
+    {
+      "view": "005",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/005.png",
+          "sha256": "64fdcfea4324c073d3628296cca2941f2f40c1825671fadcb664ec963e474fa9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/005.png",
+          "sha256": "6250f53fb5edc34af3f17849c60fc68be1c4ad727c40e0b76e455852567fa737"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/005.png",
+          "sha256": "2e8fef31d92b18b981eafbd26223ec27a6c413fcc013a9de315566f2117e897b"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/005.png",
+          "sha256": "e3f4815edb5db5f1661c7ae1adda2bc3fce8ddf632a34f291a43eb0fd8a6e485"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/005.png",
+          "sha256": "3ae71528db0aaf2a56b3df4b3108832a6e29318097ce88037dd3d7202b14ca6b"
+        }
+      ]
+    },
+    {
+      "view": "007",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/007.png",
+          "sha256": "01a72f7f5f6a7cbfba2d04370d470e9e5081873b8a6f150a75126adc902bbefc"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/007.png",
+          "sha256": "bdd5b07e0c44ea2464202de47c1303ffa252faca62c5d7ba68b7fe17bef71f22"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/007.png",
+          "sha256": "d4baf38dd3de93810e0bf2cd389b723a1b747ba1b9ddec8547b1310559fe7529"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/007.png",
+          "sha256": "2ec1ad523ec9e6dc7ab424239194a312332684ee2dd55d202cfe7ec452bc40da"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/007.png",
+          "sha256": "1c62fde90bc4253063f7f366848870e78466de90d9b483b0f7ce0125be544685"
+        }
+      ]
+    },
+    {
+      "view": "009",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/009.png",
+          "sha256": "05ded7cc60d419a1b8fb85d8f6a433b917364e76a062b300de63acc6762e1140"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/009.png",
+          "sha256": "9c56007ac72618ea8f88e5de983646acea8e662a1ce639cf26a085b3b52cc3e1"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/009.png",
+          "sha256": "d1836d2e91dad6950d2b229bcb1fd748d352bd29408294ea86d41d419ccfe509"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/009.png",
+          "sha256": "c7b7a3d789407e201ae6c2696a2904221d8b8bec278d773853adce13481a1956"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/009.png",
+          "sha256": "0da8550fe64048293a4f785edda18135116f5432e5694fa8b785883dfed5f0d8"
+        }
+      ]
+    },
+    {
+      "view": "011",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/011.png",
+          "sha256": "a52823fb84b9cfe033a6084d3f8b2d281cb472629752505f640afcb8de9f89d1"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/011.png",
+          "sha256": "bd0e5cdfef9c431db93fb3b3b0af38420af24d0c31ceacbd0845931926b61878"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/011.png",
+          "sha256": "e6e792db752984025b62df1395fb2d97e1bc862a92b7d0542a378f08a618ba04"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/011.png",
+          "sha256": "b6efac7fca23c85cd454b6497e4af79dd73ad2946e51138b9da03b2de7d5f34d"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/011.png",
+          "sha256": "611f1cd15803b05e4259f5d0d4879c5aa22189069236ca30236efc06507da8e6"
+        }
+      ]
+    },
+    {
+      "view": "013",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/013.png",
+          "sha256": "055054dc7b71fcf47eaf1ebea7efc38ef05bbafec87588d4b546ffa49979de2c"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/013.png",
+          "sha256": "90072925414cab2ebad8c5edc0d54d9f7fe0ba8abab3c07324c2191b7739127c"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/013.png",
+          "sha256": "dea5f6163a6482b7e6027ff29196c47d650b110ca236dd442d63a2e1ee915365"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/013.png",
+          "sha256": "f70570ea102cf5cd45d14038cd43ec8b6b84699b57387bb6dbf8cfd1a37c41aa"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/013.png",
+          "sha256": "bfe3b9e7b62f00dad40175a24836674299235289a0f675337073ddce9ac42927"
+        }
+      ]
+    },
+    {
+      "view": "015",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/015.png",
+          "sha256": "52ad6a445d8cc851067b63e1c79b8300235d9e883da1fc53c144f4fc56f91241"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/015.png",
+          "sha256": "0ca4ecba2e9b94207e5b0fb0d8f3900efe3d8a8c55781709a3a34ed5c3eba4c1"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/015.png",
+          "sha256": "15d218f0d8226a36b2e95d4467a6719fbcf6badbeb3bd374a0873ef2c2ab1138"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/015.png",
+          "sha256": "bcd7acfeb11645b8cbaac8efb855b8ba854ecd95ef7d29cdfcb5083d636c671d"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/015.png",
+          "sha256": "b9da590266bf248c8b698c7f2fefabc486f75b76264449fae2fe7d8726f3412c"
+        }
+      ]
+    },
+    {
+      "view": "017",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/017.png",
+          "sha256": "a6209c3801d42e6827194228228c7609b1b63212a81e4d1beaf52f76c33d0fdb"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/017.png",
+          "sha256": "1fa85fb69ea0bf0993e2e64670365803414ea0a16a674e4472f63d16451639d9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/017.png",
+          "sha256": "5cf669a8fb29d2b6f30683cc5a93d1d597cef5da13315f27051c928e70f1e242"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/017.png",
+          "sha256": "5053184bfc6e83767d0c00f8f9201b32a1b65197a1410143ffc80796a414e0d3"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/017.png",
+          "sha256": "4eaaf8eab88c5270c16bcbbe02152538eb2ea3a2907c705ba471e25142d0d6f5"
+        }
+      ]
+    },
+    {
+      "view": "019",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/019.png",
+          "sha256": "4772cdde8d985c0eee9a0325550a8d749b5878a40a240a3de3aa924e23111673"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/019.png",
+          "sha256": "83150a7d79c612feff9caae1e14f0d3241d0fba69941f52bf6553d58b61eee03"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/019.png",
+          "sha256": "ef4b56cedb5d5c2fc0df5dcb5315b2caa2452a9beba87b999ad91241390606a9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/019.png",
+          "sha256": "0bbf320762d12c41a4419507d919d7a6e44397476e973941028362a485482da7"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/019.png",
+          "sha256": "a126fa7d29dce6bac387771cf8a6bbfade22610a2eddf567b36f4a6a671fd44c"
+        }
+      ]
+    },
+    {
+      "view": "021",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/021.png",
+          "sha256": "7835aa5fa95dfcebdb826057ebc1b387de464306a4ea684e6cf40639febe9d64"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/021.png",
+          "sha256": "bb21b9bcbc0cb0310ce0f01904cad9079cd0cf422c3ee86cbd2e97d48f7e23c2"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/021.png",
+          "sha256": "ecd16fc71aa08806d43c9237ed227978ac0863d49718679a513bf2cb93d52fa9"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/021.png",
+          "sha256": "b327e5904455ae6b3c8ac5f94213d3de55f4e4899a0b7617375e9c2f98c891ab"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/021.png",
+          "sha256": "7a76a20ed5d1f81ca4ab72eef7efde4438dcc16a314607e3650e7e518ae4601d"
+        }
+      ]
+    },
+    {
+      "view": "023",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/023.png",
+          "sha256": "42ecb2ed6122f5c645893b68134230e6774605ec1d7b0dbbd157adc028191e2d"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/023.png",
+          "sha256": "a8dd521f011efc68ae73ad23f8cb3fe7bfc890c2948c30349f015af20536a75d"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/023.png",
+          "sha256": "237addf7f8cd5ec4bd738bf5f116b61a621df8aeab6cb6a46acf3d3fda74a3ac"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/023.png",
+          "sha256": "f274c6418b8688a14285ad6c7d40063ddbf25c17b6eabeeaf29049bf7c56ecab"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/023.png",
+          "sha256": "2bbed600ce7350b65a130073c6f55a40f908f97efd180a113a26805920245eff"
+        }
+      ]
+    },
+    {
+      "view": "025",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/025.png",
+          "sha256": "5ee2346c338b568e06e4bbb603447e026bef9d5e68d0c3062a271019db4ea73f"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/025.png",
+          "sha256": "6b6bde4c710617cecf7faf69c62b623a3e2548156c8f4851d5d67bf2415599dc"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/025.png",
+          "sha256": "31e80ff3f5962192a7756c586ae658aa1cfbd118d3c89435164d0d77f87e3138"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/025.png",
+          "sha256": "a9205d864e3658c81122e8560ea31638779adca6e36069642962f8cfa4a55a5b"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/025.png",
+          "sha256": "cc134cc19829884c39371914dd140ae5b28e72e7590627d6506019b6257c6c42"
+        }
+      ]
+    },
+    {
+      "view": "027",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/027.png",
+          "sha256": "e1fa56af5b4ac1c623fbea0055c969f6b8d1f96c93fc9ca9f7e872839afbb4a3"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/027.png",
+          "sha256": "d12d76587f3f1224d837fc5a630ff1e93b803c00e8af53ea0570d50dbd36224b"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/027.png",
+          "sha256": "000ca39b95d059df6746b8fcae51222ec5f8a4c7eae4adae3651060f2632d3e8"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/027.png",
+          "sha256": "21e191da8470b8c09b5d2a56b722cb60e00f6218fd19d4b904facf184f8e3d46"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/027.png",
+          "sha256": "105b9d2ebd974e92548ffbb8c949a1ae815630ebde947f1f689d294bb5208d1c"
+        }
+      ]
+    },
+    {
+      "view": "029",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/029.png",
+          "sha256": "8a1fd1bbf4c3074aaf2f0c1b3e5a2492357a7d5d61348f973474376eacba4129"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/029.png",
+          "sha256": "9a11e73fc974c4f56f2d4a227cd9b80d79485cb25ec7047bed0afdef52f9df94"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/029.png",
+          "sha256": "583353f3ea82e54bc2072a1a0ee69f1a5040891ab3d3edd0f15065d13eb49209"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/029.png",
+          "sha256": "11cabdab663ac9aca8765e3aca9510be3d3384b04496fe64fb08565316d62d9a"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/029.png",
+          "sha256": "eda030b9ddd65f748689cfb5d06ddebb23da2709233e16527dc924572d5c69ab"
+        }
+      ]
+    },
+    {
+      "view": "031",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/031.png",
+          "sha256": "b7baf87f9e7c4316b5b621b04d2d4eb0cb43e882128cd29acc60359e86c3a5f7"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/031.png",
+          "sha256": "ac097111c23df46134c1d81de011eb8950e1b49107b2283a03feec2958b09ab5"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/031.png",
+          "sha256": "5d3ae2cf664ef22adbefc74b17733dbed1ee7a236afe612f8ab8a54ddf738cb0"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/031.png",
+          "sha256": "fc326896d6c59c4e1b29580a7cdfeb09a99aa495f3dcd1b7c4aa2924c5961ade"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/031.png",
+          "sha256": "e60dc2630fe73187a99aaad8e2a9af82e958f0ca70ab6486439b71e54f23697f"
+        }
+      ]
+    },
+    {
+      "view": "033",
+      "sources": [
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/test/ours_20000/hdr_mu/033.png",
+          "sha256": "d5f989676bd877464de9151774de61c6c4ef39252234a8210eb8410e5d0a3f7a"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/test/ours_20000/hdr_mu/033.png",
+          "sha256": "e898358acfc8e09eb938daba32c4c0d8d1c553bf7f4594889e71c4c2a7aae039"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/ppisp_3dgs_no_metadata/models/33U33M33O/box/raw_gs/test/ours_20000/renders/033.png",
+          "sha256": "d7c8ec2d75005b453535580091ea5d7e25dd315e4b4aed190ac67bbb69a026cd"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/intrinsic_native/033.png",
+          "sha256": "cd154d5ef73cc6a7f2a4858f7b0c590ff4dfbad33164bdf7b439695eb650f5d2"
+        },
+        {
+          "path": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/exgs/33U33M33O/box/test/ours_20000/fused_reference/033.png",
+          "sha256": "59fe4c64a67b3b68201c8a59fc7c262ab4804a294fb4dcb9ae567aba75d7af62"
+        }
+      ]
+    }
+  ]
+}

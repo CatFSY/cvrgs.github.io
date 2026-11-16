@@ -1,0 +1,15 @@
+{
+  "new_synthetic_videos": 4,
+  "new_multi_exposure_videos": 16,
+  "total_new_videos": 20,
+  "all_mp4s_full_decode_passed_during_build": true,
+  "all_frame_counts_and_durations_verified": true,
+  "html_local_resources_checked": 28,
+  "duplicate_html_ids": false,
+  "all_15_original_videos_unchanged": true,
+  "flashlight_and_lom_html_unchanged": true,
+  "source_sha256_rechecked": true,
+  "browser_end_to_end_playback_tested": false,
+  "video_bytes": 51248208,
+  "validation_phase": "pre-publication checks; not a deployment status record"
+}
