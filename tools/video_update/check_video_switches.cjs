@@ -1,88 +1,93 @@
-// Execute the actual controller with a small DOM fixture; no browser dependency.
+// Check the published scene/method controls and their real media assets.
+// This exercises the actual controller without a browser or media decoder.
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
-const site = '/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io';
 const assert = require('assert');
-const makeElement = (extra = {}) => Object.assign({
-  listeners: {}, dataset: {}, hidden: false,
+const site = path.resolve(__dirname, '../..');
+const html = fs.readFileSync(path.join(site, 'index.html'), 'utf8');
+const element = (extra = {}) => Object.assign({
+  listeners: {}, dataset: {}, hidden: false, attributes: {},
   addEventListener(type, cb) { this.listeners[type] = cb; },
-  classList: { toggle() {} },
-  setAttribute(key, value) { this[key] = value; },
+  setAttribute(key, value) { this.attributes[key] = value; },
+  getAttribute(key) { return this.attributes[key]; },
+  removeAttribute(key) { delete this[key]; },
 }, extra);
-function fixture(kind, scenes, continuous = false) {
-  const video = makeElement({paused: true, playCalls: 0,
-    pause() {this.paused = true;}, load() {},
-    play() {this.paused = false; this.playCalls++; return Promise.resolve();}});
-  const buttons = scenes.map(scene => makeElement({dataset: {scene}}));
-  const elements = {
-    'video': video,
-    '[data-version]': makeElement({value: 'v2'}),
-    '[data-setting]': kind === 'hdr' && !continuous ? makeElement({value: '50U50O'}) : null,
-    '[data-method]': continuous ? makeElement({value: 'ppisp'}) : null,
-    '[data-method-control]': makeElement(),
-    '[data-setting-control]': makeElement(),
-    '[data-download]': makeElement(), '[data-protocol]': makeElement(),
-    '[data-caption]': makeElement(), '[data-video-error]': makeElement(),
-    '[data-scene][aria-pressed="true"]': buttons[0],
-  };
+const attr = (tag, name) => tag.match(new RegExp(`${name}="([^"]*)"`))?.[1];
+const groups = [...html.matchAll(/<section[^>]*data-comparison-group="([^"]+)"[^>]*>([\s\S]*?)<\/section>/g)].map(([, kind, body]) => {
+  const buttons = [...body.matchAll(/<button\b[^>]*>/g)].map(([tag]) => {
+    const scene = attr(tag, 'data-scene');
+    const method = attr(tag, 'data-method');
+    return element({dataset: scene ? {scene} : {method}, attributes: {'aria-pressed': attr(tag, 'aria-pressed')}});
+  });
+  const videoTag = body.match(/<video\b[^>]*>/)[0];
+  const video = element({src: attr(videoTag, 'src'), poster: attr(videoTag, 'poster'), paused: true,
+    pause() { this.paused = true; }, load() {},
+    play() { this.paused = false; return Promise.resolve(); }});
+  const download = element({href: attr(body.match(/<a data-download[^>]*>/)[0], 'href')});
+  const error = element({hidden: true});
   return {
-    dataset: {comparisonGroup: kind, caption: 'updated', legacyCaption: 'previous'},
-    buttons, elements,
-    querySelector(selector) {assert(selector in elements, selector); return elements[selector];},
-    querySelectorAll(selector) {assert.equal(selector, '[data-scene]'); return buttons;},
+    dataset: {comparisonGroup: kind}, buttons, video, download, error,
+    querySelector(selector) {
+      if (selector === 'video') return video;
+      if (selector === '[data-download]') return download;
+      if (selector === '[data-video-error]') return error;
+      const choice = selector.match(/^\[data-(scene|method)\]\[aria-pressed="true"\]$/)?.[1];
+      assert(choice, selector);
+      return buttons.find(button => button.dataset[choice] && button.getAttribute('aria-pressed') === 'true') ?? null;
+    },
+    querySelectorAll(selector) {
+      const choice = selector.match(/^\[data-(scene|method)\]$/)?.[1];
+      assert(choice, selector);
+      return buttons.filter(button => button.dataset[choice]);
+    },
   };
-}
-const groups = [fixture('hdr', ['box', 'luckycat', 'flower', 'plant']),
-                fixture('syn', ['hotdog', 'ficus', 'mic', 'chair']),
-                fixture('hdr', ['box', 'luckycat', 'flower', 'plant'], true)];
+});
+assert.equal(groups.length, 4);
 const document = {
-  addEventListener(type, cb) {assert.equal(type, 'DOMContentLoaded'); cb();},
-  querySelectorAll(selector) {assert.equal(selector, '[data-comparison-group]'); return groups;},
+  addEventListener(type, cb) { assert.equal(type, 'DOMContentLoaded'); cb(); },
+  querySelectorAll(selector) { assert.equal(selector, '[data-comparison-group]'); return groups; },
 };
 vm.runInNewContext(fs.readFileSync(path.join(site, 'static/js/comparisons-v2.js'), 'utf8'), {document});
-let checks = 0;
+let combinations = 0;
 for (const group of groups) {
-  const e = group.elements;
-  for (const button of group.buttons) {
-    button.listeners.click();
-    const settings = e['[data-method]'] ? ['ppisp','hdrgs','gausshdr']
-      : e['[data-setting]'] ? ['12U12M100O', '100U12M12O', '33U33M33O', '50U50O'] : [null];
-    for (const setting of settings) {
-      if (setting) {
-        const selector = e['[data-method]'] || e['[data-setting]'];
-        selector.value = setting; selector.listeners.change();
-      }
-      const video = e.video;
-      assert(fs.existsSync(path.join(site, video.src)), video.src);
-      assert(fs.existsSync(path.join(site, video.poster)), video.poster);
-      assert(fs.existsSync(path.join(site, e['[data-protocol]'].href)));
-      assert.equal(e['[data-download]'].href, video.src);
-      assert.equal(e['[data-protocol]'].hidden, false);
-      assert.equal(e['[data-caption]'].textContent, 'updated');
-      assert.equal(video.paused, true);
-      checks++;
+  const verifyMedia = () => {
+    assert(fs.existsSync(path.join(site, group.video.src)), group.video.src);
+    if (group.video.poster) assert(fs.existsSync(path.join(site, group.video.poster)), group.video.poster);
+    assert.equal(group.download.href, group.video.src);
+    for (const choice of ['scene', 'method']) {
+      const choices = group.querySelectorAll(`[data-${choice}]`);
+      if (choices.length) assert.equal(choices.filter(x => x.getAttribute('aria-pressed') === 'true').length, 1);
     }
-    e.video.paused = false;
-    e['[data-version]'].value = 'legacy';
-    e['[data-version]'].listeners.change();
-    assert(fs.existsSync(path.join(site, e.video.src)), e.video.src);
-    assert.equal(e['[data-protocol]'].hidden, true);
-    assert.equal(e['[data-caption]'].textContent, 'previous');
-    assert.equal(e.video.paused, false);
-    if (e['[data-setting]']) assert.equal(e['[data-setting-control]'].hidden, true);
-    if (e['[data-method]']) assert.equal(e['[data-method-control]'].hidden, true);
-    e.video.listeners.error();
-    assert.equal(e['[data-video-error]'].hidden, false);
-    e['[data-version]'].value = 'v2';
-    e['[data-version]'].listeners.change();
-    assert.equal(e['[data-video-error]'].hidden, true);
-    if (e['[data-setting]']) assert.equal(e['[data-setting-control]'].hidden, false);
-    if (e['[data-method]']) assert.equal(e['[data-method-control]'].hidden, false);
-    e.video.pause();
-    checks++;
+  };
+  verifyMedia(); // HTML defaults must work before JavaScript interaction.
+  for (const scene of group.querySelectorAll('[data-scene]')) {
+    scene.listeners.click();
+    const methods = group.querySelectorAll('[data-method]');
+    for (const method of methods.length ? methods : [null]) {
+      if (method) method.listeners.click();
+      verifyMedia();
+      assert(group.video.src.includes(`_${scene.dataset.scene}`));
+      if (method) assert(group.video.src.includes(`_${method.dataset.method}_path`));
+      assert.equal(group.video.paused, true);
+      combinations++;
+    }
   }
+  group.video.paused = false;
+  group.querySelectorAll('[data-scene]')[0].listeners.click();
+  assert.equal(group.video.paused, false, 'Playing state must persist through a scene switch');
+  group.video.listeners.error();
+  assert.equal(group.error.hidden, false);
+  group.querySelectorAll('[data-scene]')[1].listeners.click();
+  assert.equal(group.error.hidden, true);
+  group.video.listeners.error();
+  group.video.listeners.loadeddata();
+  assert.equal(group.error.hidden, true);
+  verifyMedia();
 }
-console.log(JSON.stringify({updated_and_legacy_switch_checks: checks, passed: true,
-  playback_state_preserved: true, error_reset_checked: true,
-  scope: 'actual JavaScript controller with DOM fixture; not an end-to-end browser playback test'}));
+assert(!/Previous video|Updated methods|data-version|data-protocol|xxxx\.xxxxx|Anonymous Author/.test(html));
+const authors = html.split('class="publication-authors"')[1].split('</div>')[0];
+assert(!authors.includes('<a '));
+console.log(JSON.stringify({dataset_sections: groups.length, scene_method_combinations: combinations,
+  asset_paths_valid: true, playback_state_preserved: true, error_recovery_checked: true,
+  historical_controls_removed: true, passed: true}));

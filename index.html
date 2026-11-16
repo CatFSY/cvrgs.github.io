@@ -1,112 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting.">
+  <meta name="description" content="CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting.">
   <meta name="keywords" content="CVR-GS, 3D Gaussian Splatting, Extreme Lighting, Novel View Synthesis, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting</title>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans:400,500,700|Noto+Sans:400,600,700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script>
-    MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-  <link rel="stylesheet" href="./static/css/comparisons-v2.css">
-  <script defer src="./static/js/comparisons-v2.js?v=path-v3"></script>
+  <link rel="stylesheet" href="./static/css/index.css?v=academic-1">
+  <link rel="stylesheet" href="./static/css/comparisons-v2.css?v=academic-1">
+  <script defer src="./static/js/comparisons-v2.js?v=academic-1"></script>
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-    </div>
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">CVR-GS: Illumination-Robust Novel View Synthesis via Cross-View Relighting</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">ShuangYu Feng<sup>1</sup>,</span>
-            <span class="author-block">Xiangbo Wang<sup>1</sup>,</span>
-            <span class="author-block">Xianghui Fan<sup>1</sup>,</span>
-            <span class="author-block">Xiangru Huang<sup>1</sup></span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup> Westlake University</span>
-          </div>
-
-          <div class="publication-links" style="margin-top: 1.5rem; display: none;">
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/xxxx.xxxxx"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/xxxx.xxxxx"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="ai ai-arxiv"></i></span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                  <span>Code</span>
-                </a>
-              </span>
-            </div>
-          </div>
-        </div>
+<main>
+  <header class="publication-header">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="publication-title"><span class="project-name">CVR-GS</span>
+        Illumination-Robust Novel View Synthesis<br class="desktop-break"> via Cross-View Relighting</h1>
+      <div class="publication-authors">
+        <span class="author-block">ShuangYu Feng<sup>1</sup></span>
+        <span class="author-block">Xiangbo Wang<sup>1</sup></span>
+        <span class="author-block">Xianghui Fan<sup>1</sup></span>
+        <span class="author-block">Xiangru Huang<sup>1</sup></span>
       </div>
+      <p class="publication-affiliation"><sup>1</sup> Westlake University</p>
+      <nav class="section-links" aria-label="Page sections">
+        <a href="#abstract">Abstract</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- Teaser Image -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <img src="./static/images/teaser.png?v=65c962e623" alt="CVR-GS Teaser" style="width:100%; border-radius:10px;">
+  <!-- Teaser Image -->
+  <section class="teaser" aria-label="CVR-GS overview">
+    <div class="figure-container">
+      <img src="./static/images/teaser.png?v=65c962e623" alt="CVR-GS recovers scene appearance across Multi-Light Objects, multi-exposure, low-light, overexposure and flashlight scenes.">
     </div>
-  </div>
-</section>
+  </section>
 
 <!-- Abstract -->
-<section class="section">
+<section class="section" id="abstract">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column abstract-column">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -120,13 +58,13 @@
 
 
 <!-- Pipeline -->
-<section class="section">
+<section class="section" id="method">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Method Overview</h2>
         <div class="content">
-          <img src="./static/images/pipeline.png?v=21a6e7b484" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
+          <img loading="lazy" src="./static/images/pipeline.png?v=21a6e7b484" alt="CVR-GS Pipeline" style="width:100%; border-radius:10px;">
           <p style="margin-top:1em;" class="has-text-justified">
             <strong>Overview of CVR-GS pipeline.</strong> CVR-GS pairs illumination-complementary views and learns an appearance–illumination decomposition of Gaussian colors for consistent appearance recovery. Cross-view relighting enforces consistency by exchanging illumination between paired views, while illumination reliability guides Gaussian densification and pruning.
           </p>
@@ -137,202 +75,106 @@
 </section>
 
 
-<!-- Updated Multi-Exposure Scenes -->
-<section class="section comparison-v2" data-comparison-group="hdr"
-  data-caption="Continuous novel-view rendering along the original 120-pose B-spline camera path (15 FPS, 8 seconds). Four columns show Bright-skewed, Dark-skewed, Uniform Random and Extreme Bimodal training settings. The selected comparison method is above Ours. Every method and setting uses the same camera poses. The top row contains static exposure examples; these are not per-frame ground truth." data-legacy-caption="Previous four-setting comparison video.">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Multi-Exposure Scenes</h2>
-    <div class="scene-buttons" role="group" aria-label="Multi-Exposure Scenes scenes">
-      <button type="button" class="button is-link" data-scene="box" aria-pressed="true">box</button>
-<button type="button" class="button is-light" data-scene="luckycat" aria-pressed="false">luckycat</button>
-<button type="button" class="button is-light" data-scene="flower" aria-pressed="false">flower</button>
-<button type="button" class="button is-light" data-scene="plant" aria-pressed="false">plant</button>
-    </div>
-    <div class="comparison-controls">
-      <div>
-        <label for="hdr-version-v2">Comparison</label>
-        <div class="select"><select id="hdr-version-v2" data-version>
-          <option value="v3">Continuous camera path</option>
-          <option value="legacy">Previous video</option>
-        </select></div>
+  <section class="section comparison-section" id="results" data-comparison-group="hdr">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Multi-Exposure Scenes</h2>
+      <p class="section-intro">Novel-view synthesis from images captured with different exposures.</p>
+      <div class="selector-row">
+        <span class="selector-label" id="hdr-scene-label">Scene</span>
+        <div class="choice-buttons scene-buttons" role="group" aria-labelledby="hdr-scene-label">
+          <button type="button" data-scene="box" aria-pressed="true">Box</button>
+          <button type="button" data-scene="luckycat" aria-pressed="false">Luckycat</button>
+          <button type="button" data-scene="flower" aria-pressed="false">Flower</button>
+          <button type="button" data-scene="plant" aria-pressed="false">Plant</button>
+        </div>
       </div>
-      <div data-method-control>
-        <label for="hdr-method-v3">Comparison method</label>
-        <div class="select"><select id="hdr-method-v3" data-method>
-          <option value="ppisp">PPISP</option>
-          <option value="hdrgs">HDR-GS</option>
-          <option value="gausshdr">GaussHDR</option>
-        </select></div>
+      <div class="selector-row">
+        <span class="selector-label" id="hdr-method-label">Compare with</span>
+        <div class="choice-buttons method-buttons" role="group" aria-labelledby="hdr-method-label">
+          <button type="button" data-method="ppisp" aria-pressed="true">PPISP</button>
+          <button type="button" data-method="hdrgs" aria-pressed="false">HDR-GS</button>
+          <button type="button" data-method="gausshdr" aria-pressed="false">GaussHDR</button>
+        </div>
       </div>
+      <figure class="comparison-figure">
+        <video src="static/videos/v3/hdr_box_ppisp_path_v3.mp4" poster="static/images/video_v3/hdr_box_ppisp_path_v3_000.png" controls loop muted playsinline preload="metadata" aria-label="Multi-Exposure Scenes comparison"></video>
+        <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
+        <figcaption>Top: selected method. Bottom: CVR-GS. The four columns correspond to bright-skewed, dark-skewed, uniform random, and extreme bimodal training exposures. All methods follow the same camera path; the exposure examples above the comparisons are static input views.</figcaption>
+      </figure>
+      <p class="video-download"><a data-download href="static/videos/v3/hdr_box_ppisp_path_v3.mp4" download>Download video</a></p>
     </div>
-    <video src="static/videos/v3/hdr_box_ppisp_path_v3.mp4"
-      poster="static/images/video_v3/hdr_box_ppisp_path_v3_000.png"
-      controls loop muted playsinline preload="metadata" aria-label="Multi-Exposure Scenes method comparison"></video>
-    <p data-video-error role="alert" hidden>Unable to load the video. Use the MP4 download below.</p>
-    <p class="comparison-caption" data-caption>Continuous novel-view rendering along the original 120-pose B-spline camera path (15 FPS, 8 seconds). Four columns show Bright-skewed, Dark-skewed, Uniform Random and Extreme Bimodal training settings. The selected comparison method is above Ours. Every method and setting uses the same camera poses. The top row contains static exposure examples; these are not per-frame ground truth.</p>
-    <div class="comparison-downloads">
-      <a data-download href="static/videos/v3/hdr_box_ppisp_path_v3.mp4" download>Download MP4</a>
-      <a data-protocol href="static/data/video_v3/hdr_box_ppisp_path_v3.json">Sources and display protocol</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Updated Synthetic Scenes -->
-<section class="section comparison-v2" data-comparison-group="syn"
-  data-caption="Input, GS-W, LumiGS, PPISP, Ours and GT at corresponding views. PPISP uses the model trained without exposure metadata and renders direct GS RGB before the Controller and ISP. All 200 views are shown in their recorded order; each frame identifies its training or test split." data-legacy-caption="Previous four-column video: Input, GS-W, LumiGS and Ours.">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Synthetic Dataset</h2>
-    <div class="scene-buttons" role="group" aria-label="Synthetic Dataset scenes">
-      <button type="button" class="button is-link" data-scene="hotdog" aria-pressed="true">hotdog</button>
-<button type="button" class="button is-light" data-scene="ficus" aria-pressed="false">ficus</button>
-<button type="button" class="button is-light" data-scene="mic" aria-pressed="false">mic</button>
-<button type="button" class="button is-light" data-scene="chair" aria-pressed="false">chair</button>
-    </div>
-    <div class="comparison-controls">
-      <div>
-        <label for="syn-version-v2">Comparison</label>
-        <div class="select"><select id="syn-version-v2" data-version>
-          <option value="v2">Updated methods</option>
-          <option value="legacy">Previous video</option>
-        </select></div>
+  <section class="section comparison-section" id="multi-light" data-comparison-group="syn">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Multi-Light Objects</h2>
+      <p class="section-intro">Appearance recovery under spatially varying illumination on synthetic scenes.</p>
+      <div class="selector-row">
+        <span class="selector-label" id="syn-scene-label">Scene</span>
+        <div class="choice-buttons scene-buttons" role="group" aria-labelledby="syn-scene-label">
+          <button type="button" data-scene="hotdog" aria-pressed="true">Hotdog</button>
+          <button type="button" data-scene="ficus" aria-pressed="false">Ficus</button>
+          <button type="button" data-scene="mic" aria-pressed="false">Mic</button>
+          <button type="button" data-scene="chair" aria-pressed="false">Chair</button>
+        </div>
       </div>
-
+      <figure class="comparison-figure">
+        <video src="static/videos/v2/syn_hotdog_v2.mp4" poster="static/images/video_v2/syn_hotdog_v2.png" controls loop muted playsinline preload="metadata" aria-label="Multi-Light Objects comparison"></video>
+        <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
+        <figcaption>Input, GS-W, LumiGS, PPISP, CVR-GS, and ground truth at corresponding camera views. PPISP uses direct GS RGB from training without exposure metadata, before the Controller and ISP. Training and held-out views are identified in the video.</figcaption>
+      </figure>
+      <p class="video-download"><a data-download href="static/videos/v2/syn_hotdog_v2.mp4" download>Download video</a></p>
     </div>
-    <video src="static/videos/v2/syn_hotdog_v2.mp4" poster="static/images/video_v2/syn_hotdog_v2.png"
-      controls loop muted playsinline preload="metadata" aria-label="Synthetic Dataset method comparison"></video>
-    <p data-video-error role="alert" hidden>Unable to load the video. Use the MP4 download below.</p>
-    <p class="comparison-caption" data-caption>Input, GS-W, LumiGS, PPISP, Ours and GT at corresponding views. PPISP uses the model trained without exposure metadata and renders direct GS RGB before the Controller and ISP. All 200 views are shown in their recorded order; each frame identifies its training or test split.</p>
-    <div class="comparison-downloads">
-      <a data-download href="static/videos/v2/syn_hotdog_v2.mp4" download>Download MP4</a>
-      <a data-protocol href="static/data/video_v2/syn_hotdog_v2.json">Sources and display protocol</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Flashlight Scenes -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Flashlight Dataset</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <div class="tabs is-boxed is-centered">
-          <ul>
-            <li class="is-active" data-scan="flash_lab1"><a>lab1</a></li>
-            <li data-scan="flash_lab2"><a>lab_2</a></li>
-            <li data-scan="flash_out2"><a>outdoor_2</a></li>
-          </ul>
+  <section class="section comparison-section" id="flashlight" data-comparison-group="flash">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Flashlight Scenes</h2>
+      <p class="section-intro">Scene recovery from views captured under moving, localized illumination.</p>
+      <div class="selector-row">
+        <span class="selector-label" id="flash-scene-label">Scene</span>
+        <div class="choice-buttons scene-buttons" role="group" aria-labelledby="flash-scene-label">
+          <button type="button" data-scene="lab1" aria-pressed="true">Lab 1</button>
+          <button type="button" data-scene="lab2" aria-pressed="false">Lab 2</button>
+          <button type="button" data-scene="out2" aria-pressed="false">Outdoor</button>
         </div>
-
-        <div id="flash_lab1" class="scan-content">
-          <video src="static/videos/flash_lab1.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="flash_lab2" class="scan-content is-hidden">
-          <video src="static/videos/flash_lab2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="flash_out2" class="scan-content is-hidden">
-          <video src="static/videos/flash_out2.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-
-        <script>
-          (function() {
-            const sec = document.currentScript.parentElement;
-            const tabs = sec.querySelectorAll('.tabs ul li');
-            const contents = sec.querySelectorAll('.scan-content');
-            tabs.forEach(tab => {
-              tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('is-active'));
-                contents.forEach(c => c.classList.add('is-hidden'));
-                tab.classList.add('is-active');
-                document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
-              });
-            });
-          })();
-        </script>
-
       </div>
+      <figure class="comparison-figure">
+        <video src="static/videos/flash_lab1.mp4" controls loop muted playsinline preload="metadata" aria-label="Flashlight Scenes comparison"></video>
+        <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
+        <figcaption>Qualitative comparisons under flashlight illumination.</figcaption>
+      </figure>
+      <p class="video-download"><a data-download href="static/videos/flash_lab1.mp4" download>Download video</a></p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- LOM Scenes -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">LOM Dataset</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <div class="tabs is-boxed is-centered">
-          <ul>
-            <li class="is-active" data-scan="lom_buu"><a>buu</a></li>
-            <li data-scan="lom_shrub"><a>shrub</a></li>
-            <li data-scan="lom_chair"><a>chair</a></li>
-            <li data-scan="lom_sofa"><a>sofa</a></li>
-          </ul>
+  <section class="section comparison-section" id="low-light" data-comparison-group="lom">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Low-Light and Overexposure</h2>
+      <p class="section-intro">Appearance recovery on the LOM dataset.</p>
+      <div class="selector-row">
+        <span class="selector-label" id="lom-scene-label">Scene</span>
+        <div class="choice-buttons scene-buttons" role="group" aria-labelledby="lom-scene-label">
+          <button type="button" data-scene="buu" aria-pressed="true">Buu</button>
+          <button type="button" data-scene="shrub" aria-pressed="false">Shrub</button>
+          <button type="button" data-scene="chair" aria-pressed="false">Chair</button>
+          <button type="button" data-scene="sofa" aria-pressed="false">Sofa</button>
         </div>
-
-        <div id="lom_buu" class="scan-content">
-          <video src="static/videos/lom_buu.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="lom_shrub" class="scan-content is-hidden">
-          <video src="static/videos/lom_shrub.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="lom_chair" class="scan-content is-hidden">
-          <video src="static/videos/lom_chair.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-        <div id="lom_sofa" class="scan-content is-hidden">
-          <video src="static/videos/lom_sofa.mp4" autoplay loop muted style="width: 100%; height: auto;"></video>
-        </div>
-
-        <script>
-          (function() {
-            const sec = document.currentScript.parentElement;
-            const tabs = sec.querySelectorAll('.tabs ul li');
-            const contents = sec.querySelectorAll('.scan-content');
-            tabs.forEach(tab => {
-              tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('is-active'));
-                contents.forEach(c => c.classList.add('is-hidden'));
-                tab.classList.add('is-active');
-                document.getElementById(tab.dataset.scan).classList.remove('is-hidden');
-              });
-            });
-          })();
-        </script>
-
       </div>
+      <figure class="comparison-figure">
+        <video src="static/videos/lom_buu.mp4" controls loop muted playsinline preload="metadata" aria-label="Low-Light and Overexposure comparison"></video>
+        <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
+        <figcaption>Qualitative comparisons on scenes with low-light or overexposed inputs.</figcaption>
+      </figure>
+      <p class="video-download"><a data-download href="static/videos/lom_buu.mp4" download>Download video</a></p>
     </div>
-  </div>
-</section>
-
-<!-- BibTeX -->
-<section class="section" id="BibTeX" style="display: none;">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{anonymous2027extreme,
-  author    = {Anonymous Authors},
-  title     = {CVR-GS: Illumination-Consistent 3D Scene Representation under Extreme Lighting},
-  year      = {2027},
-}</code></pre>
-  </div>
-</section>
-
-
+  </section>
+</main>
 <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-          </p>
-        </div>
-      </div>
-    </div>
+  <div class="container has-text-centered">
+    <p>Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+      Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
   </div>
 </footer>
-
 </body>
 </html>

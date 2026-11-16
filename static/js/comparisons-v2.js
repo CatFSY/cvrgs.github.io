@@ -1,55 +1,54 @@
-/* One active video per dataset; preserve the previous comparisons for reference. */
+/* Scene and method selection for the published comparisons. */
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-comparison-group]').forEach(group => {
     const kind = group.dataset.comparisonGroup;
     const video = group.querySelector('video');
-    const version = group.querySelector('[data-version]');
-    const setting = group.querySelector('[data-setting]');
-    const method = group.querySelector('[data-method]');
     const download = group.querySelector('[data-download]');
-    const protocol = group.querySelector('[data-protocol]');
-    const caption = group.querySelector('[data-caption]');
     const error = group.querySelector('[data-video-error]');
     let scene = group.querySelector('[data-scene][aria-pressed="true"]').dataset.scene;
+    let method = group.querySelector('[data-method][aria-pressed="true"]')?.dataset.method;
+
     const update = () => {
-      const legacy = version.value === 'legacy';
-      const prefix = kind === 'hdr' ? 'hdr' : 'syn';
-      const continuous = kind === 'hdr' && method !== null;
-      const stem = continuous ? `${prefix}_${scene}_${method.value}_path_v3`
-        : kind === 'hdr' ? `${prefix}_${scene}_${setting.value}_v2` : `${prefix}_${scene}_v2`;
-      const revision = continuous ? 'v3' : 'v2';
-      const src = legacy ? `static/videos/${prefix}_${scene}.mp4` : `static/videos/${revision}/${stem}.mp4`;
+      let src;
+      let poster = '';
+      if (kind === 'hdr') {
+        const stem = `hdr_${scene}_${method}_path_v3`;
+        src = `static/videos/v3/${stem}.mp4`;
+        poster = `static/images/video_v3/${stem}_000.png`;
+      } else if (kind === 'syn') {
+        const stem = `syn_${scene}_v2`;
+        src = `static/videos/v2/${stem}.mp4`;
+        poster = `static/images/video_v2/${stem}.png`;
+      } else {
+        src = `static/videos/${kind}_${scene}.mp4`;
+      }
+      // Keep an active comparison playing when switching its scene or method.
       const wasPlaying = !video.paused;
       video.pause();
       video.src = src;
-      video.poster = legacy ? '' : `static/images/video_${revision}/${stem}${continuous ? '_000' : ''}.png`;
+      if (poster) video.poster = poster;
+      else video.removeAttribute('poster');
       download.href = src;
       download.download = src.split('/').pop();
-      protocol.hidden = legacy;
-      protocol.href = `static/data/video_${revision}/${stem}.json`;
       error.hidden = true;
-      if (setting) group.querySelector('[data-setting-control]').hidden = legacy;
-      if (method) group.querySelector('[data-method-control]').hidden = legacy;
-      caption.textContent = legacy ? group.dataset.legacyCaption : group.dataset.caption;
       video.load();
       if (wasPlaying) video.play().catch(() => {});
     };
-    group.querySelectorAll('[data-scene]').forEach(button => {
-      button.addEventListener('click', () => {
-        scene = button.dataset.scene;
-        group.querySelectorAll('[data-scene]').forEach(other => {
-          const active = other === button;
-          other.setAttribute('aria-pressed', String(active));
-          other.classList.toggle('is-link', active);
-          other.classList.toggle('is-light', !active);
+
+    ['scene', 'method'].forEach(choice => {
+      group.querySelectorAll(`[data-${choice}]`).forEach(button => {
+        button.addEventListener('click', () => {
+          if (button.getAttribute('aria-pressed') === 'true') return;
+          if (choice === 'scene') scene = button.dataset.scene;
+          else method = button.dataset.method;
+          group.querySelectorAll(`[data-${choice}]`).forEach(other => {
+            other.setAttribute('aria-pressed', String(other === button));
+          });
+          update();
         });
-        update();
       });
     });
-    version.addEventListener('change', update);
-    if (setting) setting.addEventListener('change', update);
-    if (method) method.addEventListener('change', update);
     video.addEventListener('error', () => { error.hidden = false; });
-    update();
+    video.addEventListener('loadeddata', () => { error.hidden = true; });
   });
 });

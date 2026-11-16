@@ -1,113 +1,52 @@
-body {
-  font-family: 'Noto Sans', sans-serif;
+:root {
+  --text: #25282d;
+  --muted: #66707b;
+  --accent: #275c8c;
+  --rule: #e9edf1;
 }
-
-.footer .icon-link {
-    font-size: 25px;
-    color: #000;
-}
-
-.link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.dnerf {
-  font-variant: small-caps;
-}
-
-.teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.teaser {
-  font-family: 'Google Sans', sans-serif;
-}
-
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body { font-family: 'Noto Sans', sans-serif; color: var(--text); line-height: 1.75; }
+.container.is-max-desktop { max-width: 1080px; }
+.publication-header { padding: 4.5rem 1.5rem 2.2rem; }
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  margin: 0 auto 1.8rem;
+  max-width: 1020px;
+  color: #202329;
+  font-family: 'Google Sans', 'Noto Sans', sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -.035em;
 }
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
+.project-name { display: block; margin-bottom: .55rem; font-size: 1.18em; font-weight: 700; }
+.publication-authors { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem 1.6rem; font-size: 1.12rem; }
+.author-block { display: inline-block; }
+sup { font-size: .65em; margin-left: .12em; }
+.publication-affiliation { margin-top: .65rem; color: var(--muted); font-size: 1rem; }
+.section-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin-top: 1.6rem; font-size: .9rem; }
+a { color: var(--accent); }
+a:hover { color: #193e60; text-decoration: underline; }
+.section-links a { color: var(--muted); }
+a:focus-visible, button:focus-visible { outline: 3px solid #80acd4; outline-offset: 4px; }
+.teaser { padding: 0 1.5rem 1rem; }
+.figure-container { max-width: 1240px; margin: 0 auto; }
+.teaser img { display: block; width: 100%; height: auto; }
+.section { padding: 3.25rem 1.5rem; }
+.section .title { margin-bottom: 1.5rem; color: var(--text); font-family: 'Google Sans', sans-serif; font-weight: 500; letter-spacing: -.025em; }
+.abstract-column { max-width: 850px; }
+.content { font-size: 1rem; line-height: 1.85; }
+#method .content > p { max-width: 900px; margin: 1.4rem auto 0; color: #505862; font-size: .95rem; }
+.footer { padding: 2rem 1.5rem; background: #fafbfc; border-top: 1px solid var(--rule); color: var(--muted); font-size: .8rem; }
+@media (max-width: 700px) {
+  .publication-header { padding: 2.5rem 1.25rem 1.7rem; }
+  .publication-title { letter-spacing: -.025em; }
+  .desktop-break { display: none; }
+  .publication-authors { gap: .45rem 1rem; font-size: 1rem; }
+  .section { padding: 2.25rem 1rem; }
+  .section .title { font-size: 1.65rem; }
+  .teaser { padding: 0 .5rem; }
+  .has-text-justified { text-align: left !important; }
 }
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-    margin: 0.5em auto;
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
-.author-block {
-  display: inline-block;
-}
-
-.publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    border-radius: 10px !important;
-}
-
-.publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.results-carousel {
-  overflow: hidden;
-}
-
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
-}
-
-.results-carousel video {
-  margin: 0;
-}
-
-.interpolation-panel {
-  background: #f5f5f5;
-  border-radius: 10px;
-}
-
-.interpolation-panel .interpolation-image {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
-#interpolation-image-wrapper {
-  width: 100%;
-}
-#interpolation-image-wrapper img {
-  border-radius: 5px;
-}
-
-/* Extreme-GS specific */
-.section .content ul li {
-  margin-bottom: 0.5em;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
