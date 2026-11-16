@@ -44,6 +44,9 @@ const groups = [...html.matchAll(/<section[^>]*data-comparison-group="([^"]+)"[^
   };
 });
 assert.equal(groups.length, 4);
+assert.deepEqual(groups.find(group => group.dataset.comparisonGroup === 'hdr').querySelectorAll('[data-method]').map(button => button.dataset.method).sort(),
+  ['3dgs', 'mcmc', 'gsw', 'lumi', 'ppisp', 'hdrgs', 'gausshdr'].sort());
+const originalComparisons = JSON.parse(fs.readFileSync(path.join(site, 'static/data/hdr_baselines/catalog.json'), 'utf8')).videos;
 const document = {
   addEventListener(type, cb) { assert.equal(type, 'DOMContentLoaded'); cb(); },
   querySelectorAll(selector) { assert.equal(selector, '[data-comparison-group]'); return groups; },
@@ -68,7 +71,13 @@ for (const group of groups) {
       if (method) method.listeners.click();
       verifyMedia();
       assert(group.video.src.includes(`_${scene.dataset.scene}`));
-      if (method) assert(group.video.src.includes(`_${method.dataset.method}_path`));
+      if (method) {
+        const original = originalComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);
+        if (original) {
+          assert.equal(group.video.src, original.video);
+          assert.equal(group.video.poster, original.poster);
+        } else assert(group.video.src.includes(`_${method.dataset.method}_path`));
+      }
       assert.equal(group.video.paused, true);
       combinations++;
     }
@@ -90,4 +99,4 @@ const authors = html.split('class="publication-authors"')[1].split('</div>')[0];
 assert(!authors.includes('<a '));
 console.log(JSON.stringify({dataset_sections: groups.length, scene_method_combinations: combinations,
   asset_paths_valid: true, playback_state_preserved: true, error_recovery_checked: true,
-  historical_controls_removed: true, passed: true}));
+  original_methods_retained: true, historical_controls_removed: true, passed: true}));

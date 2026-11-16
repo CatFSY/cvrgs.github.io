@@ -1,0 +1,357 @@
+{
+  "description": "Original continuous-camera baseline comparisons, preserved without re-encoding. Existing four published examples are reused unchanged; twelve additional method/scene combinations come from the original demo directory.",
+  "videos": [
+    {
+      "scene": "box",
+      "method": "3dgs",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_box.mp4",
+      "video": "static/videos/hdr_box.mp4",
+      "sha256": "d92ee78b19c8aa718701d75b7842ab0f7bc3e0694555ef0ac481f6c786863f20",
+      "poster": "static/images/hdr_baselines/hdr_box_3dgs.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "box",
+      "method": "mcmc",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/box_mcmc.mp4",
+      "video": "static/videos/baselines/hdr_box_mcmc.mp4",
+      "sha256": "f50544bd1f91530066e3721be064fec67764e6ebeb94d5c8a2fc74f765d52382",
+      "poster": "static/images/hdr_baselines/hdr_box_mcmc.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "box",
+      "method": "gsw",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/box_gsw.mp4",
+      "video": "static/videos/baselines/hdr_box_gsw.mp4",
+      "sha256": "30b161b0117f36f6bd9468a5878c6ab9890f0d2ec9a3e6635936201cfb2a52a7",
+      "poster": "static/images/hdr_baselines/hdr_box_gsw.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "box",
+      "method": "lumi",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/box_lumi.mp4",
+      "video": "static/videos/baselines/hdr_box_lumi.mp4",
+      "sha256": "a802974d5269cfc0883bf31c2aca4eeb99c104f3790587775db2043714a18429",
+      "poster": "static/images/hdr_baselines/hdr_box_lumi.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "luckycat",
+      "method": "3dgs",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/luckycat_3dgs.mp4",
+      "video": "static/videos/baselines/hdr_luckycat_3dgs.mp4",
+      "sha256": "190808e793bd0609526cc29b113127a390ad93562a84303eab0e0af76a2691c5",
+      "poster": "static/images/hdr_baselines/hdr_luckycat_3dgs.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "luckycat",
+      "method": "mcmc",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_luckycat.mp4",
+      "video": "static/videos/hdr_luckycat.mp4",
+      "sha256": "9da223d4b6c07685021f69511bf38270a31f31ca8d2f4f6b1c443b75a5d85329",
+      "poster": "static/images/hdr_baselines/hdr_luckycat_mcmc.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "luckycat",
+      "method": "gsw",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/luckycat_gsw.mp4",
+      "video": "static/videos/baselines/hdr_luckycat_gsw.mp4",
+      "sha256": "5240f7493a9f1c1bd26b5d3f65346e0c7b82b69b6719fb62c4a0e441d9b88e1d",
+      "poster": "static/images/hdr_baselines/hdr_luckycat_gsw.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "luckycat",
+      "method": "lumi",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/luckycat_lumi.mp4",
+      "video": "static/videos/baselines/hdr_luckycat_lumi.mp4",
+      "sha256": "d84b7c032c66bd70c4b856e6a2103aad9ee8f4c14ee3bcfa9831001eeea1b37c",
+      "poster": "static/images/hdr_baselines/hdr_luckycat_lumi.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "flower",
+      "method": "3dgs",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/flower_3dgs.mp4",
+      "video": "static/videos/baselines/hdr_flower_3dgs.mp4",
+      "sha256": "1a82733b65bbc57598c69d880ef97b31ae2d64869e4d4746cb494832bf8ee95c",
+      "poster": "static/images/hdr_baselines/hdr_flower_3dgs.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "flower",
+      "method": "mcmc",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/flower_mcmc.mp4",
+      "video": "static/videos/baselines/hdr_flower_mcmc.mp4",
+      "sha256": "df0fb89d5fcccbb951485345d0b1abf02b603547a2e0ace675e927701a15457b",
+      "poster": "static/images/hdr_baselines/hdr_flower_mcmc.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "flower",
+      "method": "gsw",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_flower.mp4",
+      "video": "static/videos/hdr_flower.mp4",
+      "sha256": "8dff76c931356103e05fcd9615e480e850be12245b7907fc88468854a8ad5bd7",
+      "poster": "static/images/hdr_baselines/hdr_flower_gsw.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "flower",
+      "method": "lumi",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/flower_lumi.mp4",
+      "video": "static/videos/baselines/hdr_flower_lumi.mp4",
+      "sha256": "22cbe3aa1067902e1a3d9734ef05eb0c8a31b5455ddd1918a495bc1fc4acd1b8",
+      "poster": "static/images/hdr_baselines/hdr_flower_lumi.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "plant",
+      "method": "3dgs",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/plant_3dgs.mp4",
+      "video": "static/videos/baselines/hdr_plant_3dgs.mp4",
+      "sha256": "64f806a7874ff18db0d7d89b717a4f95d5bcba4d65dc954049f006e3782baf10",
+      "poster": "static/images/hdr_baselines/hdr_plant_3dgs.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "plant",
+      "method": "mcmc",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/plant_mcmc.mp4",
+      "video": "static/videos/baselines/hdr_plant_mcmc.mp4",
+      "sha256": "53251d6d76f7ff5c4ff648d73cd8a08aa786ef1216cee7396a3eebee447a1d44",
+      "poster": "static/images/hdr_baselines/hdr_plant_mcmc.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "plant",
+      "method": "gsw",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/demo/Multi-exposure/plant_gsw.mp4",
+      "video": "static/videos/baselines/hdr_plant_gsw.mp4",
+      "sha256": "cd71d01e40ce4144afcb509f9a1a558f1386465709d3d1306d1ca313b1621925",
+      "poster": "static/images/hdr_baselines/hdr_plant_gsw.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    },
+    {
+      "scene": "plant",
+      "method": "lumi",
+      "source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_plant.mp4",
+      "video": "static/videos/hdr_plant.mp4",
+      "sha256": "ab8ee92dbf5eb0906281026c83e645816e64b87db29cb43e43c9d0d26a8191c2",
+      "poster": "static/images/hdr_baselines/hdr_plant_lumi.jpg",
+      "media": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 1648,
+            "height": 930,
+            "r_frame_rate": "25/1",
+            "nb_frames": "200"
+          }
+        ],
+        "format": {
+          "duration": "8.000000"
+        }
+      }
+    }
+  ]
+}

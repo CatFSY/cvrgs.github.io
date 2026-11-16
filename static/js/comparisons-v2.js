@@ -12,9 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
       let src;
       let poster = '';
       if (kind === 'hdr') {
-        const stem = `hdr_${scene}_${method}_path_v3`;
-        src = `static/videos/v3/${stem}.mp4`;
-        poster = `static/images/video_v3/${stem}_000.png`;
+        if (['3dgs', 'mcmc', 'gsw', 'lumi'].includes(method)) {
+          const publishedExamples = {box: '3dgs', luckycat: 'mcmc', flower: 'gsw', plant: 'lumi'};
+          src = publishedExamples[scene] === method
+            ? `static/videos/hdr_${scene}.mp4`
+            : `static/videos/baselines/hdr_${scene}_${method}.mp4`;
+          poster = `static/images/hdr_baselines/hdr_${scene}_${method}.jpg`;
+        } else {
+          const stem = `hdr_${scene}_${method}_path_v3`;
+          src = `static/videos/v3/${stem}.mp4`;
+          poster = `static/images/video_v3/${stem}_000.png`;
+        }
       } else if (kind === 'syn') {
         const stem = `syn_${scene}_v2`;
         src = `static/videos/v2/${stem}.mp4`;

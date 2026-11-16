@@ -5,7 +5,10 @@ workflow. It does not use the previous v2 held-out-image slideshow.
 
 ## Multi-Exposure (current v3)
 
-Four scenes: box, luckycat, flower, plant. Choose PPISP, HDR-GS or GaussHDR.
+Four scenes: box, luckycat, flower, plant. Choose 3DGS, GS-MCMC, GS-W,
+LumiGS, PPISP, HDR-GS or GaussHDR. The original four baselines and three
+new baselines share the method selector; no comparison is hidden behind a
+historical-version menu.
 Each video presents all four training settings side by side: Bright-skewed,
 Dark-skewed, Uniform Random and Extreme Bimodal. The comparison method is
 above Ours, matching the original 1648×930 demo layout.
@@ -20,7 +23,8 @@ The top exposure-example banner is retained from the original video. These
 static recorded images illustrate exposure conditions; they are not GT for
 novel camera positions. No captured GT is available at the spline camera poses.
 
-All model runs use their existing 20000-step checkpoints. Each reloaded model
+For the three newly rendered comparisons, model runs use their existing
+20000-step checkpoints. Each reloaded model
 was checked against a saved test output, within one 8-bit quantization level.
 Checkpoint hashes were checked before and after rendering. Native model frames
 are distinct across the trajectory. No retraining, Gaussian filtering or
@@ -50,7 +54,16 @@ the provenance recorded in static/data/video_v2/.
 
 ## Earlier assets
 
-Previous website videos remain selectable. Flashlight and LOM are unchanged.
+All original HDR baseline methods remain selectable by method name. Four
+previously published clips are reused byte-for-byte; twelve other scene/method
+clips are copied unchanged from ExgsPage/demo/Multi-exposure. Their original
+CVR-GS comparisons remain intact. Source paths, hashes and media checks are in
+static/data/hdr_baselines/catalog.json; the additional clips are in
+static/videos/baselines and posters in static/images/hdr_baselines.
+
+Synthetic retains GS-W and LumiGS alongside PPISP and GT. Flashlight retains
+DarkGS, LITA-GS and LumiGS; LOM retains 3DGS, LumiGS and LITA-GS. Their videos
+are unchanged. The site uses scene/method buttons rather than version menus.
 The v2 HDR held-out-camera clips remain archived in static/videos/v2/; they are
 not the current continuous-camera comparison. See VIDEO_UPDATE_V2_ARCHIVE.md
 for their historical construction details.

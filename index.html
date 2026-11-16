@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css?v=academic-1">
   <link rel="stylesheet" href="./static/css/comparisons-v2.css?v=academic-1">
-  <script defer src="./static/js/comparisons-v2.js?v=academic-1"></script>
+  <script defer src="./static/js/comparisons-v2.js?v=all-methods-1"></script>
 </head>
 <body>
 <main>
@@ -91,6 +91,10 @@
       <div class="selector-row">
         <span class="selector-label" id="hdr-method-label">Compare with</span>
         <div class="choice-buttons method-buttons" role="group" aria-labelledby="hdr-method-label">
+          <button type="button" data-method="3dgs" aria-pressed="false">3DGS</button>
+          <button type="button" data-method="mcmc" aria-pressed="false">GS-MCMC</button>
+          <button type="button" data-method="gsw" aria-pressed="false">GS-W</button>
+          <button type="button" data-method="lumi" aria-pressed="false">LumiGS</button>
           <button type="button" data-method="ppisp" aria-pressed="true">PPISP</button>
           <button type="button" data-method="hdrgs" aria-pressed="false">HDR-GS</button>
           <button type="button" data-method="gausshdr" aria-pressed="false">GaussHDR</button>
@@ -142,7 +146,7 @@
       <figure class="comparison-figure">
         <video src="static/videos/flash_lab1.mp4" controls loop muted playsinline preload="metadata" aria-label="Flashlight Scenes comparison"></video>
         <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
-        <figcaption>Qualitative comparisons under flashlight illumination.</figcaption>
+        <figcaption>Input, DarkGS, LITA-GS, LumiGS, and CVR-GS under flashlight illumination.</figcaption>
       </figure>
       <p class="video-download"><a data-download href="static/videos/flash_lab1.mp4" download>Download video</a></p>
     </div>
@@ -164,7 +168,7 @@
       <figure class="comparison-figure">
         <video src="static/videos/lom_buu.mp4" controls loop muted playsinline preload="metadata" aria-label="Low-Light and Overexposure comparison"></video>
         <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
-        <figcaption>Qualitative comparisons on scenes with low-light or overexposed inputs.</figcaption>
+        <figcaption>3DGS, LumiGS, LITA-GS, and CVR-GS on scenes with low-light or overexposed inputs.</figcaption>
       </figure>
       <p class="video-download"><a data-download href="static/videos/lom_buu.mp4" download>Download video</a></p>
     </div>
