@@ -44,6 +44,8 @@ const groups = [...html.matchAll(/<section[^>]*data-comparison-group="([^"]+)"[^
   };
 });
 assert.equal(groups.length, 4);
+assert.deepEqual(groups.find(group => group.dataset.comparisonGroup === 'syn').querySelectorAll('[data-scene]').map(button => button.dataset.scene),
+  ['hotdog', 'ficus', 'chair']);
 assert.deepEqual(groups.find(group => group.dataset.comparisonGroup === 'hdr').querySelectorAll('[data-method]').map(button => button.dataset.method).sort(),
   ['3dgs', 'mcmc', 'gsw', 'lumi', 'ppisp', 'hdrgs', 'gausshdr'].sort());
 const hdrComparisons = JSON.parse(fs.readFileSync(path.join(site, 'static/data/video_v4/catalog.json'), 'utf8'));
@@ -73,8 +75,8 @@ for (const group of groups) {
       if (method) method.listeners.click();
       verifyMedia();
       if (group.dataset.comparisonGroup === 'syn') {
-        assert.equal(group.video.src, `static/videos/objects/${scene.dataset.scene}.mp4`);
-        assert.equal(group.video.poster, `static/images/objects/${scene.dataset.scene}.png`);
+        assert.equal(group.video.src, `static/videos/objects_row/${scene.dataset.scene}.mp4`);
+        assert.equal(group.video.poster, `static/images/objects_row/${scene.dataset.scene}.png`);
       } else assert(group.video.src.includes(`_${scene.dataset.scene}`));
       if (method) {
         const record = hdrComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);

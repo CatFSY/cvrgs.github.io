@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/index.css?v=academic-1">
   <link rel="stylesheet" href="./static/css/comparisons-v2.css?v=academic-1">
-  <script defer src="./static/js/comparisons-v2.js?v=clean-object-6"></script>
+  <script defer src="./static/js/comparisons-v2.js?v=objects-row-7"></script>
 </head>
 <body>
 <main>
@@ -118,16 +118,15 @@
         <div class="choice-buttons scene-buttons" role="group" aria-labelledby="syn-scene-label">
           <button type="button" data-scene="hotdog" aria-pressed="true">Hotdog</button>
           <button type="button" data-scene="ficus" aria-pressed="false">Ficus</button>
-          <button type="button" data-scene="mic" aria-pressed="false">Mic</button>
           <button type="button" data-scene="chair" aria-pressed="false">Chair</button>
         </div>
       </div>
       <figure class="comparison-figure">
-        <video src="static/videos/objects/hotdog.mp4" poster="static/images/objects/hotdog.png" controls loop muted playsinline preload="metadata" aria-label="Multi-Light Objects comparison"></video>
+        <video src="static/videos/objects_row/hotdog.mp4" poster="static/images/objects_row/hotdog.png" controls loop muted playsinline preload="metadata" aria-label="Multi-Light Objects comparison"></video>
         <p class="video-error" data-video-error role="alert" hidden>Unable to play this video. You can download it using the link below.</p>
-        <figcaption>Input, GS-W, LumiGS, PPISP, CVR-GS, and ground truth at corresponding camera views. PPISP uses direct GS RGB from training without exposure metadata, before the Controller and ISP. The sequence includes training and held-out views.</figcaption>
+        <figcaption>Input, GS-W, LumiGS, PPISP, and CVR-GS at corresponding camera views. PPISP uses direct GS RGB from training without exposure metadata, before the Controller and ISP. The sequence includes training and held-out views.</figcaption>
       </figure>
-      <p class="video-download"><a data-download href="static/videos/objects/hotdog.mp4" download>Download video</a></p>
+      <p class="video-download"><a data-download href="static/videos/objects_row/hotdog.mp4" download>Download video</a></p>
     </div>
   </section>
 

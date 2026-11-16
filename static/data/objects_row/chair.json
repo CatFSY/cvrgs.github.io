@@ -1,0 +1,71 @@
+{
+  "scene": "chair",
+  "source": "static/videos/v2/syn_chair_v2.mp4",
+  "source_sha256": "60787e944e0f8b3143a3fbac067fd5bb354959c4de845ab91e3db3e08a8c7399",
+  "video": "static/videos/objects_row/chair.mp4",
+  "sha256": "83f06aff46c910cedaea09fe695fbab2383ca9c43950885952be3f2fc14d6dcf",
+  "poster": "static/images/objects_row/chair.png",
+  "columns": [
+    "Input",
+    "GS-W",
+    "LumiGS",
+    "PPISP",
+    "Ours"
+  ],
+  "layout": "single row",
+  "gt_shown": false,
+  "mic_included": false,
+  "source_crops": [
+    [
+      0,
+      78,
+      400,
+      478
+    ],
+    [
+      408,
+      78,
+      808,
+      478
+    ],
+    [
+      816,
+      78,
+      1216,
+      478
+    ],
+    [
+      0,
+      524,
+      400,
+      924
+    ],
+    [
+      408,
+      524,
+      808,
+      924
+    ]
+  ],
+  "rendered_panel_pixels_preserved_before_encoding": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "training_views": 180,
+  "heldout_views": 20,
+  "font": "/amax/home/fengshuangyu/cvrgs/output/fig3_relighting_layout_preview/body_fonts/NimbusRomNo9L-Regu.otf",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 2032,
+        "height": 438,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}

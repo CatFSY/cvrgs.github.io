@@ -1,0 +1,71 @@
+{
+  "scene": "ficus",
+  "source": "static/videos/v2/syn_ficus_v2.mp4",
+  "source_sha256": "b8001e9b7d7a7091781aec63c612f1b43359c7a536332481238a8ec4ff9cf5ca",
+  "video": "static/videos/objects_row/ficus.mp4",
+  "sha256": "b814c4bd0e6a3ec5a701ad62b466434fb0c9feaabdb3135c317ac479f859f6ce",
+  "poster": "static/images/objects_row/ficus.png",
+  "columns": [
+    "Input",
+    "GS-W",
+    "LumiGS",
+    "PPISP",
+    "Ours"
+  ],
+  "layout": "single row",
+  "gt_shown": false,
+  "mic_included": false,
+  "source_crops": [
+    [
+      0,
+      78,
+      400,
+      478
+    ],
+    [
+      408,
+      78,
+      808,
+      478
+    ],
+    [
+      816,
+      78,
+      1216,
+      478
+    ],
+    [
+      0,
+      524,
+      400,
+      924
+    ],
+    [
+      408,
+      524,
+      808,
+      924
+    ]
+  ],
+  "rendered_panel_pixels_preserved_before_encoding": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "training_views": 180,
+  "heldout_views": 20,
+  "font": "/amax/home/fengshuangyu/cvrgs/output/fig3_relighting_layout_preview/body_fonts/NimbusRomNo9L-Regu.otf",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 2032,
+        "height": 438,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}

@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         src = `static/videos/v4/${stem}.mp4?v=clean-labels-1`;
         poster = `static/images/video_v4/${stem}_000.png?v=clean-labels-1`;
       } else if (kind === 'syn') {
-        src = `static/videos/objects/${scene}.mp4`;
-        poster = `static/images/objects/${scene}.png`;
+        src = `static/videos/objects_row/${scene}.mp4`;
+        poster = `static/images/objects_row/${scene}.png`;
       } else {
         src = `static/videos/${kind}_${scene}.mp4`;
       }

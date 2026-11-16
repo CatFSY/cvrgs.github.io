@@ -1,0 +1,71 @@
+{
+  "scene": "hotdog",
+  "source": "static/videos/v2/syn_hotdog_v2.mp4",
+  "source_sha256": "a8de7381573464c8128c9e1297ea691670ea23411534fe8b5c45f9bb1dd94e73",
+  "video": "static/videos/objects_row/hotdog.mp4",
+  "sha256": "9283fcee64f26a063d5d481a3a2f15fc4cc6d09006aaa17c57ac6fb0b509054e",
+  "poster": "static/images/objects_row/hotdog.png",
+  "columns": [
+    "Input",
+    "GS-W",
+    "LumiGS",
+    "PPISP",
+    "Ours"
+  ],
+  "layout": "single row",
+  "gt_shown": false,
+  "mic_included": false,
+  "source_crops": [
+    [
+      0,
+      78,
+      400,
+      478
+    ],
+    [
+      408,
+      78,
+      808,
+      478
+    ],
+    [
+      816,
+      78,
+      1216,
+      478
+    ],
+    [
+      0,
+      524,
+      400,
+      924
+    ],
+    [
+      408,
+      524,
+      808,
+      924
+    ]
+  ],
+  "rendered_panel_pixels_preserved_before_encoding": true,
+  "frames": 200,
+  "fps": 20,
+  "duration_seconds": 10,
+  "training_views": 180,
+  "heldout_views": 20,
+  "font": "/amax/home/fengshuangyu/cvrgs/output/fig3_relighting_layout_preview/body_fonts/NimbusRomNo9L-Regu.otf",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 2032,
+        "height": 438,
+        "r_frame_rate": "20/1",
+        "nb_frames": "200"
+      }
+    ],
+    "format": {
+      "duration": "10.000000"
+    }
+  }
+}

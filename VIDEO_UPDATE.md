@@ -42,14 +42,32 @@ exposure fitting, GT-mean alignment or external fusion is applied.
 
 ## Multi-Light Objects
 
-The four synthetic videos cover hotdog, ficus, mic and chair. Only the
-40-pixel top metadata band (scene, frame ID and train/test label) has been
-removed; all six 400x400 image panels and method names remain intact.
+The page shows Hotdog, Ficus and Chair. Mic is excluded from the displayed
+scene selector and standalone export. Each video uses a single row of five
+400x400 panels: Input, GS-W, LumiGS, PPISP and Ours. GT is omitted, along with
+the scene/frame/train-test metadata badge. The image panels are preserved
+without cropping or color changes before video encoding, and method labels
+use the same Nimbus Roman font as the HDR comparisons.
+
+- Videos: static/videos/objects_row/
+- Posters: static/images/objects_row/
+- Source crops, hashes and sequence metadata: static/data/objects_row/
+- Reproduction: tools/video_update/reformat_object_row.py
+
 The 200-frame sequence still includes 180 training and 20 held-out views.
-Clean videos and posters are in static/videos/objects/ and
-static/images/objects/, with provenance in static/data/objects/. PPISP is the GS branch
-before Controller/ISP from training without exposure metadata. Source details
-remain in static/data/video_v2/.
+PPISP is the GS branch before Controller/ISP, trained without exposure metadata.
+Original source details remain in static/data/video_v2/.
+
+## Standalone comparison video
+
+Run tools/video_update/build_standalone_video.py to export the currently
+selected four datasets independently of the website. Output is written outside
+the site repository to output/standalone_video_20261117/. The export includes
+38 comparison clips, dataset chapter cards, scene/method headings and a
+1080p H.264 master. The complete render panels retain their aspect ratio; FPS
+conversion only repeats frames. No model is retrained, and no new optical-flow
+interpolation, appearance fitting, audio, authors or website links are added.
+The export manifest records clip sources and chapter timing.
 
 ## Flashlight and LOM
 
