@@ -4,7 +4,7 @@
   "label": "GS-MCMC",
   "video": "static/videos/v4/hdr_plant_mcmc_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_plant_mcmc_path_v4_000.png",
-  "sha256": "831d0e64441a28587ac7538c5ab930df47df88fb392eec9d67d140a7770c884e",
+  "sha256": "e0108795a07ed82eea85c9d408e1ffe79a11400bd2ca36ea54188ef63fb4a4d0",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 36.998
     }
   ],
-  "elapsed_seconds": 11.29,
+  "elapsed_seconds": 10.09,
   "probe": {
     "programs": [],
     "streams": [

@@ -4,7 +4,7 @@
   "label": "GS-W",
   "video": "static/videos/v4/hdr_plant_gsw_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_plant_gsw_path_v4_000.png",
-  "sha256": "5836c3d46f0b8262590a477e438ce48baf6a7efbb2575eac8e10d72c1e1408a5",
+  "sha256": "acbb309ac5636791be2e90a14d24c32b47fb19901466468c40913695aefd4316",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 36.914
     }
   ],
-  "elapsed_seconds": 10.2,
+  "elapsed_seconds": 9.02,
   "probe": {
     "programs": [],
     "streams": [

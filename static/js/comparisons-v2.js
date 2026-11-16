@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       let poster = '';
       if (kind === 'hdr') {
         const stem = `hdr_${scene}_${method}_path_v4`;
-        src = `static/videos/v4/${stem}.mp4`;
-        poster = `static/images/video_v4/${stem}_000.png`;
+        src = `static/videos/v4/${stem}.mp4?v=clean-labels-1`;
+        poster = `static/images/video_v4/${stem}_000.png?v=clean-labels-1`;
       } else if (kind === 'syn') {
         const stem = `syn_${scene}_v2`;
         src = `static/videos/v2/${stem}.mp4`;
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (poster) video.poster = poster;
       else video.removeAttribute('poster');
       download.href = src;
-      download.download = src.split('/').pop();
+      download.download = src.split('?')[0].split('/').pop();
       error.hidden = true;
       video.load();
       if (wasPlaying) video.play().catch(() => {});

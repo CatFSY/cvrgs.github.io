@@ -4,7 +4,7 @@
   "label": "GS-W",
   "video": "static/videos/v4/hdr_luckycat_gsw_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_gsw_path_v4_000.png",
-  "sha256": "635ea82b341657019c5a8e45f593de056bd5e8e02e3c8dda2c63ccef4694a8d9",
+  "sha256": "8bdef740e95b86a0cb8da3e978b82bb2bd2f1683ea2a7abec57854bfd57d032b",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.038
     }
   ],
-  "elapsed_seconds": 9.17,
+  "elapsed_seconds": 7.62,
   "probe": {
     "programs": [],
     "streams": [

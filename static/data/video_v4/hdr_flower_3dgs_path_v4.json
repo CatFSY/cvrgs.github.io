@@ -4,7 +4,7 @@
   "label": "3DGS",
   "video": "static/videos/v4/hdr_flower_3dgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_flower_3dgs_path_v4_000.png",
-  "sha256": "db99cb8adce227d723224eee7ab1ae9d270a5378551645fa87f3f4d3669cd528",
+  "sha256": "ca5fe33311e178cef4288476292248c64585174ff25428088a8a9c81a3c9173d",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.493
     }
   ],
-  "elapsed_seconds": 9.36,
+  "elapsed_seconds": 8.43,
   "probe": {
     "programs": [],
     "streams": [

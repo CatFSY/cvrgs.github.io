@@ -4,7 +4,7 @@
   "label": "GS-W",
   "video": "static/videos/v4/hdr_flower_gsw_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_flower_gsw_path_v4_000.png",
-  "sha256": "d1d496b4a1bdd1067fdf92a0d6d74c514976b22e074319b16cd06330b7a1a95c",
+  "sha256": "501a1def2838786de2cc479093e13926351141ad94b2439ceece35494310a25d",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.494
     }
   ],
-  "elapsed_seconds": 7.86,
+  "elapsed_seconds": 7.45,
   "probe": {
     "programs": [],
     "streams": [

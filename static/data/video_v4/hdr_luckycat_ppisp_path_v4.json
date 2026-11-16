@@ -4,7 +4,7 @@
   "label": "PPISP",
   "video": "static/videos/v4/hdr_luckycat_ppisp_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_ppisp_path_v4_000.png",
-  "sha256": "ebec204a0a928a0a8b5c208872dac841321a6592113afcead655dfcd79e8de67",
+  "sha256": "5d35f517d0901ff35a5907bb7361b4600ccdc2c686c6c319b7c8e9d19ce169bf",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 40.779
     }
   ],
-  "elapsed_seconds": 8.99,
+  "elapsed_seconds": 7.65,
   "probe": {
     "programs": [],
     "streams": [

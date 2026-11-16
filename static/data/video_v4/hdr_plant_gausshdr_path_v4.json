@@ -4,7 +4,7 @@
   "label": "GaussHDR",
   "video": "static/videos/v4/hdr_plant_gausshdr_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_plant_gausshdr_path_v4_000.png",
-  "sha256": "e3ea7f2469fed0d92db6ba7848300e0d6e3e720c0a5c246d703b993c1152732d",
+  "sha256": "16664234adb527a2ddfc06a1777383f79902f1f77afc714a30ea8ffff3f73097",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 40.36
     }
   ],
-  "elapsed_seconds": 9.7,
+  "elapsed_seconds": 8.76,
   "probe": {
     "programs": [],
     "streams": [

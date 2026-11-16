@@ -4,7 +4,7 @@
   "label": "3DGS",
   "video": "static/videos/v4/hdr_luckycat_3dgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_3dgs_path_v4_000.png",
-  "sha256": "e188d6380d0e1076983d81a5c3c1a7ba883447dbb320eefdb68e5a4c628de902",
+  "sha256": "97bc3df19c302b8e496ea7492f076008a62d392fa5f47067aac7ebb976620901",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.151
     }
   ],
-  "elapsed_seconds": 8.98,
+  "elapsed_seconds": 8.47,
   "probe": {
     "programs": [],
     "streams": [

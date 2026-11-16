@@ -4,7 +4,7 @@
   "label": "3DGS",
   "video": "static/videos/v4/hdr_plant_3dgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_plant_3dgs_path_v4_000.png",
-  "sha256": "9a4cfddbbe4167d38c63771744af1a46515fc2667880c03f93f315307a64e494",
+  "sha256": "4ce724defe1c6fba00160c47b3b54d4bdc983665b5a1636f23d6dc7957041836",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 36.926
     }
   ],
-  "elapsed_seconds": 12.43,
+  "elapsed_seconds": 10.49,
   "probe": {
     "programs": [],
     "streams": [

@@ -4,7 +4,7 @@
   "label": "HDR-GS",
   "video": "static/videos/v4/hdr_flower_hdrgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_flower_hdrgs_path_v4_000.png",
-  "sha256": "943fcd8020171ddf8ee9f7024068216db6844dd526e025f0ed79ccf8c50fcbd1",
+  "sha256": "f09fbe6e7322aef9a547085bb856c4d701de5db08ee9ae4627a93a316ac5493e",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 40.256
     }
   ],
-  "elapsed_seconds": 8.79,
+  "elapsed_seconds": 7.56,
   "probe": {
     "programs": [],
     "streams": [

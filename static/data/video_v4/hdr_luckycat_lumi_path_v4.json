@@ -4,7 +4,7 @@
   "label": "LumiGS",
   "video": "static/videos/v4/hdr_luckycat_lumi_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_lumi_path_v4_000.png",
-  "sha256": "59c5a939ee35398cb9733325ab4cba55d398cd806f47e0ab83acf0b534a1b8ce",
+  "sha256": "65ce6b0e97419d8e3690d3dc46ae1b2d019e8130359fa00729b5dec80728f250",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.11
     }
   ],
-  "elapsed_seconds": 9.13,
+  "elapsed_seconds": 8.83,
   "probe": {
     "programs": [],
     "streams": [

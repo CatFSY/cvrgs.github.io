@@ -4,7 +4,7 @@
   "label": "GS-MCMC",
   "video": "static/videos/v4/hdr_flower_mcmc_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_flower_mcmc_path_v4_000.png",
-  "sha256": "ee44e7aaf2eb2bf460857547e81ee24bf80155dc4d582d8ec2399770de87c835",
+  "sha256": "e247efc6ef6317797e9d5e9b5bb85f18b9af6d05e2adc70fd4b8f17707b9fc69",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.188
     }
   ],
-  "elapsed_seconds": 9.48,
+  "elapsed_seconds": 8.4,
   "probe": {
     "programs": [],
     "streams": [

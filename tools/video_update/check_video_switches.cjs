@@ -57,8 +57,8 @@ vm.runInNewContext(fs.readFileSync(path.join(site, 'static/js/comparisons-v2.js'
 let combinations = 0;
 for (const group of groups) {
   const verifyMedia = () => {
-    assert(fs.existsSync(path.join(site, group.video.src)), group.video.src);
-    if (group.video.poster) assert(fs.existsSync(path.join(site, group.video.poster)), group.video.poster);
+    assert(fs.existsSync(path.join(site, group.video.src.split('?')[0])), group.video.src);
+    if (group.video.poster) assert(fs.existsSync(path.join(site, group.video.poster.split('?')[0])), group.video.poster);
     assert.equal(group.download.href, group.video.src);
     for (const choice of ['scene', 'method']) {
       const choices = group.querySelectorAll(`[data-${choice}]`);
@@ -76,8 +76,8 @@ for (const group of groups) {
       if (method) {
         const record = hdrComparisons.find(item => item.scene === scene.dataset.scene && item.method === method.dataset.method);
         assert(record);
-        assert.equal(group.video.src, record.video);
-        assert.equal(group.video.poster, record.poster);
+        assert.equal(group.video.src.split('?')[0], record.video);
+        assert.equal(group.video.poster.split('?')[0], record.poster);
       }
       assert.equal(group.video.paused, true);
       combinations++;

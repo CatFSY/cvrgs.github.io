@@ -4,7 +4,7 @@
   "label": "PPISP",
   "video": "static/videos/v4/hdr_box_ppisp_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_ppisp_path_v4_000.png",
-  "sha256": "7a527b3bbab84dd3ec891ad0dee425fca140f0e7da9260e64ae3e2a93f5ba0d2",
+  "sha256": "0e75588baddb90a5aeca7b865c38c21fda69cafa456e93077c847fb681489e26",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.604
     }
   ],
-  "elapsed_seconds": 8.78,
+  "elapsed_seconds": 7.9,
   "probe": {
     "programs": [],
     "streams": [

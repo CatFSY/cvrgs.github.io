@@ -4,7 +4,7 @@
   "label": "GS-MCMC",
   "video": "static/videos/v4/hdr_luckycat_mcmc_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_mcmc_path_v4_000.png",
-  "sha256": "a4581bc97881348e6d878ca73ac7b8a66c3feebec5ecb3e5348a18b41d3f0b0c",
+  "sha256": "7138b3766be547d43c464f95067ffbbbd004b398506fb2df10b412214ae19642",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 38.854
     }
   ],
-  "elapsed_seconds": 10.11,
+  "elapsed_seconds": 9.36,
   "probe": {
     "programs": [],
     "streams": [

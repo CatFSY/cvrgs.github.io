@@ -4,7 +4,7 @@
   "label": "3DGS",
   "video": "static/videos/v4/hdr_box_3dgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_3dgs_path_v4_000.png",
-  "sha256": "1104d5a3474958834fc40a5bc6b0883a42f7b007fcac392db9fed3fb1257aa37",
+  "sha256": "ea995b5889d14a7af4f97e848d28f775658fbd917938b101c4ff4a18da9eb40e",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.8
     }
   ],
-  "elapsed_seconds": 9.32,
+  "elapsed_seconds": 8.6,
   "probe": {
     "programs": [],
     "streams": [

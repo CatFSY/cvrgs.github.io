@@ -4,7 +4,7 @@
   "label": "GaussHDR",
   "video": "static/videos/v4/hdr_luckycat_gausshdr_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_gausshdr_path_v4_000.png",
-  "sha256": "7ba04ec2e114367ab7f7babaa273cb2e68814f542058b7803e4eb1d922cf516b",
+  "sha256": "413dee11558a08211c43b62882ca0b0a302b7e1185724ba95ce3d2c75edd06b4",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 40.781
     }
   ],
-  "elapsed_seconds": 8.54,
+  "elapsed_seconds": 8.1,
   "probe": {
     "programs": [],
     "streams": [

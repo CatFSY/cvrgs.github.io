@@ -4,7 +4,7 @@
   "label": "HDR-GS",
   "video": "static/videos/v4/hdr_box_hdrgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_hdrgs_path_v4_000.png",
-  "sha256": "387e2dffe61d8dae7618128ed033782b6309d4da7b6a8044ff42bf9fa9b3b2fb",
+  "sha256": "08a5aa4ff83716ae96a2b92287cab00e4b7e7da90968ea1c6d1b859f0f530c7a",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.625
     }
   ],
-  "elapsed_seconds": 8.68,
+  "elapsed_seconds": 8.19,
   "probe": {
     "programs": [],
     "streams": [

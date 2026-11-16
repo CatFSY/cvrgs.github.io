@@ -4,7 +4,7 @@
   "label": "HDR-GS",
   "video": "static/videos/v4/hdr_luckycat_hdrgs_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_luckycat_hdrgs_path_v4_000.png",
-  "sha256": "465b2a11b3612b395b918411e521a2957552ed58cdf36b333b7fc920d315636b",
+  "sha256": "ba870472a87680b67f60f7fd949ed9ac8f0cb540d63e51c498dbc785f280053c",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 40.76
     }
   ],
-  "elapsed_seconds": 8.96,
+  "elapsed_seconds": 7.99,
   "probe": {
     "programs": [],
     "streams": [

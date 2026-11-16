@@ -4,7 +4,7 @@
   "label": "GS-W",
   "video": "static/videos/v4/hdr_box_gsw_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_gsw_path_v4_000.png",
-  "sha256": "9c1dd557e9bb215ccd4adda58311a883289be2df9df91aa3ad1616a392237f03",
+  "sha256": "1d1b0c98e57fcb1492b90b80018b770f1b4562da6acc37e7c2c500257c051757",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.704
     }
   ],
-  "elapsed_seconds": 8.8,
+  "elapsed_seconds": 7.94,
   "probe": {
     "programs": [],
     "streams": [

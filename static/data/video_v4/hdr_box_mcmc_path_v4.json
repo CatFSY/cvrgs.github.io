@@ -4,7 +4,7 @@
   "label": "GS-MCMC",
   "video": "static/videos/v4/hdr_box_mcmc_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_mcmc_path_v4_000.png",
-  "sha256": "c66cb15937e7d2c3ffaa1c9fdbaf6d025ebde697df7e61d85bb1ef9466842c96",
+  "sha256": "4050ad559587c39c58ff4b1fae754f0b0ca0b3afde6632bee0cb1c24cd27cdd2",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.525
     }
   ],
-  "elapsed_seconds": 10.73,
+  "elapsed_seconds": 9.53,
   "probe": {
     "programs": [],
     "streams": [

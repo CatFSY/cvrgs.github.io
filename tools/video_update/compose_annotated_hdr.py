@@ -47,7 +47,6 @@ def template(scene):
   # This rectangle belongs to the static header, outside the model renders.
   d.rectangle((x,48,x+479,75),fill='white')
   d.text((x+240,51),label,font=INPUT_FONT,fill=INK,anchor='mt')
- d.text((824,382),'Exposure settings (schematic)',font=SMALL,fill=MUTED,anchor='mt')
  for col,(title,heights) in enumerate(zip(LABELS,[[7,0,35],[35,0,7],[23,23,23],[30,0,30]])):
   x=col*416
   d.text((x+200,413),title,font=HEADING,fill=INK,anchor='mt')

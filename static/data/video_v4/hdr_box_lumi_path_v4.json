@@ -4,7 +4,7 @@
   "label": "LumiGS",
   "video": "static/videos/v4/hdr_box_lumi_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_box_lumi_path_v4_000.png",
-  "sha256": "2a9092e749ca51221db94097102027dbe78a8a366f93b21418d1f91420e95f46",
+  "sha256": "01ac870e7768175b702de3bc280bfbc5f4e563656a7580b5be489327ce7c187c",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 39.796
     }
   ],
-  "elapsed_seconds": 9.13,
+  "elapsed_seconds": 8.16,
   "probe": {
     "programs": [],
     "streams": [

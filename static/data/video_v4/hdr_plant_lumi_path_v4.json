@@ -4,7 +4,7 @@
   "label": "LumiGS",
   "video": "static/videos/v4/hdr_plant_lumi_path_v4.mp4",
   "poster": "static/images/video_v4/hdr_plant_lumi_path_v4_000.png",
-  "sha256": "b68ed4f26c80b54f21cf90fc95a5b2fd5c66c9f006994808a3d2712eb3d22436",
+  "sha256": "a83b7203a4c0dbda1bd2dec1244631e4249c4cbbd6efd71db261df802f56ab62",
   "frames": 120,
   "fps": 15,
   "layout": [
@@ -112,7 +112,7 @@
       "reference_psnr": 36.741
     }
   ],
-  "elapsed_seconds": 11.14,
+  "elapsed_seconds": 9.38,
   "probe": {
     "programs": [],
     "streams": [

@@ -5,7 +5,7 @@
     "label": "3DGS",
     "video": "static/videos/v4/hdr_box_3dgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_3dgs_path_v4_000.png",
-    "sha256": "1104d5a3474958834fc40a5bc6b0883a42f7b007fcac392db9fed3fb1257aa37",
+    "sha256": "ea995b5889d14a7af4f97e848d28f775658fbd917938b101c4ff4a18da9eb40e",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -113,7 +113,7 @@
         "reference_psnr": 39.8
       }
     ],
-    "elapsed_seconds": 9.32,
+    "elapsed_seconds": 8.6,
     "probe": {
       "programs": [],
       "streams": [
@@ -135,7 +135,7 @@
     "label": "GS-MCMC",
     "video": "static/videos/v4/hdr_box_mcmc_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_mcmc_path_v4_000.png",
-    "sha256": "c66cb15937e7d2c3ffaa1c9fdbaf6d025ebde697df7e61d85bb1ef9466842c96",
+    "sha256": "4050ad559587c39c58ff4b1fae754f0b0ca0b3afde6632bee0cb1c24cd27cdd2",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -243,7 +243,7 @@
         "reference_psnr": 39.525
       }
     ],
-    "elapsed_seconds": 10.73,
+    "elapsed_seconds": 9.53,
     "probe": {
       "programs": [],
       "streams": [
@@ -265,7 +265,7 @@
     "label": "GS-W",
     "video": "static/videos/v4/hdr_box_gsw_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_gsw_path_v4_000.png",
-    "sha256": "9c1dd557e9bb215ccd4adda58311a883289be2df9df91aa3ad1616a392237f03",
+    "sha256": "1d1b0c98e57fcb1492b90b80018b770f1b4562da6acc37e7c2c500257c051757",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -373,7 +373,7 @@
         "reference_psnr": 39.704
       }
     ],
-    "elapsed_seconds": 8.8,
+    "elapsed_seconds": 7.94,
     "probe": {
       "programs": [],
       "streams": [
@@ -395,7 +395,7 @@
     "label": "LumiGS",
     "video": "static/videos/v4/hdr_box_lumi_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_lumi_path_v4_000.png",
-    "sha256": "2a9092e749ca51221db94097102027dbe78a8a366f93b21418d1f91420e95f46",
+    "sha256": "01ac870e7768175b702de3bc280bfbc5f4e563656a7580b5be489327ce7c187c",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -503,7 +503,7 @@
         "reference_psnr": 39.796
       }
     ],
-    "elapsed_seconds": 9.13,
+    "elapsed_seconds": 8.16,
     "probe": {
       "programs": [],
       "streams": [
@@ -525,7 +525,7 @@
     "label": "PPISP",
     "video": "static/videos/v4/hdr_box_ppisp_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_ppisp_path_v4_000.png",
-    "sha256": "7a527b3bbab84dd3ec891ad0dee425fca140f0e7da9260e64ae3e2a93f5ba0d2",
+    "sha256": "0e75588baddb90a5aeca7b865c38c21fda69cafa456e93077c847fb681489e26",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -633,7 +633,7 @@
         "reference_psnr": 39.604
       }
     ],
-    "elapsed_seconds": 8.78,
+    "elapsed_seconds": 7.9,
     "probe": {
       "programs": [],
       "streams": [
@@ -655,7 +655,7 @@
     "label": "HDR-GS",
     "video": "static/videos/v4/hdr_box_hdrgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_hdrgs_path_v4_000.png",
-    "sha256": "387e2dffe61d8dae7618128ed033782b6309d4da7b6a8044ff42bf9fa9b3b2fb",
+    "sha256": "08a5aa4ff83716ae96a2b92287cab00e4b7e7da90968ea1c6d1b859f0f530c7a",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -763,7 +763,7 @@
         "reference_psnr": 39.625
       }
     ],
-    "elapsed_seconds": 8.68,
+    "elapsed_seconds": 8.19,
     "probe": {
       "programs": [],
       "streams": [
@@ -785,7 +785,7 @@
     "label": "GaussHDR",
     "video": "static/videos/v4/hdr_box_gausshdr_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_box_gausshdr_path_v4_000.png",
-    "sha256": "0a45e898c5efc3c16528f1b0233d20752adbd9f64e3ece683ace2d21d637ea71",
+    "sha256": "fd29936a284da4c5aa8349d775bdc1753bd30c1ca3fa04e5359d6ac22ed69925",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -893,7 +893,7 @@
         "reference_psnr": 39.623
       }
     ],
-    "elapsed_seconds": 8.5,
+    "elapsed_seconds": 8.27,
     "probe": {
       "programs": [],
       "streams": [
@@ -915,7 +915,7 @@
     "label": "3DGS",
     "video": "static/videos/v4/hdr_luckycat_3dgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_3dgs_path_v4_000.png",
-    "sha256": "e188d6380d0e1076983d81a5c3c1a7ba883447dbb320eefdb68e5a4c628de902",
+    "sha256": "97bc3df19c302b8e496ea7492f076008a62d392fa5f47067aac7ebb976620901",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1023,7 +1023,7 @@
         "reference_psnr": 39.151
       }
     ],
-    "elapsed_seconds": 8.98,
+    "elapsed_seconds": 8.47,
     "probe": {
       "programs": [],
       "streams": [
@@ -1045,7 +1045,7 @@
     "label": "GS-MCMC",
     "video": "static/videos/v4/hdr_luckycat_mcmc_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_mcmc_path_v4_000.png",
-    "sha256": "a4581bc97881348e6d878ca73ac7b8a66c3feebec5ecb3e5348a18b41d3f0b0c",
+    "sha256": "7138b3766be547d43c464f95067ffbbbd004b398506fb2df10b412214ae19642",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1153,7 +1153,7 @@
         "reference_psnr": 38.854
       }
     ],
-    "elapsed_seconds": 10.11,
+    "elapsed_seconds": 9.36,
     "probe": {
       "programs": [],
       "streams": [
@@ -1175,7 +1175,7 @@
     "label": "GS-W",
     "video": "static/videos/v4/hdr_luckycat_gsw_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_gsw_path_v4_000.png",
-    "sha256": "635ea82b341657019c5a8e45f593de056bd5e8e02e3c8dda2c63ccef4694a8d9",
+    "sha256": "8bdef740e95b86a0cb8da3e978b82bb2bd2f1683ea2a7abec57854bfd57d032b",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1283,7 +1283,7 @@
         "reference_psnr": 39.038
       }
     ],
-    "elapsed_seconds": 9.17,
+    "elapsed_seconds": 7.62,
     "probe": {
       "programs": [],
       "streams": [
@@ -1305,7 +1305,7 @@
     "label": "LumiGS",
     "video": "static/videos/v4/hdr_luckycat_lumi_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_lumi_path_v4_000.png",
-    "sha256": "59c5a939ee35398cb9733325ab4cba55d398cd806f47e0ab83acf0b534a1b8ce",
+    "sha256": "65ce6b0e97419d8e3690d3dc46ae1b2d019e8130359fa00729b5dec80728f250",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1413,7 +1413,7 @@
         "reference_psnr": 39.11
       }
     ],
-    "elapsed_seconds": 9.13,
+    "elapsed_seconds": 8.83,
     "probe": {
       "programs": [],
       "streams": [
@@ -1435,7 +1435,7 @@
     "label": "PPISP",
     "video": "static/videos/v4/hdr_luckycat_ppisp_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_ppisp_path_v4_000.png",
-    "sha256": "ebec204a0a928a0a8b5c208872dac841321a6592113afcead655dfcd79e8de67",
+    "sha256": "5d35f517d0901ff35a5907bb7361b4600ccdc2c686c6c319b7c8e9d19ce169bf",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1543,7 +1543,7 @@
         "reference_psnr": 40.779
       }
     ],
-    "elapsed_seconds": 8.99,
+    "elapsed_seconds": 7.65,
     "probe": {
       "programs": [],
       "streams": [
@@ -1565,7 +1565,7 @@
     "label": "HDR-GS",
     "video": "static/videos/v4/hdr_luckycat_hdrgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_hdrgs_path_v4_000.png",
-    "sha256": "465b2a11b3612b395b918411e521a2957552ed58cdf36b333b7fc920d315636b",
+    "sha256": "ba870472a87680b67f60f7fd949ed9ac8f0cb540d63e51c498dbc785f280053c",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1673,7 +1673,7 @@
         "reference_psnr": 40.76
       }
     ],
-    "elapsed_seconds": 8.96,
+    "elapsed_seconds": 7.99,
     "probe": {
       "programs": [],
       "streams": [
@@ -1695,7 +1695,7 @@
     "label": "GaussHDR",
     "video": "static/videos/v4/hdr_luckycat_gausshdr_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_luckycat_gausshdr_path_v4_000.png",
-    "sha256": "7ba04ec2e114367ab7f7babaa273cb2e68814f542058b7803e4eb1d922cf516b",
+    "sha256": "413dee11558a08211c43b62882ca0b0a302b7e1185724ba95ce3d2c75edd06b4",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1803,7 +1803,7 @@
         "reference_psnr": 40.781
       }
     ],
-    "elapsed_seconds": 8.54,
+    "elapsed_seconds": 8.1,
     "probe": {
       "programs": [],
       "streams": [
@@ -1825,7 +1825,7 @@
     "label": "3DGS",
     "video": "static/videos/v4/hdr_flower_3dgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_3dgs_path_v4_000.png",
-    "sha256": "db99cb8adce227d723224eee7ab1ae9d270a5378551645fa87f3f4d3669cd528",
+    "sha256": "ca5fe33311e178cef4288476292248c64585174ff25428088a8a9c81a3c9173d",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -1933,7 +1933,7 @@
         "reference_psnr": 39.493
       }
     ],
-    "elapsed_seconds": 9.36,
+    "elapsed_seconds": 8.43,
     "probe": {
       "programs": [],
       "streams": [
@@ -1955,7 +1955,7 @@
     "label": "GS-MCMC",
     "video": "static/videos/v4/hdr_flower_mcmc_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_mcmc_path_v4_000.png",
-    "sha256": "ee44e7aaf2eb2bf460857547e81ee24bf80155dc4d582d8ec2399770de87c835",
+    "sha256": "e247efc6ef6317797e9d5e9b5bb85f18b9af6d05e2adc70fd4b8f17707b9fc69",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2063,7 +2063,7 @@
         "reference_psnr": 39.188
       }
     ],
-    "elapsed_seconds": 9.48,
+    "elapsed_seconds": 8.4,
     "probe": {
       "programs": [],
       "streams": [
@@ -2085,7 +2085,7 @@
     "label": "GS-W",
     "video": "static/videos/v4/hdr_flower_gsw_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_gsw_path_v4_000.png",
-    "sha256": "d1d496b4a1bdd1067fdf92a0d6d74c514976b22e074319b16cd06330b7a1a95c",
+    "sha256": "501a1def2838786de2cc479093e13926351141ad94b2439ceece35494310a25d",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2193,7 +2193,7 @@
         "reference_psnr": 39.494
       }
     ],
-    "elapsed_seconds": 7.86,
+    "elapsed_seconds": 7.45,
     "probe": {
       "programs": [],
       "streams": [
@@ -2215,7 +2215,7 @@
     "label": "LumiGS",
     "video": "static/videos/v4/hdr_flower_lumi_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_lumi_path_v4_000.png",
-    "sha256": "d5873aea363aafa79593658392bc9d51deb2d77961c392104652d64400945e24",
+    "sha256": "7e3ae50360c05a543af2c4e1c529e837a60ce4467b14d882f9796834f6999884",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2323,7 +2323,7 @@
         "reference_psnr": 39.345
       }
     ],
-    "elapsed_seconds": 9.75,
+    "elapsed_seconds": 8.16,
     "probe": {
       "programs": [],
       "streams": [
@@ -2345,7 +2345,7 @@
     "label": "PPISP",
     "video": "static/videos/v4/hdr_flower_ppisp_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_ppisp_path_v4_000.png",
-    "sha256": "fb869c895d69fa454664d3da1a5b0fe7e5c34e60a895116d38d53d7e5f436e5c",
+    "sha256": "f8e3ea5ce14aad668adfaf1c536bf865b3e1190c4f87af64346397bfcc86bad3",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2453,7 +2453,7 @@
         "reference_psnr": 40.291
       }
     ],
-    "elapsed_seconds": 7.73,
+    "elapsed_seconds": 7.36,
     "probe": {
       "programs": [],
       "streams": [
@@ -2475,7 +2475,7 @@
     "label": "HDR-GS",
     "video": "static/videos/v4/hdr_flower_hdrgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_hdrgs_path_v4_000.png",
-    "sha256": "943fcd8020171ddf8ee9f7024068216db6844dd526e025f0ed79ccf8c50fcbd1",
+    "sha256": "f09fbe6e7322aef9a547085bb856c4d701de5db08ee9ae4627a93a316ac5493e",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2583,7 +2583,7 @@
         "reference_psnr": 40.256
       }
     ],
-    "elapsed_seconds": 8.79,
+    "elapsed_seconds": 7.56,
     "probe": {
       "programs": [],
       "streams": [
@@ -2605,7 +2605,7 @@
     "label": "GaussHDR",
     "video": "static/videos/v4/hdr_flower_gausshdr_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_flower_gausshdr_path_v4_000.png",
-    "sha256": "a38558577f7b02e10ada258acc2e50c385679d52e502df581f8c84d7f15ce7d0",
+    "sha256": "f2e885d8fd198619a1d7f4a125797fa37619a4193e4d75b260bb35e3e571de3c",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2713,7 +2713,7 @@
         "reference_psnr": 40.277
       }
     ],
-    "elapsed_seconds": 7.79,
+    "elapsed_seconds": 7.57,
     "probe": {
       "programs": [],
       "streams": [
@@ -2735,7 +2735,7 @@
     "label": "3DGS",
     "video": "static/videos/v4/hdr_plant_3dgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_3dgs_path_v4_000.png",
-    "sha256": "9a4cfddbbe4167d38c63771744af1a46515fc2667880c03f93f315307a64e494",
+    "sha256": "4ce724defe1c6fba00160c47b3b54d4bdc983665b5a1636f23d6dc7957041836",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2843,7 +2843,7 @@
         "reference_psnr": 36.926
       }
     ],
-    "elapsed_seconds": 12.43,
+    "elapsed_seconds": 10.49,
     "probe": {
       "programs": [],
       "streams": [
@@ -2865,7 +2865,7 @@
     "label": "GS-MCMC",
     "video": "static/videos/v4/hdr_plant_mcmc_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_mcmc_path_v4_000.png",
-    "sha256": "831d0e64441a28587ac7538c5ab930df47df88fb392eec9d67d140a7770c884e",
+    "sha256": "e0108795a07ed82eea85c9d408e1ffe79a11400bd2ca36ea54188ef63fb4a4d0",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -2973,7 +2973,7 @@
         "reference_psnr": 36.998
       }
     ],
-    "elapsed_seconds": 11.29,
+    "elapsed_seconds": 10.09,
     "probe": {
       "programs": [],
       "streams": [
@@ -2995,7 +2995,7 @@
     "label": "GS-W",
     "video": "static/videos/v4/hdr_plant_gsw_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_gsw_path_v4_000.png",
-    "sha256": "5836c3d46f0b8262590a477e438ce48baf6a7efbb2575eac8e10d72c1e1408a5",
+    "sha256": "acbb309ac5636791be2e90a14d24c32b47fb19901466468c40913695aefd4316",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -3103,7 +3103,7 @@
         "reference_psnr": 36.914
       }
     ],
-    "elapsed_seconds": 10.2,
+    "elapsed_seconds": 9.02,
     "probe": {
       "programs": [],
       "streams": [
@@ -3125,7 +3125,7 @@
     "label": "LumiGS",
     "video": "static/videos/v4/hdr_plant_lumi_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_lumi_path_v4_000.png",
-    "sha256": "b68ed4f26c80b54f21cf90fc95a5b2fd5c66c9f006994808a3d2712eb3d22436",
+    "sha256": "a83b7203a4c0dbda1bd2dec1244631e4249c4cbbd6efd71db261df802f56ab62",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -3233,7 +3233,7 @@
         "reference_psnr": 36.741
       }
     ],
-    "elapsed_seconds": 11.14,
+    "elapsed_seconds": 9.38,
     "probe": {
       "programs": [],
       "streams": [
@@ -3255,7 +3255,7 @@
     "label": "PPISP",
     "video": "static/videos/v4/hdr_plant_ppisp_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_ppisp_path_v4_000.png",
-    "sha256": "095dbf751c854815571137d75500bc2d4fc5726e532ec34a4121e7b92e3b4104",
+    "sha256": "15c37bcab452a43d0411b4cf8ecaca6fa14491c949178482b02b183aeb9ab1e8",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -3363,7 +3363,7 @@
         "reference_psnr": 40.351
       }
     ],
-    "elapsed_seconds": 10.12,
+    "elapsed_seconds": 9.04,
     "probe": {
       "programs": [],
       "streams": [
@@ -3385,7 +3385,7 @@
     "label": "HDR-GS",
     "video": "static/videos/v4/hdr_plant_hdrgs_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_hdrgs_path_v4_000.png",
-    "sha256": "d362c3f1e5cc59a02eb415545c089a96c4fc5b352d9fe126d7c6843338fa60db",
+    "sha256": "c5355ab47135123e4372b6dcf01ce7850484feb36f17f001c66f57d8b811a125",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -3493,7 +3493,7 @@
         "reference_psnr": 40.359
       }
     ],
-    "elapsed_seconds": 9.78,
+    "elapsed_seconds": 8.97,
     "probe": {
       "programs": [],
       "streams": [
@@ -3515,7 +3515,7 @@
     "label": "GaussHDR",
     "video": "static/videos/v4/hdr_plant_gausshdr_path_v4.mp4",
     "poster": "static/images/video_v4/hdr_plant_gausshdr_path_v4_000.png",
-    "sha256": "e3ea7f2469fed0d92db6ba7848300e0d6e3e720c0a5c246d703b993c1152732d",
+    "sha256": "16664234adb527a2ddfc06a1777383f79902f1f77afc714a30ea8ffff3f73097",
     "frames": 120,
     "fps": 15,
     "layout": [
@@ -3623,7 +3623,7 @@
         "reference_psnr": 40.36
       }
     ],
-    "elapsed_seconds": 9.7,
+    "elapsed_seconds": 8.76,
     "probe": {
       "programs": [],
       "streams": [
