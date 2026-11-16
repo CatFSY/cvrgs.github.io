@@ -1,0 +1,317 @@
+{
+  "scene": "box",
+  "method": "gausshdr",
+  "label": "GaussHDR",
+  "video": "static/videos/v3/hdr_box_gausshdr_path_v3.mp4",
+  "poster": "static/images/video_v3/hdr_box_gausshdr_path_v3_000.png",
+  "frames": 120,
+  "fps": 15,
+  "seconds": 8,
+  "layout": [
+    1648,
+    930
+  ],
+  "settings": [
+    "12U12M100O",
+    "100U12M12O",
+    "33U33M33O",
+    "50U50O"
+  ],
+  "setting_labels": [
+    "Bright-skewed",
+    "Dark-skewed",
+    "Uniform Random",
+    "Extreme Bimodal"
+  ],
+  "layout_source": "ExgsPage/demo/README.md and original website video: static exposure examples; four setting columns; baseline above Ours",
+  "exposure_banner_source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_box.mp4",
+  "exposure_banner_sha256": "d92ee78b19c8aa718701d75b7842ab0f7bc3e0694555ef0ac481f6c786863f20",
+  "trajectory_source": {
+    "scene": "box",
+    "selected_prefixes": [
+      "000",
+      "004",
+      "015",
+      "028"
+    ],
+    "keyframe_order": [
+      "000",
+      "004",
+      "015",
+      "028"
+    ],
+    "frames": 120,
+    "fps": 15,
+    "seconds": 8,
+    "interpolation": "original generate_interpolated_path:40 samples per segment, degree5 capped to3, smoothness0.03, rot_weight0.1",
+    "historical_eval": false,
+    "pose_convention": "unchanged historical c2w; no axis flips",
+    "source_camera_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/box/cameras.json",
+    "source_camera_sha256": "ca4d9bbbcf0c39724a014edca096e013fb7f1b93971ff94ca222a18e9889efef",
+    "source_prefix_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/box/path_prefixes.npy",
+    "source_prefix_sha256": "c59202024e19acf02003c8d796b7ecdced4c566089d15aa06af8f830b3c6645f",
+    "historical_render_code": "/amax/home/fengshuangyu/cvrgs/exgs_test2/render_path.py",
+    "historical_trajectory_code_sha256": "190391ce80c0b82bc6271544f94ac655945f8b7ba6845cda175095c6ce98b3b5",
+    "cropped_reference_calibration": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/cameras.json",
+    "reference_camera": "000_0",
+    "fovx": 0.43935796790267495,
+    "fovy": 0.29174567029564946,
+    "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+    "all_settings_share_path": true
+  },
+  "no_image_slideshow": true,
+  "no_optical_flow_or_frame_morphing": true,
+  "same_camera_poses_for_all_methods_and_settings": true,
+  "novel_pose_gt": "No interpolated-camera GT is available. Static exposure examples are input references, not per-frame GT.",
+  "display_resize": "Native panels resized to400x272 for the historical layout; no color/exposure fitting.",
+  "native_runs": [
+    [
+      {
+        "method": "gausshdr",
+        "setting": "12U12M100O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/12U12M100O/box/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "1c7685ed140830df12199dfa8651795b44dfc952647de20e51881251db125638",
+          "checkpoints.pth": "f7748e33fb76843605f0589dd8ca30e35a02105368d79d5da68f6775b1e85933",
+          "point_cloud.ply": "18aeff2d5a4903ba15dff4fe597125f07fdbedb0fb5e6f06c5b5243d41864aa1"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 12.066129996906966
+      },
+      {
+        "method": "ours",
+        "setting": "12U12M100O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_12U12M100O/box/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "4998729cddde80244e48816805336d57efcdda785b2b7aa620b8504b303f198b",
+          "map_generator.pth": "7cdf50f121dada2869702764c428d45f163dc8759c578a6b50570905e30d7de0",
+          "other_atrributes_dict.pth": "6d47986bf8cc5dc18645f8a5ab45d75efeddcfebd95973f5d51ecd513fc7bb67",
+          "point_cloud.ply": "7e9b870e8746579e5b12fd6eb28d14f9c5bd64bef2e0b390e47c5db9c83a5db4",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 5.158228945918381
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "100U12M12O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/100U12M12O/box/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "50dab86429d6011f6b17bb009c3cff649ff07d3836bcadca6e396b1476544ce7",
+          "checkpoints.pth": "98b15ee584323c90894bcf080444c17be0540e61ec21d03a4ae8abdcbae21d2d",
+          "point_cloud.ply": "681ad6e4175365458f8fb0e36be61ac2b446126e7f5b07c12e8fb32f8ccf17f2"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 11.037315598223358
+      },
+      {
+        "method": "ours",
+        "setting": "100U12M12O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_100U12M12O/box/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "de96a8e52fb542bf6b83c3cd2e708d44277c1cffb93081d6e20d3f3dca93d67a",
+          "map_generator.pth": "5c1d6da679db7c4c9fef7d6f9aa9282bb4f35c316dfe89bec9fc8fdca20e63bc",
+          "other_atrributes_dict.pth": "7f7915555803c59bb1629ec4400f33659db2f2d4d0771b9ba64861601829b4f0",
+          "point_cloud.ply": "0654d2373d388937b00fff208d748b8f747abdf056ae1c3544851f0388e291b1",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.229977306909859
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "33U33M33O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/box/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "d0faf27ad4f87ae6f252b680357fd0bd8bebc99e16235369c4b8e72e1cf17211",
+          "checkpoints.pth": "810ac41e6a3acffd7799523652cf29f255108347f76e75ee720e469b00d820a8",
+          "point_cloud.ply": "7fb125957303d214889406e4c036bc553f106afa4211a7a3752c4831f41d5e2d"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 10.599043077789247
+      },
+      {
+        "method": "ours",
+        "setting": "33U33M33O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/box/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "5ca5dd7f7ab40a6f6a248f089d6fe2ac52e3b32fecac5c029df42641846e75ca",
+          "map_generator.pth": "0a1ee31161137320144583d2fd7e053a4dfb52cf95c193bc52449b171de07410",
+          "other_atrributes_dict.pth": "de8e1e4e7cfe5ad89daea3918b64a1f4d7efc2f419042e3b17e7d20e165aad9b",
+          "point_cloud.ply": "f964603a839d774d448fe244bfdc6b2f07f5ad8a7b1b070cef190cca08a94041",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.148832539096475
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "50U50O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/50U50O/box/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "3965227c6c3b5f3fe6249e9af210c54231d33e4238ccebdedf6646ae1e4a92ee",
+          "checkpoints.pth": "c2c8a40cf04c53a59e7c0e55e8f6a859c3349a51c9d371dc18000328313d3e91",
+          "point_cloud.ply": "c6ba3553d9382e075393a457faccb54bbf4c64a1e789ad8ea2a7584e1af69642"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 1,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 11.13338399771601
+      },
+      {
+        "method": "ours",
+        "setting": "50U50O",
+        "scene": "box",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/box.npz",
+        "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_50U50O/box/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "238573613d33e638f8062f35963d4aa7464a03416e5bbf01c794b3ba44b48034",
+          "map_generator.pth": "d80c79abe322b8c2355f63cb89e9a8e573d168e3d6cbb42022659110bb1f1254",
+          "other_atrributes_dict.pth": "a6d8c47fcc1fe633520e7155f11fe70c0f8c822c3aaba7f111523771e0a95a4c",
+          "point_cloud.ply": "ae4cc953cde91074a8c78113fd2b30e2af7576a96a9fadb77ab211afb57ed214",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.311933530960232
+      }
+    ]
+  ],
+  "bytes": 2369824,
+  "sha256": "5904224424a543767cbff42fda4fa57bb009483793b13fc5308ef30284a9278e",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  }
+}

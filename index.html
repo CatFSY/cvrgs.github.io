@@ -28,7 +28,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
   <link rel="stylesheet" href="./static/css/comparisons-v2.css">
-  <script defer src="./static/js/comparisons-v2.js"></script>
+  <script defer src="./static/js/comparisons-v2.js?v=path-v3"></script>
 </head>
 <body>
 
@@ -139,7 +139,7 @@
 
 <!-- Updated Multi-Exposure Scenes -->
 <section class="section comparison-v2" data-comparison-group="hdr"
-  data-caption="HDR-GS, GaussHDR, PPISP, Ours and Fusion GT at the same held-out camera poses. Choose one of the four training exposure settings. HDR-GS and GaussHDR use the existing mu-law display; PPISP uses direct GS RGB without exposure metadata, and Ours uses canonical appearance. Frames are held for inspection; this is a held-out view sequence, not a continuous camera path." data-legacy-caption="Previous four-setting comparison video.">
+  data-caption="Continuous novel-view rendering along the original 120-pose B-spline camera path (15 FPS, 8 seconds). Four columns show Bright-skewed, Dark-skewed, Uniform Random and Extreme Bimodal training settings. The selected comparison method is above Ours. Every method and setting uses the same camera poses. The top row contains static exposure examples; these are not per-frame ground truth." data-legacy-caption="Previous four-setting comparison video.">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Multi-Exposure Scenes</h2>
     <div class="scene-buttons" role="group" aria-label="Multi-Exposure Scenes scenes">
@@ -152,27 +152,27 @@
       <div>
         <label for="hdr-version-v2">Comparison</label>
         <div class="select"><select id="hdr-version-v2" data-version>
-          <option value="v2">Updated methods</option>
+          <option value="v3">Continuous camera path</option>
           <option value="legacy">Previous video</option>
         </select></div>
       </div>
-      <div data-setting-control>
-              <label for="hdr-setting-v2">Training exposure setting</label>
-              <div class="select"><select id="hdr-setting-v2" data-setting>
-                <option value="12U12M100O">Bright-skewed (12U12M100O)</option>
-                <option value="100U12M12O">Dark-skewed (100U12M12O)</option>
-                <option value="33U33M33O">Uniform Random (33U33M33O)</option>
-                <option value="50U50O" selected>Extreme Bimodal (50U50O)</option>
-              </select></div>
-            </div>
+      <div data-method-control>
+        <label for="hdr-method-v3">Comparison method</label>
+        <div class="select"><select id="hdr-method-v3" data-method>
+          <option value="ppisp">PPISP</option>
+          <option value="hdrgs">HDR-GS</option>
+          <option value="gausshdr">GaussHDR</option>
+        </select></div>
+      </div>
     </div>
-    <video src="static/videos/v2/hdr_box_50U50O_v2.mp4" poster="static/images/video_v2/hdr_box_50U50O_v2.png"
+    <video src="static/videos/v3/hdr_box_ppisp_path_v3.mp4"
+      poster="static/images/video_v3/hdr_box_ppisp_path_v3_000.png"
       controls loop muted playsinline preload="metadata" aria-label="Multi-Exposure Scenes method comparison"></video>
     <p data-video-error role="alert" hidden>Unable to load the video. Use the MP4 download below.</p>
-    <p class="comparison-caption" data-caption>HDR-GS, GaussHDR, PPISP, Ours and Fusion GT at the same held-out camera poses. Choose one of the four training exposure settings. HDR-GS and GaussHDR use the existing mu-law display; PPISP uses direct GS RGB without exposure metadata, and Ours uses canonical appearance. Frames are held for inspection; this is a held-out view sequence, not a continuous camera path.</p>
+    <p class="comparison-caption" data-caption>Continuous novel-view rendering along the original 120-pose B-spline camera path (15 FPS, 8 seconds). Four columns show Bright-skewed, Dark-skewed, Uniform Random and Extreme Bimodal training settings. The selected comparison method is above Ours. Every method and setting uses the same camera poses. The top row contains static exposure examples; these are not per-frame ground truth.</p>
     <div class="comparison-downloads">
-      <a data-download href="static/videos/v2/hdr_box_50U50O_v2.mp4" download>Download MP4</a>
-      <a data-protocol href="static/data/video_v2/hdr_box_50U50O_v2.json">Sources and display protocol</a>
+      <a data-download href="static/videos/v3/hdr_box_ppisp_path_v3.mp4" download>Download MP4</a>
+      <a data-protocol href="static/data/video_v3/hdr_box_ppisp_path_v3.json">Sources and display protocol</a>
     </div>
   </div>
 </section>

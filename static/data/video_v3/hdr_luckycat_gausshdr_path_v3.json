@@ -1,0 +1,317 @@
+{
+  "scene": "luckycat",
+  "method": "gausshdr",
+  "label": "GaussHDR",
+  "video": "static/videos/v3/hdr_luckycat_gausshdr_path_v3.mp4",
+  "poster": "static/images/video_v3/hdr_luckycat_gausshdr_path_v3_000.png",
+  "frames": 120,
+  "fps": 15,
+  "seconds": 8,
+  "layout": [
+    1648,
+    930
+  ],
+  "settings": [
+    "12U12M100O",
+    "100U12M12O",
+    "33U33M33O",
+    "50U50O"
+  ],
+  "setting_labels": [
+    "Bright-skewed",
+    "Dark-skewed",
+    "Uniform Random",
+    "Extreme Bimodal"
+  ],
+  "layout_source": "ExgsPage/demo/README.md and original website video: static exposure examples; four setting columns; baseline above Ours",
+  "exposure_banner_source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_luckycat.mp4",
+  "exposure_banner_sha256": "9da223d4b6c07685021f69511bf38270a31f31ca8d2f4f6b1c443b75a5d85329",
+  "trajectory_source": {
+    "scene": "luckycat",
+    "selected_prefixes": [
+      "000",
+      "004",
+      "030",
+      "034"
+    ],
+    "keyframe_order": [
+      "000",
+      "004",
+      "030",
+      "034"
+    ],
+    "frames": 120,
+    "fps": 15,
+    "seconds": 8,
+    "interpolation": "original generate_interpolated_path:40 samples per segment, degree5 capped to3, smoothness0.03, rot_weight0.1",
+    "historical_eval": false,
+    "pose_convention": "unchanged historical c2w; no axis flips",
+    "source_camera_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/luckycat/cameras.json",
+    "source_camera_sha256": "6729881b595a67319b10508906aa5472db13b4996ae7a9add414b715db41f163",
+    "source_prefix_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/luckycat/path_prefixes.npy",
+    "source_prefix_sha256": "d00a07b3af26fbd06aae8672dada01b2fd1d771ad9277b8813f63e2eb62a3c63",
+    "historical_render_code": "/amax/home/fengshuangyu/cvrgs/exgs_test2/render_path.py",
+    "historical_trajectory_code_sha256": "190391ce80c0b82bc6271544f94ac655945f8b7ba6845cda175095c6ce98b3b5",
+    "cropped_reference_calibration": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/luckycat/cameras.json",
+    "reference_camera": "000_2",
+    "fovx": 0.41810923202302674,
+    "fovy": 0.27885204068018327,
+    "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+    "all_settings_share_path": true
+  },
+  "no_image_slideshow": true,
+  "no_optical_flow_or_frame_morphing": true,
+  "same_camera_poses_for_all_methods_and_settings": true,
+  "novel_pose_gt": "No interpolated-camera GT is available. Static exposure examples are input references, not per-frame GT.",
+  "display_resize": "Native panels resized to400x272 for the historical layout; no color/exposure fitting.",
+  "native_runs": [
+    [
+      {
+        "method": "gausshdr",
+        "setting": "12U12M100O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/12U12M100O/luckycat/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "083dfb9a3ba70138e4c2276b33b095dfedc45727e5527ae4a8ceb0a964b88c7e",
+          "checkpoints.pth": "901be47168ebac02ea4446b98a46de11f4536f8498fd17cc6425f61bb6aed69a",
+          "point_cloud.ply": "2ce4394ea165de350a114736ef2042dc8ee6a33be7ed8c7a3c3124bbe80de6e6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 1,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 10.946327129844576
+      },
+      {
+        "method": "ours",
+        "setting": "12U12M100O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_12U12M100O/luckycat/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "d23c1c525e5564c11a6f792b275ab82ffb57503ae953983879c8f9e9c385da25",
+          "map_generator.pth": "baa830945c9e7c56301dc8e1784987c011d83b93525b29062ac29fc0ebdd1d10",
+          "other_atrributes_dict.pth": "c91fadc85a0b938d114e28ee39eb948a6cc7b4a37857512990fc5e52c4edc68d",
+          "point_cloud.ply": "b18d5814b5bcec10740fba3584fa5b7aea28695c7191873c5bc4f9602bb68eaf",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.238836784381419
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "100U12M12O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/100U12M12O/luckycat/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "2fc6702e05f61efdb0735884705ae1f09347580de8822004f31a7d8153601838",
+          "checkpoints.pth": "fd0052146a15ed2754ff57b5fa3aa0b2aec596b12b647e3669801ab742e8539d",
+          "point_cloud.ply": "cb8a3bda74cd41232a5bf874411399712f8a92c15887cfc5c1d9d90b0fc5aca1"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 1,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 11.28908630926162
+      },
+      {
+        "method": "ours",
+        "setting": "100U12M12O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_100U12M12O/luckycat/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "fda41349de153fda3df43d58d0ef569e628f32e47886a35fa7da86f43568a4cd",
+          "map_generator.pth": "3f7b89dfb0ecb76297ffc2ed6a392b336b85792f38b9b9718e6d3fe41332d4ae",
+          "other_atrributes_dict.pth": "ff9670e4fe4da85d4789c343dd03713dfbcc1c217a8eaa4c9d7d510072fabc4b",
+          "point_cloud.ply": "d0cec2b06ba23df4034f466bef7b647c0c640a1d68fd4d0a131a54328b73883b",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.008407679852098
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "33U33M33O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/33U33M33O/luckycat/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "7caece359d0b408587baddfc8172c9a0f3751b4f601e364673eea16d09bc7e49",
+          "checkpoints.pth": "b6733fe32322d88e37ee5e668c2e077c51dff4bc95e395d6287cb6b8d9e256c4",
+          "point_cloud.ply": "a20a4caf0eb58eda1c4b83b354e14989df96da9416f24d67644bd12e6da017a3"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 1,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 10.836457214783877
+      },
+      {
+        "method": "ours",
+        "setting": "33U33M33O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/luckycat/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "ef5277e63dcfbddf3bc87d4213259a99246c9e2b37040e687c117493e496a207",
+          "map_generator.pth": "1309f47e5d6a3dd4ea3620f5d339fdb7b5ca8fccad8f372478bfd7f6cc002b0e",
+          "other_atrributes_dict.pth": "5795471e5fb65d74bf4642464518e2812baaa7e0059d8fb091bed5d7606556ad",
+          "point_cloud.ply": "cda0a50ad9e27adc9a0c0a72ed679c1bae0c12f1553ce201e202dfb885f24a75",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.1001051240600646
+      }
+    ],
+    [
+      {
+        "method": "gausshdr",
+        "setting": "50U50O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/gausshdr/50U50O/luckycat/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tonemap_mlp.pt": "124ff350573e55b4c3dbed32a7e700233a65ec051de2206fa54b5ff8d4e179db",
+          "checkpoints.pth": "72564c0d470457d4862c3813f52874046ffa00ff9c627cdbdc171a59fc0176dd",
+          "point_cloud.ply": "0f7854438d699e5134e591607eeba92b32fa9a1a2719df5a2b52dfbe2287784a"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 1,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 10.782684653066099
+      },
+      {
+        "method": "ours",
+        "setting": "50U50O",
+        "scene": "luckycat",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/luckycat.npz",
+        "trajectory_sha256": "4261db9a41a8ee97736b9581f5b9a3809bbf9754b1882a4b4a4f31b6c4e027de",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_50U50O/luckycat/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "1e38ee4fc7b7897614deb1af12eefa4696d916d6c7a9be0dbf3cd68307385595",
+          "map_generator.pth": "8f21ede3ac32a08e6e9c0f16b26ac5bd0a2395fe2901b9ebd2df8a1692d476f8",
+          "other_atrributes_dict.pth": "5c2220a0c34cd392c4d742ef7d2ff1aa52f1d8091e08df8296dd2cfe83e8c16a",
+          "point_cloud.ply": "be948ae01ad6a415937d060aef4e80f92a33ea3e966d1c3ad248fd7745521652",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.192562217824161
+      }
+    ]
+  ],
+  "bytes": 2795709,
+  "sha256": "120a7c36a4f3302b027cb01e6a7e64b633b5d5c75befaa0878877269a878c28e",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  }
+}

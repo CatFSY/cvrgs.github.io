@@ -10,7 +10,7 @@ const makeElement = (extra = {}) => Object.assign({
   classList: { toggle() {} },
   setAttribute(key, value) { this[key] = value; },
 }, extra);
-function fixture(kind, scenes) {
+function fixture(kind, scenes, continuous = false) {
   const video = makeElement({paused: true, playCalls: 0,
     pause() {this.paused = true;}, load() {},
     play() {this.paused = false; this.playCalls++; return Promise.resolve();}});
@@ -18,7 +18,9 @@ function fixture(kind, scenes) {
   const elements = {
     'video': video,
     '[data-version]': makeElement({value: 'v2'}),
-    '[data-setting]': kind === 'hdr' ? makeElement({value: '50U50O'}) : null,
+    '[data-setting]': kind === 'hdr' && !continuous ? makeElement({value: '50U50O'}) : null,
+    '[data-method]': continuous ? makeElement({value: 'ppisp'}) : null,
+    '[data-method-control]': makeElement(),
     '[data-setting-control]': makeElement(),
     '[data-download]': makeElement(), '[data-protocol]': makeElement(),
     '[data-caption]': makeElement(), '[data-video-error]': makeElement(),
@@ -32,7 +34,8 @@ function fixture(kind, scenes) {
   };
 }
 const groups = [fixture('hdr', ['box', 'luckycat', 'flower', 'plant']),
-                fixture('syn', ['hotdog', 'ficus', 'mic', 'chair'])];
+                fixture('syn', ['hotdog', 'ficus', 'mic', 'chair']),
+                fixture('hdr', ['box', 'luckycat', 'flower', 'plant'], true)];
 const document = {
   addEventListener(type, cb) {assert.equal(type, 'DOMContentLoaded'); cb();},
   querySelectorAll(selector) {assert.equal(selector, '[data-comparison-group]'); return groups;},
@@ -43,9 +46,13 @@ for (const group of groups) {
   const e = group.elements;
   for (const button of group.buttons) {
     button.listeners.click();
-    const settings = e['[data-setting]'] ? ['12U12M100O', '100U12M12O', '33U33M33O', '50U50O'] : [null];
+    const settings = e['[data-method]'] ? ['ppisp','hdrgs','gausshdr']
+      : e['[data-setting]'] ? ['12U12M100O', '100U12M12O', '33U33M33O', '50U50O'] : [null];
     for (const setting of settings) {
-      if (setting) {e['[data-setting]'].value = setting; e['[data-setting]'].listeners.change();}
+      if (setting) {
+        const selector = e['[data-method]'] || e['[data-setting]'];
+        selector.value = setting; selector.listeners.change();
+      }
       const video = e.video;
       assert(fs.existsSync(path.join(site, video.src)), video.src);
       assert(fs.existsSync(path.join(site, video.poster)), video.poster);
@@ -64,12 +71,14 @@ for (const group of groups) {
     assert.equal(e['[data-caption]'].textContent, 'previous');
     assert.equal(e.video.paused, false);
     if (e['[data-setting]']) assert.equal(e['[data-setting-control]'].hidden, true);
+    if (e['[data-method]']) assert.equal(e['[data-method-control]'].hidden, true);
     e.video.listeners.error();
     assert.equal(e['[data-video-error]'].hidden, false);
     e['[data-version]'].value = 'v2';
     e['[data-version]'].listeners.change();
     assert.equal(e['[data-video-error]'].hidden, true);
     if (e['[data-setting]']) assert.equal(e['[data-setting-control]'].hidden, false);
+    if (e['[data-method]']) assert.equal(e['[data-method-control]'].hidden, false);
     e.video.pause();
     checks++;
   }

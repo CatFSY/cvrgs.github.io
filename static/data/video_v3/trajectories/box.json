@@ -1,0 +1,33 @@
+{
+  "scene": "box",
+  "selected_prefixes": [
+    "000",
+    "004",
+    "015",
+    "028"
+  ],
+  "keyframe_order": [
+    "000",
+    "004",
+    "015",
+    "028"
+  ],
+  "frames": 120,
+  "fps": 15,
+  "seconds": 8,
+  "interpolation": "original generate_interpolated_path:40 samples per segment, degree5 capped to3, smoothness0.03, rot_weight0.1",
+  "historical_eval": false,
+  "pose_convention": "unchanged historical c2w; no axis flips",
+  "source_camera_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/box/cameras.json",
+  "source_camera_sha256": "ca4d9bbbcf0c39724a014edca096e013fb7f1b93971ff94ca222a18e9889efef",
+  "source_prefix_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/box/path_prefixes.npy",
+  "source_prefix_sha256": "c59202024e19acf02003c8d796b7ecdced4c566089d15aa06af8f830b3c6645f",
+  "historical_render_code": "/amax/home/fengshuangyu/cvrgs/exgs_test2/render_path.py",
+  "historical_trajectory_code_sha256": "190391ce80c0b82bc6271544f94ac655945f8b7ba6845cda175095c6ce98b3b5",
+  "cropped_reference_calibration": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/box/cameras.json",
+  "reference_camera": "000_0",
+  "fovx": 0.43935796790267495,
+  "fovy": 0.29174567029564946,
+  "trajectory_sha256": "d86edfac9f67301689db1bc963bba4653ace851fbe8f563d6667c2c2f54e8f14",
+  "all_settings_share_path": true
+}

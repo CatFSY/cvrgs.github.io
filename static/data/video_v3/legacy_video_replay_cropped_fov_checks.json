@@ -1,0 +1,38 @@
+[
+  {
+    "scene": "box",
+    "replay_psnr_db": [
+      38.84,
+      38.42,
+      38.41,
+      37.74
+    ]
+  },
+  {
+    "scene": "luckycat",
+    "replay_psnr_db": [
+      38.6,
+      38.02,
+      37.99,
+      37.59
+    ]
+  },
+  {
+    "scene": "flower",
+    "replay_psnr_db": [
+      39.06,
+      38.32,
+      39.51,
+      37.83
+    ]
+  },
+  {
+    "scene": "plant",
+    "replay_psnr_db": [
+      40.25,
+      40.31,
+      40.73,
+      39.4
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "continuous_comparison_videos": 12,
+  "native_model_runs": 64,
+  "native_frames_per_run": 120,
+  "native_frames_total": 7680,
+  "same_camera_trajectory_for_all_methods_and_settings": true,
+  "all_native_frames_distinct": true,
+  "native_checkpoint_replay_uint8_max_error": 1,
+  "all_checkpoint_files_rehashed_and_unchanged": true,
+  "all_12_mp4s_full_decode_passed_during_composition": true,
+  "controller_switch_cases_passed": 44,
+  "synthetic_flashlight_lom_html_unchanged": true,
+  "html_resources_checked": 28,
+  "old_camera_motion_replay_checked_at_frames": [
+    0,
+    40,
+    80,
+    119
+  ],
+  "novel_pose_ground_truth_available": false,
+  "browser_playback_tested": false,
+  "display": "native checkpoint rendering along original spline; no image slideshow or morphing"
+}

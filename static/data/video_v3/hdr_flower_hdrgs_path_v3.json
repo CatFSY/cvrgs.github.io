@@ -1,0 +1,313 @@
+{
+  "scene": "flower",
+  "method": "hdrgs",
+  "label": "HDR-GS",
+  "video": "static/videos/v3/hdr_flower_hdrgs_path_v3.mp4",
+  "poster": "static/images/video_v3/hdr_flower_hdrgs_path_v3_000.png",
+  "frames": 120,
+  "fps": 15,
+  "seconds": 8,
+  "layout": [
+    1648,
+    930
+  ],
+  "settings": [
+    "12U12M100O",
+    "100U12M12O",
+    "33U33M33O",
+    "50U50O"
+  ],
+  "setting_labels": [
+    "Bright-skewed",
+    "Dark-skewed",
+    "Uniform Random",
+    "Extreme Bimodal"
+  ],
+  "layout_source": "ExgsPage/demo/README.md and original website video: static exposure examples; four setting columns; baseline above Ours",
+  "exposure_banner_source": "/amax/home/fengshuangyu/cvrgs/ExgsPage/cvrgs.github.io/static/videos/hdr_flower.mp4",
+  "exposure_banner_sha256": "8dff76c931356103e05fcd9615e480e850be12245b7907fc88468854a8ad5bd7",
+  "trajectory_source": {
+    "scene": "flower",
+    "selected_prefixes": [
+      "000",
+      "017",
+      "021",
+      "026"
+    ],
+    "keyframe_order": [
+      "000",
+      "017",
+      "021",
+      "026"
+    ],
+    "frames": 120,
+    "fps": 15,
+    "seconds": 8,
+    "interpolation": "original generate_interpolated_path:40 samples per segment, degree5 capped to3, smoothness0.03, rot_weight0.1",
+    "historical_eval": false,
+    "pose_convention": "unchanged historical c2w; no axis flips",
+    "source_camera_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/flower/cameras.json",
+    "source_camera_sha256": "3839f2bfe150b22410dca19cb987ce55cb70afb704d5d7851ea399c66253ccb5",
+    "source_prefix_file": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/flower/path_prefixes.npy",
+    "source_prefix_sha256": "f0ad917397377bcd4f40b31f739401bb7a44b8c306d93e253ff5fc822550ea57",
+    "historical_render_code": "/amax/home/fengshuangyu/cvrgs/exgs_test2/render_path.py",
+    "historical_trajectory_code_sha256": "190391ce80c0b82bc6271544f94ac655945f8b7ba6845cda175095c6ce98b3b5",
+    "cropped_reference_calibration": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/flower/cameras.json",
+    "reference_camera": "000_4",
+    "fovx": 0.43367317007644046,
+    "fovy": 0.2888741492981143,
+    "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+    "all_settings_share_path": true
+  },
+  "no_image_slideshow": true,
+  "no_optical_flow_or_frame_morphing": true,
+  "same_camera_poses_for_all_methods_and_settings": true,
+  "novel_pose_gt": "No interpolated-camera GT is available. Static exposure examples are input references, not per-frame GT.",
+  "display_resize": "Native panels resized to400x272 for the historical layout; no color/exposure fitting.",
+  "native_runs": [
+    [
+      {
+        "method": "hdrgs",
+        "setting": "12U12M100O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/12U12M100O/flower/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tone_mapper.pth": "2e60124d7aae4fda3e2f36296a3758e05ac9b0434461a18f5621b8c7f1496f87",
+          "point_cloud.ply": "9a388b36e0f278d9903524e4a9a5769b1a72d0801b1671d3e864e0d4cc5c9554"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 2.8478253199718893
+      },
+      {
+        "method": "ours",
+        "setting": "12U12M100O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_12U12M100O/flower/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "cb4fd84aa30dd6bbcc200f316b4fccc3496c428166197a509e88dadcff987e6d",
+          "map_generator.pth": "caf6dd306d0d8351afd4e1dd99338cc9555120139c7fdd3ebaae32b176734ca7",
+          "other_atrributes_dict.pth": "ea71f6a123edd0dcd315fb8837169de50d92490ccf215a9558c117bf62da86f4",
+          "point_cloud.ply": "d3bfe09b3742f3300af3f58fe15d5ad7b384fc2440b82e26cdd44465f9ecbece",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.0114126252010465
+      }
+    ],
+    [
+      {
+        "method": "hdrgs",
+        "setting": "100U12M12O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/100U12M12O/flower/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tone_mapper.pth": "8c5b395bd36b14881444d6687c02fa0796d7ba11ef2e085498630f452dacd964",
+          "point_cloud.ply": "5d5d5bbfffe8ff759302cc4c73a80c8fd46f28d9ed6b740945b9db976af05e95"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 3.129639159888029
+      },
+      {
+        "method": "ours",
+        "setting": "100U12M12O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_100U12M12O/flower/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "a2db4237b13125b74fe862aba0054ad6e9a1205dffa4791c09c0c5426b21fccf",
+          "map_generator.pth": "d991ebf06c4b0b214499bae422b95e2f8e966d5d0f360a85825939e9482a258f",
+          "other_atrributes_dict.pth": "4d4f633d7b87f4d0250b57dee12d1977384b94bf1b498c3635daf4c15d4c5b4c",
+          "point_cloud.ply": "98e80c17af0d4cf9c894432519f64f51c5ead96ac94dcb2c37d5ce51da900a7f",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.113703725859523
+      }
+    ],
+    [
+      {
+        "method": "hdrgs",
+        "setting": "33U33M33O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/33U33M33O/flower/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tone_mapper.pth": "ecf03a914ad5a44518598daf7a9cada4c761300d0ec72a0a19a8fef43df64091",
+          "point_cloud.ply": "ce2e809cf85bb013aa6dd435cae5efaa3dcc03925ba04d0f5bec71a41268a97f"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 2.930977236945182
+      },
+      {
+        "method": "ours",
+        "setting": "33U33M33O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_33U33M33O/flower/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "514ce9a43de1fcdfc3099efe94e8296f8bbbaf91aa45df4158a91bffe35894bd",
+          "map_generator.pth": "0efce6c597526d5ac3e3a0a5c985f0531f513ab4f873f9f34e63b997c0809878",
+          "other_atrributes_dict.pth": "50b311c4eabf1a81479ec62b4b1cdc31598d12f872d77e3de4f0134425af646a",
+          "point_cloud.ply": "322b1461e0ed9f32c15247aecaad2101225af1a2838da43c5021ad9662dc3716",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 4.125900599639863
+      }
+    ],
+    [
+      {
+        "method": "hdrgs",
+        "setting": "50U50O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/runs/hdr_baselines/models/hdrgs/50U50O/flower/point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "tone_mapper.pth": "54bcab4a41b8c51baeddd2f471efb7dacf9c11e06f4fa2c4a33d55801c97c89c",
+          "point_cloud.ply": "45f9c8b898e3ba23ee3bbde60f33155c487a2788d3a005a4310b61ed426aa119"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "existing own-max + mu-law5000",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 2.8653153027407825
+      },
+      {
+        "method": "ours",
+        "setting": "50U50O",
+        "scene": "flower",
+        "frames": 120,
+        "fps": 15,
+        "seconds": 8,
+        "width": 400,
+        "height": 264,
+        "trajectory": "/amax/home/fengshuangyu/cvrgs/runs/hdr_path_video_20261117/trajectories/flower.npz",
+        "trajectory_sha256": "7479429e0c2eb836541967f2197ce24ed592f77ad24653539f3240861d0d0baf",
+        "checkpoint_dir": "/amax/home/fengshuangyu/cvrgs/exgs_test2/hdr_8scenes_50U50O/flower/ckpts_point_cloud/iteration_20000",
+        "checkpoint_sha256": {
+          "color_net.pth": "50261c8333fe34355c43c037a737fafc335a28f949363c9f33eb74dee07d2a96",
+          "map_generator.pth": "a871c217eb1f65f780f3377574a891b11ce069a2ef5708c7258e12727f9d3d59",
+          "other_atrributes_dict.pth": "e38d085a61b2ed9d631a60226a8e1b89490964a1fb2c3096db05b68b5d7392b7",
+          "point_cloud.ply": "6f1aced6b4576770b54c54ef27e122fc9c46f30415dd23f342466e349065b14d",
+          "network_weights.pth": "1f7b9b5809e1ee001cc380847ebf7dc10b4dfe3f4acc5e5ecbdadbbb86e939c6"
+        },
+        "checkpoint_unchanged": true,
+        "heldout_reload_png_max_error": 0,
+        "unique_raw_frames": 120,
+        "rendering": "checkpoint -> native renderer at120 distinct spline camera poses -> video",
+        "no_photo_interpolation": true,
+        "test_rgb_used_for_inference": false,
+        "display": "clamp only",
+        "ppisp_controller_isp_bypassed": false,
+        "elapsed_seconds": 3.8951176297850907
+      }
+    ]
+  ],
+  "bytes": 2498523,
+  "sha256": "934685b177d42e13fe111c7b4d230e08ed01c16275bfa2706a8924adfc9ae429",
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "width": 1648,
+        "height": 930,
+        "r_frame_rate": "15/1",
+        "nb_frames": "120"
+      }
+    ],
+    "format": {
+      "duration": "8.000000"
+    }
+  }
+}
